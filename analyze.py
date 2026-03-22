@@ -76,6 +76,16 @@ def load_bookings(csv_path: Path) -> pd.DataFrame:
     df["lead_days"] = pd.to_numeric(df["lead_days"], errors="coerce")
     df["space_id"] = pd.to_numeric(df["space_id"], errors="coerce").astype("Int64")
     df["start_hour"] = df["start_time"].str.extract(r"^(\d+):", expand=False).astype("Int64")
+
+    # Retroactively infer lead_days for initial-batch rows (source="grid") where it
+    # wasn't recorded.  fetch_date = first time we observed the booking, so
+    # (booking_date - fetch_date) is a lower bound on true lead time for those rows.
+    missing_lead = df["lead_days"].isna() & df["booking_date"].notna() & df["fetch_date"].notna()
+    if missing_lead.any():
+        df.loc[missing_lead, "lead_days"] = (
+            df.loc[missing_lead, "booking_date"] - df.loc[missing_lead, "fetch_date"]
+        ).dt.days
+
     return df
 
 
@@ -114,7 +124,9 @@ def compute_lead_time_distribution(df: pd.DataFrame) -> pd.DataFrame:
         df: Bookings DataFrame from :func:`load_bookings`.
 
     Returns:
-        DataFrame with columns: library, n, median_days, p25, p75, p90, pct_same_day.
+        DataFrame with columns: library, n, n_direct, n_lb, median_days, p25, p75, p90,
+        pct_same_day.  ``n_direct`` counts rows with source='grid_inferred' (accurate to
+        ~12 hours); ``n_lb`` counts rows whose lead time is a lower bound (initial batch).
     """
     valid = df.dropna(subset=["lead_days"])
     if valid.empty:
@@ -122,10 +134,14 @@ def compute_lead_time_distribution(df: pd.DataFrame) -> pd.DataFrame:
     rows = []
     for lib, grp in valid.groupby("library"):
         ld = grp["lead_days"]
+        n_direct = int((grp["source"] == "grid_inferred").sum())
+        n_lb = len(grp) - n_direct
         rows.append(
             {
                 "library": lib,
                 "n": len(ld),
+                "n_direct": n_direct,
+                "n_lb": n_lb,
                 "median_days": round(ld.median(), 1),
                 "p25": round(ld.quantile(0.25), 1),
                 "p75": round(ld.quantile(0.75), 1),
@@ -341,18 +357,34 @@ def generate_report(
 
     # 4. Lead time distribution
     lines.append("## Booking Lead Times")
-    lines.append("*How far in advance meeting rooms are typically reserved:*\n")
+    lines.append(
+        "*How far in advance meeting rooms are reserved, inferred from first-seen date.*\n"
+    )
+    lines.append(
+        "> **Methodology:** `lead_days = booking_date − first_seen_date`. "
+        "For bookings caught fresh (source=`grid_inferred`), first_seen ≈ creation date "
+        "(accurate to ~12 hours). For the initial batch (source=`grid`), first_seen is a "
+        "lower bound — true lead times may be longer.\n"
+    )
     if not lead_times.empty:
-        lines.append("| Library | Median days | p25 | p75 | p90 | % same-day | N |")
-        lines.append("|---------|------------|-----|-----|-----|------------|---|")
+        n_direct_total = int(lead_times["n_direct"].sum())
+        n_lb_total = int(lead_times["n_lb"].sum())
+        lines.append("| Library | Median days | p25 | p75 | p90 | % same-day | N (direct / lower-bound) |")
+        lines.append("|---------|------------|-----|-----|-----|------------|--------------------------|")
         for _, row in lead_times.iterrows():
             lines.append(
                 f"| {row['library']} | {row['median_days']} | {row['p25']} | "
-                f"{row['p75']} | {row['p90']} | {row['pct_same_day']}% | {int(row['n'])} |"
+                f"{row['p75']} | {row['p90']} | {row['pct_same_day']}% | "
+                f"{int(row['n'])} ({int(row['n_direct'])} / {int(row['n_lb'])}) |"
             )
-        lines.append(f"\n*Based on {int(lead_times['n'].sum()):,} bookings with valid `created` timestamps.*")
+        lines.append(
+            f"\n*{int(lead_times['n'].sum()):,} bookings total — "
+            f"{n_direct_total:,} fresh-caught (accurate), "
+            f"{n_lb_total:,} initial batch (lower bounds). "
+            f"Accuracy improves as the dataset matures.*"
+        )
     else:
-        lines.append("*Not enough data yet (need bookings with `created` timestamps).*")
+        lines.append("*No data yet.*")
     lines.append("")
 
     # 5. Day × hour heatmap
@@ -417,12 +449,24 @@ def generate_report(
     lines.append("")
 
     # 8. Data quality notes
+    n_inferred_lb = int((df["source"] == "grid").sum()) if not df.empty else 0
+    n_direct = int((df["source"] == "grid_inferred").sum()) if not df.empty else 0
     lines.append("## Data Quality Notes")
+    n_with_lead = int(df["lead_days"].notna().sum()) if not df.empty else 0
     lines.append(f"- Total records: {n_total:,}")
     lines.append(f"- Records missing `created` timestamp: {n_missing_created:,}")
     if n_total:
-        coverage = round((n_total - n_missing_created) / n_total * 100)
-        lines.append(f"- Lead time coverage: {coverage}% of records have valid lead time data")
+        coverage = round(n_with_lead / n_total * 100)
+        lines.append(f"- Lead time coverage: {coverage}% of records have lead time data (direct or inferred)")
+    lines.append(f"- Fresh-caught bookings (lead time accurate ±12h): {n_direct:,}")
+    lines.append(
+        f"- Initial-batch bookings (lead time is lower bound — true lead may be longer): {n_inferred_lb:,}"
+    )
+    if n_total:
+        pct_fresh = round(n_direct / n_total * 100)
+        lines.append(
+            f"- Data maturity: {pct_fresh}% fresh — grows toward 100% as initial batch ages out"
+        )
     lines.append("")
 
     return os.linesep.join(lines)

@@ -330,9 +330,9 @@ def infer_bookings_from_slots(
                 "start_time": bs.strftime("%H:%M"),
                 "end_time": be.strftime("%H:%M"),
                 "duration_hrs": duration_hrs,
-                "created_date": "",
-                "lead_days": "",
-                "source": "grid",
+                "created_date": fetch_date.isoformat(),
+                "lead_days": (booking_date - fetch_date).days,
+                "source": "grid_inferred",
             }
         )
 
