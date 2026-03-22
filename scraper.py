@@ -62,7 +62,7 @@ LIBRARIES: dict[str, dict] = {
         },
     },
     "woodinville": {
-        "lid": 2406,
+        "lid": 2408,  # corrected from 2406 (Vashon)
         "gid": 4484,
         "slug": "woodinville",
         "phone": "425-788-0733",
@@ -73,35 +73,41 @@ LIBRARIES: dict[str, dict] = {
         },
     },
     "kingsgate": {
-        "lid": None,
-        "gid": None,
+        "lid": 2382,
+        "gid": 4490,
         "slug": "kingsgate",
         "phone": "425-821-7686",
         "saturday_hours": ("11:00", "18:00"),
         "sunday_open": True,
         "spaces": {
-            "Meeting Room 1": 17223,  # cap 100
+            "Meeting Room": 17268,  # cap 50
         },
     },
     "issaquah": {
-        "lid": None,
-        "gid": None,
+        "lid": 2379,
+        "gid": 4469,
         "slug": "issaquah",
         "phone": None,
         "saturday_hours": ("11:00", "18:00"),
         "sunday_open": True,
         "spaces": {
-            "Meeting Room": 17233,  # cap 35
+            "Meeting Room": 17233,  # cap 54
         },
     },
     "bellevue": {
         "lid": 2360,
-        "gid": None,
+        "gid": 4467,
         "slug": "bellevue",
         "phone": "425-450-1765",
         "saturday_hours": ("11:00", "18:00"),
         "sunday_open": True,
-        "spaces": {},  # Space IDs to be discovered via probe_spaces.py
+        "spaces": {
+            "Meeting Room 1": 17223,   # cap 100
+            "Meeting Room 2": 17225,   # cap 16
+            "Meeting Room 3": 17226,   # cap 12
+            "Meeting Room 4": 176330,  # cap 12
+            "Meeting Room 5": 17227,   # cap 12
+        },
     },
 }
 
