@@ -1,54 +1,80 @@
 #!/usr/bin/env python3
 """
-KCLS Meeting Room Analyzer
+KCLS Meeting Room Analyzer.
+
 Reads data/bookings/bookings.csv and generates pattern reports.
 
 Usage:
-  python analyze.py
-  python analyze.py --csv data/bookings/bookings.csv --out data/reports
+  uv run analyze.py
+  uv run analyze.py --csv data/bookings/bookings.csv --out data/reports
 """
 
 import argparse
 import json
-from datetime import datetime, time
+import logging
+import os
+from datetime import datetime
 from pathlib import Path
 
 import pandas as pd
 
+from scraper import LIBRARIES
+
+logger = logging.getLogger(__name__)
+
 # ---------------------------------------------------------------------------
 # Paths
 # ---------------------------------------------------------------------------
-DATA_DIR   = Path("data")
-CSV_PATH   = DATA_DIR / "bookings" / "bookings.csv"
+DATA_DIR = Path("data")
+CSV_PATH = DATA_DIR / "bookings" / "bookings.csv"
 REPORT_DIR = DATA_DIR / "reports"
 
 # Saturday availability thresholds
-THRESH_OPEN   = 0.30   # pct_booked < 30% → often available
-THRESH_BUSY   = 0.70   # pct_booked > 70% → usually taken
+THRESH_OPEN = 0.30  # pct_booked < 30% → often available
+THRESH_BUSY = 0.70  # pct_booked > 70% → usually taken
 
 # ---------------------------------------------------------------------------
 # Loading
 # ---------------------------------------------------------------------------
 
+_EMPTY_COLUMNS = [
+    "fetch_date",
+    "booking_date",
+    "day_of_week",
+    "library",
+    "space_name",
+    "space_id",
+    "booking_id",
+    "title",
+    "start_time",
+    "end_time",
+    "duration_hrs",
+    "created_date",
+    "lead_days",
+    "source",
+]
+
+
 def load_bookings(csv_path: Path) -> pd.DataFrame:
+    """Load the bookings CSV into a DataFrame with parsed types.
+
+    Args:
+        csv_path: Path to the bookings CSV file.
+
+    Returns:
+        DataFrame with parsed date columns, numeric columns, and a ``start_hour`` column.
+        Returns an empty DataFrame with the correct schema if the file does not exist.
+    """
     if not csv_path.exists():
-        print(f"[WARN] {csv_path} not found — returning empty DataFrame")
-        return pd.DataFrame(columns=[
-            "fetch_date", "booking_date", "day_of_week", "library",
-            "space_name", "space_id", "booking_id", "title",
-            "start_time", "end_time", "duration_hrs",
-            "created_date", "lead_days", "source",
-        ])
+        logger.warning("%s not found — returning empty DataFrame", csv_path)
+        return pd.DataFrame(columns=_EMPTY_COLUMNS)
     df = pd.read_csv(csv_path, dtype=str)
-    # Parse dates
     df["booking_date"] = pd.to_datetime(df["booking_date"], errors="coerce")
     df["created_date"] = pd.to_datetime(df["created_date"], errors="coerce")
-    df["fetch_date"]   = pd.to_datetime(df["fetch_date"], errors="coerce")
-    # Numeric conversions
+    df["fetch_date"] = pd.to_datetime(df["fetch_date"], errors="coerce")
     df["duration_hrs"] = pd.to_numeric(df["duration_hrs"], errors="coerce")
-    df["lead_days"]    = pd.to_numeric(df["lead_days"], errors="coerce")
-    df["space_id"]     = pd.to_numeric(df["space_id"], errors="coerce").astype("Int64")
-    # Extract start hour for frequency analysis
+    df["lead_days"] = pd.to_numeric(df["lead_days"], errors="coerce")
+    df["space_id"] = pd.to_numeric(df["space_id"], errors="coerce").astype("Int64")
     df["start_hour"] = df["start_time"].str.extract(r"^(\d+):", expand=False).astype("Int64")
     return df
 
@@ -59,42 +85,54 @@ def load_bookings(csv_path: Path) -> pd.DataFrame:
 
 DAY_ORDER = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
 
+
 def compute_day_hour_frequency(df: pd.DataFrame) -> pd.DataFrame:
-    """Return a DataFrame (day_of_week × start_hour) with booking counts."""
+    """Compute a day-of-week × start-hour booking count matrix.
+
+    Args:
+        df: Bookings DataFrame from :func:`load_bookings`.
+
+    Returns:
+        Pivot table with day-of-week rows and hour columns, or empty DataFrame.
+    """
     if df.empty:
         return pd.DataFrame()
-    grp = (
-        df.dropna(subset=["start_hour"])
-        .groupby(["day_of_week", "start_hour"])
-        .size()
-        .reset_index(name="count")
-    )
+    grp = df.dropna(subset=["start_hour"]).groupby(["day_of_week", "start_hour"]).size().reset_index(name="count")
     pivot = grp.pivot(index="day_of_week", columns="start_hour", values="count").fillna(0)
-    pivot = pivot.reindex([d for d in DAY_ORDER if d in pivot.index])
-    return pivot
+    return pivot.reindex([d for d in DAY_ORDER if d in pivot.index])
 
 
 # ---------------------------------------------------------------------------
 # Lead time distribution
 # ---------------------------------------------------------------------------
 
+
 def compute_lead_time_distribution(df: pd.DataFrame) -> pd.DataFrame:
-    """Per-library lead time stats (median, p25, p75, p90, pct_same_day)."""
+    """Compute per-library lead time statistics.
+
+    Args:
+        df: Bookings DataFrame from :func:`load_bookings`.
+
+    Returns:
+        DataFrame with columns: library, n, median_days, p25, p75, p90, pct_same_day.
+    """
     valid = df.dropna(subset=["lead_days"])
     if valid.empty:
         return pd.DataFrame()
     rows = []
     for lib, grp in valid.groupby("library"):
         ld = grp["lead_days"]
-        rows.append({
-            "library":      lib,
-            "n":            len(ld),
-            "median_days":  round(ld.median(), 1),
-            "p25":          round(ld.quantile(0.25), 1),
-            "p75":          round(ld.quantile(0.75), 1),
-            "p90":          round(ld.quantile(0.90), 1),
-            "pct_same_day": round((ld == 0).mean() * 100, 1),
-        })
+        rows.append(
+            {
+                "library": lib,
+                "n": len(ld),
+                "median_days": round(ld.median(), 1),
+                "p25": round(ld.quantile(0.25), 1),
+                "p75": round(ld.quantile(0.75), 1),
+                "p90": round(ld.quantile(0.90), 1),
+                "pct_same_day": round((ld == 0).mean() * 100, 1),
+            }
+        )
     return pd.DataFrame(rows).sort_values("library")
 
 
@@ -102,83 +140,71 @@ def compute_lead_time_distribution(df: pd.DataFrame) -> pd.DataFrame:
 # Saturday availability windows
 # ---------------------------------------------------------------------------
 
+
 def _slot_booked(slot_hour: int, start_time_str: str, end_time_str: str) -> bool:
-    """Return True if the 1-hour slot starting at slot_hour overlaps the booking."""
+    """Return True if the 1-hour slot starting at ``slot_hour`` overlaps the booking.
+
+    Args:
+        slot_hour: Hour of the slot (e.g. 11 for 11:00–12:00).
+        start_time_str: Booking start time as ``HH:MM``.
+        end_time_str: Booking end time as ``HH:MM``.
+
+    Returns:
+        ``True`` if the booking overlaps the slot window.
+    """
     try:
         bstart_h, bstart_m = map(int, start_time_str.split(":"))
-        bend_h,   bend_m   = map(int, end_time_str.split(":"))
+        bend_h, bend_m = map(int, end_time_str.split(":"))
     except (ValueError, AttributeError):
         return False
     slot_start = slot_hour * 60
-    slot_end   = slot_start + 60
-    b_start    = bstart_h * 60 + bstart_m
-    b_end      = bend_h   * 60 + bend_m
-    # Overlap: booking starts before slot ends AND ends after slot starts
+    slot_end = slot_start + 60
+    b_start = bstart_h * 60 + bstart_m
+    b_end = bend_h * 60 + bend_m
     return b_start < slot_end and b_end > slot_start
 
 
-def compute_saturday_windows(
-    df: pd.DataFrame,
-    libraries: dict,
-) -> dict:
-    """
-    For each library/space, compute per-hour Saturday booking rates.
+def compute_saturday_windows(df: pd.DataFrame, libraries: dict[str, dict]) -> dict[str, dict]:
+    """Compute per-hour Saturday booking rates for each library/space.
+
+    Args:
+        df: Bookings DataFrame from :func:`load_bookings`.
+        libraries: Library configuration dict (same structure as ``LIBRARIES``).
 
     Returns:
-      {library: {space_name: {hour_str: {pct_booked, n_saturdays, n_booked}}}}
+        Nested dict: ``{library: {space_name: {hour_str: {pct_booked, n_saturdays, n_booked}}}}``.
     """
     sat_df = df[df["day_of_week"] == "Saturday"].copy()
-    result: dict = {}
+    all_sats = sorted(df[df["day_of_week"] == "Saturday"]["booking_date"].dt.date.dropna().unique())
+    n_saturdays = len(all_sats)
+    result: dict[str, dict] = {}
 
     for lib_name, lib_cfg in libraries.items():
         sat_open_str, sat_close_str = lib_cfg.get("saturday_hours", ("11:00", "18:00"))
-        open_h  = int(sat_open_str.split(":")[0])
+        open_h = int(sat_open_str.split(":")[0])
         close_h = int(sat_close_str.split(":")[0])
-        slot_hours = list(range(open_h, close_h))  # e.g. [11,12,13,14,15,16,17]
+        slot_hours = list(range(open_h, close_h))
 
-        spaces = lib_cfg.get("spaces", {})
-        lib_result: dict = {}
-
-        for space_name, space_id in spaces.items():
+        lib_result: dict[str, dict] = {}
+        for space_name, space_id in lib_cfg.get("spaces", {}).items():
             if not space_id:
                 continue
             sp_df = sat_df[sat_df["space_id"] == space_id]
-            saturdays = sorted(
-                sp_df["booking_date"].dt.date.dropna().unique()
-            ) if not sp_df.empty else []
-            # If the CSV spans more Saturdays than ones with bookings, we need
-            # to know all Saturdays in the full dataset for this library.
-            all_sats = sorted(
-                df[df["day_of_week"] == "Saturday"]["booking_date"].dt.date.dropna().unique()
-            )
-            n_saturdays = len(all_sats) if all_sats else 0
-
-            hour_stats: dict = {}
+            hour_stats: dict[str, dict] = {}
             for h in slot_hours:
                 if n_saturdays == 0:
-                    hour_stats[f"{h:02d}:00"] = {
-                        "pct_booked": None,
-                        "n_saturdays": 0,
-                        "n_booked": 0,
-                    }
+                    hour_stats[f"{h:02d}:00"] = {"pct_booked": None, "n_saturdays": 0, "n_booked": 0}
                     continue
-                n_booked = 0
-                for sat in all_sats:
-                    day_bookings = sp_df[sp_df["booking_date"].dt.date == sat]
-                    booked = any(
+                n_booked = sum(
+                    any(
                         _slot_booked(h, row["start_time"], row["end_time"])
-                        for _, row in day_bookings.iterrows()
+                        for _, row in sp_df[sp_df["booking_date"].dt.date == sat].iterrows()
                     )
-                    if booked:
-                        n_booked += 1
-                pct = round(n_booked / n_saturdays, 4) if n_saturdays else None
-                hour_stats[f"{h:02d}:00"] = {
-                    "pct_booked":  pct,
-                    "n_saturdays": n_saturdays,
-                    "n_booked":    n_booked,
-                }
+                    for sat in all_sats
+                )
+                pct = round(n_booked / n_saturdays, 4)
+                hour_stats[f"{h:02d}:00"] = {"pct_booked": pct, "n_saturdays": n_saturdays, "n_booked": n_booked}
             lib_result[space_name] = hour_stats
-
         result[lib_name] = lib_result
     return result
 
@@ -187,8 +213,16 @@ def compute_saturday_windows(
 # Report formatting helpers
 # ---------------------------------------------------------------------------
 
+
 def _fmt_hour(h_str: str) -> str:
-    """'11:00' → '11am', '13:00' → '1pm'"""
+    """Format an ``HH:MM`` string as a human-readable am/pm label.
+
+    Args:
+        h_str: Hour string like ``"11:00"`` or ``"13:00"``.
+
+    Returns:
+        Label like ``"11am"`` or ``"1pm"``.
+    """
     h = int(h_str.split(":")[0])
     if h == 0:
         return "12am"
@@ -200,6 +234,14 @@ def _fmt_hour(h_str: str) -> str:
 
 
 def _status_icon(pct: float | None) -> str:
+    """Return a status emoji + label for a booking percentage.
+
+    Args:
+        pct: Fraction of slots booked (0.0–1.0), or ``None`` if unknown.
+
+    Returns:
+        Status string with emoji.
+    """
     if pct is None:
         return "—"
     if pct < THRESH_OPEN:
@@ -210,26 +252,45 @@ def _status_icon(pct: float | None) -> str:
 
 
 def _pct_str(pct: float | None) -> str:
-    if pct is None:
-        return "n/a"
-    return f"{round(pct * 100)}%"
+    """Format a fraction as a percentage string.
+
+    Args:
+        pct: Fraction (0.0–1.0), or ``None``.
+
+    Returns:
+        String like ``"42%"`` or ``"n/a"``.
+    """
+    return "n/a" if pct is None else f"{round(pct * 100)}%"
 
 
 # ---------------------------------------------------------------------------
 # Markdown report
 # ---------------------------------------------------------------------------
 
+
 def generate_report(
     df: pd.DataFrame,
-    saturday_windows: dict,
+    saturday_windows: dict[str, dict],
     lead_times: pd.DataFrame,
     heatmap: pd.DataFrame,
-    libraries: dict,
+    libraries: dict[str, dict],
 ) -> str:
+    """Generate the full Markdown pattern report.
+
+    Args:
+        df: Bookings DataFrame.
+        saturday_windows: Output of :func:`compute_saturday_windows`.
+        lead_times: Output of :func:`compute_lead_time_distribution`.
+        heatmap: Output of :func:`compute_day_hour_frequency`.
+        libraries: Library configuration dict.
+
+    Returns:
+        Markdown string ready to write to ``report.md``.
+    """
     lines: list[str] = []
     today_str = datetime.utcnow().strftime("%Y-%m-%d")
     n_total = len(df)
-    n_missing_created = df["created_date"].isna().sum()
+    n_missing_created = int(df["created_date"].isna().sum())
 
     date_min = df["booking_date"].min()
     date_max = df["booking_date"].max()
@@ -238,22 +299,23 @@ def generate_report(
         if not df.empty and pd.notna(date_min) and pd.notna(date_max)
         else "no data"
     )
-    libs_covered = sorted(df["library"].dropna().unique().tolist()) if not df.empty else []
+    libs_covered: list[str] = sorted(df["library"].dropna().unique().tolist()) if not df.empty else []
 
-    lines.append(f"# KCLS Room Monitor Report")
+    lines.append("# KCLS Room Monitor Report")
     lines.append(f"*Generated: {today_str} UTC*\n")
 
-    # --- 1. Dataset summary ---
+    # 1. Dataset summary
     lines.append("## Dataset Summary")
-    lines.append(f"| Metric | Value |")
-    lines.append(f"|--------|-------|")
+    lines.append("| Metric | Value |")
+    lines.append("|--------|-------|")
     lines.append(f"| Total records | {n_total:,} |")
     lines.append(f"| Date range | {date_range_str} |")
     lines.append(f"| Libraries | {', '.join(libs_covered) if libs_covered else 'none'} |")
-    lines.append(f"| Missing `created` (affects lead time) | {n_missing_created:,} ({round(n_missing_created/n_total*100) if n_total else 0}%) |")
+    pct_missing = round(n_missing_created / n_total * 100) if n_total else 0
+    lines.append(f"| Missing `created` (affects lead time) | {n_missing_created:,} ({pct_missing}%) |")
     lines.append("")
 
-    # --- 2. Booking volume by day of week ---
+    # 2. Booking volume by day of week
     lines.append("## Booking Volume by Day of Week")
     if not df.empty:
         dow_counts = df["day_of_week"].value_counts().reindex(DAY_ORDER).fillna(0).astype(int)
@@ -265,15 +327,10 @@ def generate_report(
         lines.append("*No data yet.*")
     lines.append("")
 
-    # --- 3. Booking volume by hour ---
+    # 3. Booking volume by hour
     lines.append("## Booking Volume by Hour (All Libraries)")
     if not df.empty and "start_hour" in df.columns:
-        hour_counts = (
-            df.dropna(subset=["start_hour"])
-            .groupby("start_hour")
-            .size()
-            .sort_index()
-        )
+        hour_counts = df.dropna(subset=["start_hour"]).groupby("start_hour").size().sort_index()
         lines.append("| Hour | Bookings |")
         lines.append("|------|---------|")
         for h, cnt in hour_counts.items():
@@ -282,7 +339,7 @@ def generate_report(
         lines.append("*No data yet.*")
     lines.append("")
 
-    # --- 4. Lead time distribution ---
+    # 4. Lead time distribution
     lines.append("## Booking Lead Times")
     lines.append("*How far in advance meeting rooms are typically reserved:*\n")
     if not lead_times.empty:
@@ -298,12 +355,12 @@ def generate_report(
         lines.append("*Not enough data yet (need bookings with `created` timestamps).*")
     lines.append("")
 
-    # --- 5. Day × hour heatmap ---
+    # 5. Day × hour heatmap
     lines.append("## Day × Hour Heatmap (Booking Counts)")
     if not heatmap.empty:
         hour_cols = sorted(heatmap.columns.tolist())
         header = "| Day | " + " | ".join(_fmt_hour(f"{int(h):02d}:00") for h in hour_cols) + " |"
-        sep    = "|-----|" + "|".join(["----"] * len(hour_cols)) + "|"
+        sep = "|-----|" + "|".join(["----"] * len(hour_cols)) + "|"
         lines.append(header)
         lines.append(sep)
         for day in heatmap.index:
@@ -313,19 +370,14 @@ def generate_report(
         lines.append("*No data yet.*")
     lines.append("")
 
-    # --- 6. Saturday availability windows ---
-    n_saturdays_global = len(
-        df[df["day_of_week"] == "Saturday"]["booking_date"].dt.date.dropna().unique()
-    ) if not df.empty else 0
+    # 6. Saturday availability windows
+    n_saturdays_global = (
+        len(df[df["day_of_week"] == "Saturday"]["booking_date"].dt.date.dropna().unique()) if not df.empty else 0
+    )
     lines.append("## Saturday Availability Windows")
     if n_saturdays_global:
-        sat_dates = sorted(
-            df[df["day_of_week"] == "Saturday"]["booking_date"].dt.date.dropna().unique()
-        )
-        lines.append(
-            f"*Based on {n_saturdays_global} Saturdays observed "
-            f"({sat_dates[0]} to {sat_dates[-1]}):*\n"
-        )
+        sat_dates = sorted(df[df["day_of_week"] == "Saturday"]["booking_date"].dt.date.dropna().unique())
+        lines.append(f"*Based on {n_saturdays_global} Saturdays observed ({sat_dates[0]} to {sat_dates[-1]}):*\n")
         for lib_name, spaces in saturday_windows.items():
             if not spaces:
                 continue
@@ -338,11 +390,8 @@ def generate_report(
                 lines.append("|------|-------------|--------|")
                 for h_str, stats in sorted(hour_stats.items()):
                     pct = stats["pct_booked"]
-                    lines.append(
-                        f"| {_fmt_hour(h_str)} | {_pct_str(pct)} | {_status_icon(pct)} |"
-                    )
+                    lines.append(f"| {_fmt_hour(h_str)} | {_pct_str(pct)} | {_status_icon(pct)} |")
                 lines.append("")
-            # Lead time for this library
             if not lead_times.empty:
                 lib_lt = lead_times[lead_times["library"] == lib_name]
                 if not lib_lt.empty:
@@ -355,7 +404,7 @@ def generate_report(
         lines.append("*Not enough Saturday data yet (need at least 1 Saturday observed).*")
     lines.append("")
 
-    # --- 7. Booking frequency by library ---
+    # 7. Booking frequency by library
     lines.append("## Booking Frequency by Library")
     if not df.empty:
         lib_counts = df.groupby("library").size().sort_values(ascending=False)
@@ -367,84 +416,86 @@ def generate_report(
         lines.append("*No data yet.*")
     lines.append("")
 
-    # --- 8. Data quality notes ---
+    # 8. Data quality notes
     lines.append("## Data Quality Notes")
     lines.append(f"- Total records: {n_total:,}")
     lines.append(f"- Records missing `created` timestamp: {n_missing_created:,}")
     if n_total:
-        lines.append(
-            f"- Lead time coverage: {round((n_total - n_missing_created) / n_total * 100)}% "
-            f"of records have valid lead time data"
-        )
+        coverage = round((n_total - n_missing_created) / n_total * 100)
+        lines.append(f"- Lead time coverage: {coverage}% of records have valid lead time data")
     lines.append("")
 
-    return "\n".join(lines)
+    return os.linesep.join(lines)
 
 
 # ---------------------------------------------------------------------------
 # Output writers
 # ---------------------------------------------------------------------------
 
-def write_outputs(
-    df: pd.DataFrame,
-    libraries: dict,
-    report_dir: Path,
-) -> None:
+
+def write_outputs(df: pd.DataFrame, libraries: dict[str, dict], report_dir: Path) -> None:
+    """Compute all analyses and write report files.
+
+    Args:
+        df: Bookings DataFrame from :func:`load_bookings`.
+        libraries: Library configuration dict.
+        report_dir: Directory to write output files into.
+    """
     report_dir.mkdir(parents=True, exist_ok=True)
 
     heatmap = compute_day_hour_frequency(df)
     lead_times = compute_lead_time_distribution(df)
     sat_windows = compute_saturday_windows(df, libraries)
-
-    # report.md
     report_md = generate_report(df, sat_windows, lead_times, heatmap, libraries)
-    (report_dir / "report.md").write_text(report_md, encoding="utf-8")
-    print(f"  Wrote {report_dir / 'report.md'}")
 
-    # heatmap.csv
-    if not heatmap.empty:
-        heatmap.to_csv(report_dir / "heatmap.csv")
-        print(f"  Wrote {report_dir / 'heatmap.csv'}")
+    try:
+        (report_dir / "report.md").write_text(report_md, encoding="utf-8")
+        logger.info("Wrote %s", report_dir / "report.md")
 
-    # lead_times.csv
-    if not lead_times.empty:
-        lead_times.to_csv(report_dir / "lead_times.csv", index=False)
-        print(f"  Wrote {report_dir / 'lead_times.csv'}")
+        if not heatmap.empty:
+            heatmap.to_csv(report_dir / "heatmap.csv")
+            logger.info("Wrote %s", report_dir / "heatmap.csv")
 
-    # saturday_windows.json
-    (report_dir / "saturday_windows.json").write_text(
-        json.dumps(sat_windows, indent=2), encoding="utf-8"
-    )
-    print(f"  Wrote {report_dir / 'saturday_windows.json'}")
+        if not lead_times.empty:
+            lead_times.to_csv(report_dir / "lead_times.csv", index=False)
+            logger.info("Wrote %s", report_dir / "lead_times.csv")
 
-    # summary.json
-    n_total = len(df)
-    n_missing = int(df["created_date"].isna().sum()) if not df.empty else 0
-    summary = {
-        "generated_at":   datetime.utcnow().isoformat(),
-        "total_records":  n_total,
-        "missing_created": n_missing,
-        "libraries":      sorted(df["library"].dropna().unique().tolist()) if not df.empty else [],
-        "date_range": {
-            "min": df["booking_date"].min().date().isoformat() if not df.empty and pd.notna(df["booking_date"].min()) else None,
-            "max": df["booking_date"].max().date().isoformat() if not df.empty and pd.notna(df["booking_date"].max()) else None,
-        },
-        "saturday_windows": sat_windows,
-        "lead_time_summary": lead_times.to_dict(orient="records") if not lead_times.empty else [],
-    }
-    (report_dir / "summary.json").write_text(
-        json.dumps(summary, indent=2, default=str), encoding="utf-8"
-    )
-    print(f"  Wrote {report_dir / 'summary.json'}")
+        (report_dir / "saturday_windows.json").write_text(json.dumps(sat_windows, indent=2), encoding="utf-8")
+        logger.info("Wrote %s", report_dir / "saturday_windows.json")
+
+        n_total = len(df)
+        n_missing = int(df["created_date"].isna().sum()) if not df.empty else 0
+        summary = {
+            "generated_at": datetime.utcnow().isoformat(),
+            "total_records": n_total,
+            "missing_created": n_missing,
+            "libraries": sorted(df["library"].dropna().unique().tolist()) if not df.empty else [],
+            "date_range": {
+                "min": df["booking_date"].min().date().isoformat()
+                if not df.empty and pd.notna(df["booking_date"].min())
+                else None,
+                "max": df["booking_date"].max().date().isoformat()
+                if not df.empty and pd.notna(df["booking_date"].max())
+                else None,
+            },
+            "saturday_windows": sat_windows,
+            "lead_time_summary": lead_times.to_dict(orient="records") if not lead_times.empty else [],
+        }
+        (report_dir / "summary.json").write_text(json.dumps(summary, indent=2, default=str), encoding="utf-8")
+        logger.info("Wrote %s", report_dir / "summary.json")
+
+    except OSError:
+        logger.exception("Failed to write report outputs to %s", report_dir)
 
 
 # ---------------------------------------------------------------------------
 # Entry point
 # ---------------------------------------------------------------------------
 
-def main() -> None:
-    from scraper import LIBRARIES  # reuse library config
 
+def main() -> None:
+    """Parse CLI arguments and run the analyzer."""
+    logging.basicConfig(level=logging.INFO, format="%(levelname)s %(name)s: %(message)s")
     parser = argparse.ArgumentParser(description="KCLS booking pattern analyzer")
     parser.add_argument("--csv", default=str(CSV_PATH), help="Path to bookings CSV")
     parser.add_argument("--out", default=str(REPORT_DIR), help="Output directory for reports")
@@ -453,13 +504,12 @@ def main() -> None:
     csv_path = Path(args.csv)
     report_dir = Path(args.out)
 
-    print(f"Loading bookings from {csv_path}...")
+    logger.info("Loading bookings from %s", csv_path)
     df = load_bookings(csv_path)
-    print(f"  {len(df):,} records loaded.")
+    logger.info("%d records loaded.", len(df))
 
-    print("Writing reports...")
     write_outputs(df, LIBRARIES, report_dir)
-    print("Done.")
+    logger.info("Done.")
 
 
 if __name__ == "__main__":

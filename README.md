@@ -20,39 +20,39 @@ Monitors all King County Library System (KCLS) meeting room availability by scra
 ### Check real-time availability
 
 ```bash
-pip install -r requirements.txt
+uv sync
 
 # Check availability for a specific date
-python check_availability.py --date 2026-04-05
+uv run check_availability.py --date 2026-04-05
 
 # Check all Saturdays for the next 4 weeks, show slots ≥ 2 hours
-python check_availability.py --saturdays --weeks 4 --min-hours 2
+uv run check_availability.py --saturdays --weeks 4 --min-hours 2
 
 # Check a specific library
-python check_availability.py --date 2026-04-05 --library redmond
+uv run check_availability.py --date 2026-04-05 --library redmond
 ```
 
 ### Run the scraper manually
 
 ```bash
 # Scrape all configured libraries for the next 28 days
-python scraper.py
+uv run scraper.py
 
 # Scrape specific libraries for the next 7 days
-python scraper.py --days 7 --libraries redmond,sammamish
+uv run scraper.py --days 7 --libraries redmond,sammamish
 ```
 
 ### Generate the analysis report
 
 ```bash
-python analyze.py
+uv run analyze.py
 # Outputs to data/reports/
 ```
 
 ### Discover space IDs for new branches
 
 ```bash
-python probe_spaces.py
+uv run probe_spaces.py
 # Scans ID ranges and saves data/space_catalog.json
 ```
 

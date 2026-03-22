@@ -1,31 +1,36 @@
 #!/usr/bin/env python3
 """
-KCLS Space ID Discovery
+KCLS Space ID Discovery.
+
 Scans LibCal space ID ranges to find all KCLS meeting rooms.
 Run once (or periodically) to populate data/space_catalog.json.
 
 Usage:
-  python probe_spaces.py
-  python probe_spaces.py --ranges 17215-17285,134480-134515
-  python probe_spaces.py --dry-run   # just print what would be scanned
+  uv run probe_spaces.py
+  uv run probe_spaces.py --ranges 17215-17285,134480-134515
+  uv run probe_spaces.py --dry-run
 """
 
 import argparse
 import json
+import logging
 import time
 from pathlib import Path
 
 import requests
+import requests.exceptions
 
-BASE_URL     = "https://rooms.kcls.org"
-ITEM_API     = BASE_URL + "/api/1.1/space/item/{}"
+logger = logging.getLogger(__name__)
+
+BASE_URL = "https://rooms.kcls.org"
+ITEM_API = BASE_URL + "/api/1.1/space/item/{}"
 CATALOG_PATH = Path("data") / "space_catalog.json"
 
 # Known KCLS ID ranges — extend as new rooms are added
 DEFAULT_RANGES = [
-    range(17215, 17286),     # original LibCal setup
-    range(134480, 134516),   # later additions (e.g. Sammamish Sunset Room)
-    range(176320, 176341),   # possible future additions
+    range(17215, 17286),   # original LibCal setup
+    range(134480, 134516), # later additions (e.g. Sammamish Sunset Room)
+    range(176320, 176341), # possible future additions
 ]
 
 PROBE_DELAY = 0.3  # seconds between requests
@@ -40,41 +45,56 @@ HEADERS = {
 
 
 def probe_space(space_id: int) -> dict | None:
-    """
-    Query /api/1.1/space/item/{space_id}.
-    Returns a metadata dict if valid, None otherwise.
+    """Query the LibCal space metadata endpoint for a single ID.
+
+    Args:
+        space_id: Candidate LibCal space identifier.
+
+    Returns:
+        Metadata dict if the ID is valid, ``None`` otherwise.
     """
     url = ITEM_API.format(space_id)
     try:
         resp = requests.get(url, headers=HEADERS, timeout=10)
         if resp.status_code == 429:
-            print(f"  [429] Rate limited at {space_id}, waiting 30s...")
+            logger.warning("Rate limited at %s, waiting 30s...", space_id)
             time.sleep(30)
             resp = requests.get(url, headers=HEADERS, timeout=10)
         if resp.status_code != 200:
             return None
         data = resp.json()
-        # LibCal returns {"space": {...}} for valid IDs
         space = data.get("space") or data.get("item")
         if not space:
             return None
         return {
-            "space_id":  space_id,
-            "name":      space.get("name") or space.get("title"),
-            "capacity":  space.get("capacity"),
-            "lid":       space.get("lid"),
-            "cid":       space.get("cid"),
-            "image":     space.get("image"),
+            "space_id": space_id,
+            "name": space.get("name") or space.get("title"),
+            "capacity": space.get("capacity"),
+            "lid": space.get("lid"),
+            "cid": space.get("cid"),
             "description": (space.get("description") or "")[:200],
         }
-    except Exception as e:
-        print(f"  [ERROR] {space_id}: {e}")
+    except requests.exceptions.Timeout:
+        logger.exception("Timeout probing space %s", space_id)
+        return None
+    except requests.exceptions.ConnectionError:
+        logger.exception("Connection error probing space %s", space_id)
+        return None
+    except (requests.exceptions.RequestException, ValueError):
+        logger.exception("Request error probing space %s", space_id)
         return None
 
 
 def parse_ranges(ranges_str: str) -> list[range]:
-    """Parse '17215-17285,134480-134515' → [range(17215,17286), ...]"""
-    result = []
+    """Parse a comma-separated range string into a list of ranges.
+
+    Args:
+        ranges_str: String like ``"17215-17285,134480-134515"``.
+
+    Returns:
+        List of ``range`` objects (end-inclusive).
+    """
+    result: list[range] = []
     for part in ranges_str.split(","):
         part = part.strip()
         if "-" in part:
@@ -87,23 +107,11 @@ def parse_ranges(ranges_str: str) -> list[range]:
 
 
 def main() -> None:
+    """Parse CLI arguments and scan for valid KCLS space IDs."""
+    logging.basicConfig(level=logging.INFO, format="%(levelname)s %(name)s: %(message)s")
     parser = argparse.ArgumentParser(description="Discover KCLS LibCal space IDs")
-    parser.add_argument(
-        "--ranges",
-        default=None,
-        help="Comma-separated ID ranges to probe, e.g. '17215-17285,134480-134515'",
-    )
-    parser.add_argument(
-        "--dry-run",
-        action="store_true",
-        help="Print IDs that would be scanned without making requests",
-    )
-    parser.add_argument(
-        "--merge",
-        action="store_true",
-        default=True,
-        help="Merge results with existing catalog (default: True)",
-    )
+    parser.add_argument("--ranges", default=None, help="Comma-separated ID ranges, e.g. '17215-17285,134480-134515'")
+    parser.add_argument("--dry-run", action="store_true", help="Print IDs that would be scanned without requesting")
     args = parser.parse_args()
 
     ranges = parse_ranges(args.ranges) if args.ranges else DEFAULT_RANGES
@@ -115,41 +123,44 @@ def main() -> None:
             print(f"  {r.start}–{r.stop - 1}  ({len(r)} IDs)")
         return
 
-    print(f"Probing {total_ids} space IDs across {len(ranges)} ranges...")
-    print(f"(~{total_ids * PROBE_DELAY:.0f}s at {PROBE_DELAY}s/request)\n")
+    logger.info("Probing %d space IDs across %d ranges (~%.0fs)", total_ids, len(ranges), total_ids * PROBE_DELAY)
 
-    # Load existing catalog if merging
-    existing: dict = {}
-    if args.merge and CATALOG_PATH.exists():
-        existing = json.loads(CATALOG_PATH.read_text())
-        print(f"  Loaded {len(existing)} existing entries from {CATALOG_PATH}")
+    existing: dict[str, dict] = {}
+    if CATALOG_PATH.exists():
+        try:
+            existing = json.loads(CATALOG_PATH.read_text())
+            logger.info("Loaded %d existing entries from %s", len(existing), CATALOG_PATH)
+        except (OSError, json.JSONDecodeError):
+            logger.exception("Failed to load existing catalog from %s", CATALOG_PATH)
 
-    found: dict = dict(existing)  # str keys for JSON
+    found: dict[str, dict] = dict(existing)
 
     for r in ranges:
-        print(f"\nScanning {r.start}–{r.stop - 1}...")
+        logger.info("Scanning %d–%d...", r.start, r.stop - 1)
         for space_id in r:
             key = str(space_id)
             if key in found:
-                print(f"  {space_id}: already known — {found[key]['name']}")
+                logger.debug("%s: already known — %s", space_id, found[key]["name"])
                 continue
             time.sleep(PROBE_DELAY)
             result = probe_space(space_id)
             if result:
                 found[key] = result
-                print(f"  FOUND {space_id}: {result['name']}  (lid={result['lid']}, cap={result['capacity']})")
+                logger.info("FOUND %s: %s  (lid=%s, cap=%s)", space_id, result["name"], result["lid"], result["capacity"])
             else:
-                print(f"  {space_id}: not a valid space")
+                logger.debug("%s: not a valid space", space_id)
 
-    # Save results
     CATALOG_PATH.parent.mkdir(parents=True, exist_ok=True)
-    CATALOG_PATH.write_text(json.dumps(found, indent=2))
+    try:
+        CATALOG_PATH.write_text(json.dumps(found, indent=2))
+    except OSError:
+        logger.exception("Failed to write catalog to %s", CATALOG_PATH)
+        return
 
     new_count = len(found) - len(existing)
-    print(f"\nDone. {len(found)} total spaces ({new_count} new). Saved to {CATALOG_PATH}")
+    logger.info("Done. %d total spaces (%d new). Saved to %s", len(found), new_count, CATALOG_PATH)
 
-    # Print summary of found spaces grouped by library (lid)
-    by_lid: dict = {}
+    by_lid: dict[str, list[dict]] = {}
     for meta in found.values():
         lid = str(meta.get("lid", "unknown"))
         by_lid.setdefault(lid, []).append(meta)
