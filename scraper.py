@@ -48,19 +48,22 @@ LIBRARIES: dict[str, dict] = {
     },
     "sammamish": {
         "lid": 2397,
-        "gid": None,
+        "gid": 4481,
         "slug": "sammamish",
         "phone": "425-392-3130",
         "saturday_hours": ("11:00", "18:00"),
         "sunday_open": True,
         "spaces": {
-            "Meeting Room": 17254,   # cap 72
-            "Sunset Room": 134490,   # cap TBD
+            "Meeting Room": 17254,   # cap 72, gid=4481 (library default)
+            "Sunset Room": 134490,   # cap TBD, gid=33944 (different group)
+        },
+        "space_gids": {
+            134490: 33944,  # Sunset Room belongs to a different group
         },
     },
     "woodinville": {
         "lid": 2406,
-        "gid": None,
+        "gid": 4484,
         "slug": "woodinville",
         "phone": "425-788-0733",
         "saturday_hours": ("11:00", "18:00"),
@@ -434,6 +437,11 @@ def _resolve_gid(lib_cfg: dict, space_id: int) -> int | None:
     lid = lib_cfg.get("lid")
     if lid is None:
         return None
+
+    # Per-space gid override takes priority over the library-level default
+    space_gids: dict[int, int] = lib_cfg.get("space_gids", {})
+    if space_id in space_gids:
+        return space_gids[space_id]
 
     configured_gid: int | None = lib_cfg.get("gid")
     if configured_gid is not None:
