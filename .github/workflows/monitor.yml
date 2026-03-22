@@ -1,0 +1,79 @@
+name: KCLS Room Monitor
+
+on:
+  schedule:
+    - cron: "0 15 * * *"   # 7am Pacific (UTC-8 winter / UTC-7 summer ≈ 15:00 UTC)
+    - cron: "0 23 * * *"   # 3pm Pacific (≈ 23:00 UTC)
+  workflow_dispatch:
+    inputs:
+      days:
+        description: "Days ahead to scrape"
+        default: "28"
+        required: false
+      libraries:
+        description: 'Library names (comma-separated) or "all"'
+        default: "all"
+        required: false
+
+jobs:
+  scrape-and-analyze:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python 3.12
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install uv
+        uses: astral-sh/setup-uv@v4
+
+      - name: Install dependencies
+        run: uv sync
+
+      - name: Install Playwright Chromium (for fallback scraping)
+        run: uv run playwright install chromium --with-deps
+        continue-on-error: true   # Playwright is optional; API method is primary
+
+      - name: Run scraper
+        run: |
+          uv run scraper.py \
+            --days "${{ inputs.days || '28' }}" \
+            --libraries "${{ inputs.libraries || 'all' }}"
+
+      - name: Run analyzer
+        run: uv run analyze.py
+
+      - name: Post report to step summary
+        run: |
+          if [ -f data/reports/report.md ]; then
+            cat data/reports/report.md >> $GITHUB_STEP_SUMMARY
+          else
+            echo "No report generated." >> $GITHUB_STEP_SUMMARY
+          fi
+
+      - name: Commit updated data
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add data/bookings/bookings.csv data/bookings/last_run.json \
+                  data/reports/ || true
+          if git diff --cached --quiet; then
+            echo "No changes to commit."
+          else
+            git commit -m "data: scrape run $(date -u +%Y-%m-%dT%H:%M:%SZ)"
+            git push
+          fi
+
+      - name: Upload reports as artifact
+        uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: kcls-reports-${{ github.run_id }}
+          path: data/reports/
+          retention-days: 90
