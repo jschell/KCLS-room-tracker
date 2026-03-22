@@ -2,8 +2,13 @@
 """
 KCLS Meeting Room Scraper.
 
-Fetches confirmed bookings from the LibCal JSON API at rooms.kcls.org
-and appends new records to data/bookings/bookings.csv.
+Fetches room availability from the public LibCal scheduling grid at rooms.kcls.org
+and appends inferred booking blocks to data/bookings/bookings.csv.
+
+The public grid endpoint (/spaces/availability/grid) returns 30-minute time slots.
+Slots with ``className == ""`` are blocked/booked; slots with
+``className == "s-lc-eq-checkout"`` are available.  Consecutive blocked slots are
+merged into booking blocks and stored as rows in the CSV.
 
 Usage:
   uv run scraper.py
@@ -22,25 +27,15 @@ from pathlib import Path
 import requests
 import requests.exceptions
 
-try:
-    from playwright.sync_api import sync_playwright as _sync_playwright
-    from playwright.sync_api import Browser, Page
-
-    PLAYWRIGHT_AVAILABLE = True
-except ImportError:
-    PLAYWRIGHT_AVAILABLE = False
-
 logger = logging.getLogger(__name__)
 
 # ---------------------------------------------------------------------------
 # Library configuration
-# Phase 1: confirmed branches with known space IDs.
-# lid=None means the library ID hasn't been verified yet (space IDs are enough
-# to call the bookings API; lid is only needed for the /r/accessible view).
 # ---------------------------------------------------------------------------
 LIBRARIES: dict[str, dict] = {
     "redmond": {
         "lid": 2392,
+        "gid": 4468,
         "slug": "redmond",
         "phone": "425-885-1861",
         "saturday_hours": ("11:00", "18:00"),
@@ -48,22 +43,24 @@ LIBRARIES: dict[str, dict] = {
         "spaces": {
             "East Meeting Room 1": 17228,  # cap 66
             "East Meeting Room 2": 17229,  # cap 75
-            "Conference Room": 17230,  # cap 10
+            "Conference Room": 17230,      # cap 10
         },
     },
     "sammamish": {
         "lid": 2397,
+        "gid": None,
         "slug": "sammamish",
         "phone": "425-392-3130",
         "saturday_hours": ("11:00", "18:00"),
         "sunday_open": True,
         "spaces": {
-            "Meeting Room": 17254,  # cap 72
-            "Sunset Room": 134490,  # cap TBD
+            "Meeting Room": 17254,   # cap 72
+            "Sunset Room": 134490,   # cap TBD
         },
     },
     "woodinville": {
         "lid": 2406,
+        "gid": None,
         "slug": "woodinville",
         "phone": "425-788-0733",
         "saturday_hours": ("11:00", "18:00"),
@@ -74,16 +71,18 @@ LIBRARIES: dict[str, dict] = {
     },
     "kingsgate": {
         "lid": None,
+        "gid": None,
         "slug": "kingsgate",
         "phone": "425-821-7686",
         "saturday_hours": ("11:00", "18:00"),
         "sunday_open": True,
         "spaces": {
-            "Meeting Room 1": 17223,  # cap 100, piano, sound system
+            "Meeting Room 1": 17223,  # cap 100
         },
     },
     "issaquah": {
         "lid": None,
+        "gid": None,
         "slug": "issaquah",
         "phone": None,
         "saturday_hours": ("11:00", "18:00"),
@@ -94,13 +93,12 @@ LIBRARIES: dict[str, dict] = {
     },
     "bellevue": {
         "lid": 2360,
+        "gid": None,
         "slug": "bellevue",
         "phone": "425-450-1765",
         "saturday_hours": ("11:00", "18:00"),
         "sunday_open": True,
-        "spaces": {
-            # Space IDs to be discovered via probe_spaces.py
-        },
+        "spaces": {},  # Space IDs to be discovered via probe_spaces.py
     },
 }
 
@@ -108,7 +106,8 @@ LIBRARIES: dict[str, dict] = {
 # Constants
 # ---------------------------------------------------------------------------
 BASE_URL = "https://rooms.kcls.org"
-BOOKINGS_API = BASE_URL + "/api/1.1/space/bookings"
+GRID_API = BASE_URL + "/spaces/availability/grid"
+
 DATA_DIR = Path("data")
 BOOKINGS_DIR = DATA_DIR / "bookings"
 CSV_PATH = BOOKINGS_DIR / "bookings.csv"
@@ -136,180 +135,220 @@ HEADERS = {
         "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 "
         "(KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
     ),
-    "Accept": "application/json",
+    "Accept": "application/json, text/javascript, */*; q=0.01",
+    "X-Requested-With": "XMLHttpRequest",
+    "Referer": BASE_URL + "/",
 }
 
-REQUEST_DELAY = 0.5  # seconds between API calls
-BACKOFF_DELAY = 30.0  # seconds to wait after a 429
+REQUEST_DELAY = 0.5    # seconds between API calls
+BACKOFF_DELAY = 30.0   # seconds to wait after a 429
+
+# Available slots carry className="s-lc-eq-checkout".
+# Booked/blocked slots have NO className key at all.
+_CLASS_AVAILABLE = "s-lc-eq-checkout"
 
 
-# ---------------------------------------------------------------------------
-# API fetching
-# ---------------------------------------------------------------------------
+def _slot_is_booked(slot: dict) -> bool:
+    """Return True when a grid slot is booked (blocked/unavailable).
 
-
-def fetch_bookings_api(space_id: int, date_str: str) -> list[dict]:
-    """Fetch confirmed bookings for a single space on a single date.
+    The grid API omits the ``className`` key entirely for booked slots.
+    Available slots carry ``className == "s-lc-eq-checkout"``.
 
     Args:
-        space_id: LibCal space identifier.
-        date_str: Target date in ``YYYY-MM-DD`` format.
+        slot: Raw slot dict from the grid API.
 
     Returns:
-        List of raw booking dicts from the API, or ``[]`` on failure.
+        ``True`` if the slot is booked.
     """
-    params = {"ids": space_id, "dates": date_str, "limit": 500}
+    return "className" not in slot
+
+
+# ---------------------------------------------------------------------------
+# Grid API
+# ---------------------------------------------------------------------------
+
+
+def _discover_gid(lid: int, space_id: int) -> int | None:
+    """Fetch the group ID (gid) for a space by loading its booking page.
+
+    The grid endpoint requires a gid.  When gid is unknown we can parse it
+    from the inline ``springyPage`` JS object on the space's public page.
+
+    Args:
+        lid: Library ID.
+        space_id: LibCal space identifier.
+
+    Returns:
+        Group ID integer, or ``None`` if it could not be determined.
+    """
+    import re
+
+    url = f"{BASE_URL}/space/{space_id}"
     try:
-        resp = requests.get(BOOKINGS_API, params=params, headers=HEADERS, timeout=15)
-        if resp.status_code == 429:
-            logger.warning("Rate limited on space %s / %s, backing off %.0fs", space_id, date_str, BACKOFF_DELAY)
-            time.sleep(BACKOFF_DELAY)
-            resp = requests.get(BOOKINGS_API, params=params, headers=HEADERS, timeout=15)
+        resp = requests.get(url, headers={"User-Agent": HEADERS["User-Agent"]}, timeout=10)
         if resp.status_code != 200:
-            logger.warning("HTTP %s for space %s / %s", resp.status_code, space_id, date_str)
+            return None
+        m = re.search(r"groupId\s*:\s*(\d+)", resp.text)
+        return int(m.group(1)) if m else None
+    except requests.exceptions.RequestException:
+        logger.exception("Could not discover gid for space %s", space_id)
+        return None
+
+
+def fetch_grid_slots(
+    lid: int,
+    gid: int,
+    space_id: int,
+    start_date: date,
+    end_date: date,
+) -> list[dict]:
+    """Fetch raw 30-minute time slots from the public availability grid.
+
+    Args:
+        lid: Library ID.
+        gid: Group ID for the space.
+        space_id: LibCal space identifier.
+        start_date: First date to fetch (inclusive).
+        end_date: Last date to fetch (exclusive).
+
+    Returns:
+        List of slot dicts with keys ``start``, ``end``, ``itemId``, ``className``.
+    """
+    payload = {
+        "lid": str(lid),
+        "gid": str(gid),
+        "eid[]": str(space_id),
+        "start": f"{start_date.isoformat()}T00:00:00",
+        "end": f"{end_date.isoformat()}T00:00:00",
+        "pageIndex": "0",
+        "pageSize": "18",
+        "accessible": "0",
+        "powered": "0",
+        "isEquipment": "0",
+        "isSeatBooking": "0",
+    }
+    try:
+        resp = requests.post(GRID_API, data=payload, headers=HEADERS, timeout=20)
+        if resp.status_code == 429:
+            logger.warning("Rate limited for space %s, backing off %.0fs", space_id, BACKOFF_DELAY)
+            time.sleep(BACKOFF_DELAY)
+            resp = requests.post(GRID_API, data=payload, headers=HEADERS, timeout=20)
+        if resp.status_code != 200:
+            logger.warning("HTTP %s from grid API for space %s", resp.status_code, space_id)
             return []
         data = resp.json()
-        bookings = data.get("bookings", [])
-        return bookings if isinstance(bookings, list) else []
+        slots = data.get("slots", [])
+        return slots if isinstance(slots, list) else []
     except requests.exceptions.Timeout:
-        logger.exception("Timeout fetching space %s / %s", space_id, date_str)
+        logger.exception("Timeout fetching grid for space %s", space_id)
         return []
     except requests.exceptions.ConnectionError:
-        logger.exception("Connection error fetching space %s / %s", space_id, date_str)
+        logger.exception("Connection error fetching grid for space %s", space_id)
         return []
     except (requests.exceptions.RequestException, ValueError):
-        logger.exception("Request error fetching space %s / %s", space_id, date_str)
+        logger.exception("Request error fetching grid for space %s", space_id)
         return []
 
 
-def fetch_bookings_playwright(space_id: int, date_str: str) -> list[dict]:
-    """Scrape the confirmed bookings page via headless Chromium (fallback).
+# ---------------------------------------------------------------------------
+# Slot → booking inference
+# ---------------------------------------------------------------------------
 
-    Only called when the API returns ``[]`` for a space expected to have bookings.
-    Requires the ``playwright`` package with Chromium installed.
+
+def _parse_slot_dt(s: str) -> datetime | None:
+    """Parse a ``YYYY-MM-DD HH:MM:SS`` slot timestamp.
 
     Args:
-        space_id: LibCal space identifier.
-        date_str: Target date in ``YYYY-MM-DD`` format.
+        s: Slot datetime string.
 
     Returns:
-        List of booking dicts with the same shape as the API response, or ``[]``.
+        Parsed ``datetime``, or ``None`` on parse failure.
     """
-    if not PLAYWRIGHT_AVAILABLE:
-        logger.warning("Playwright not installed — skipping fallback for space %s", space_id)
-        return []
-
-    url = f"{BASE_URL}/space/{space_id}/confirmed?d={date_str}"
-    rows: list[dict] = []
     try:
-        with _sync_playwright() as p:
-            browser: Browser = p.chromium.launch(headless=True)
-            page: Page = browser.new_page()
-            page.goto(url, timeout=30000)
-            page.wait_for_selector("table", timeout=10000)
-            for tr in page.query_selector_all("table tbody tr"):
-                cells = [td.inner_text().strip() for td in tr.query_selector_all("td")]
-                if len(cells) < 3:
-                    continue
-                rows.append(
-                    {
-                        "bookId": f"pw_{space_id}_{date_str}_{len(rows)}",
-                        "eid": space_id,
-                        "fromDate": f"{date_str} 00:00:00",
-                        "toDate": f"{date_str} 00:00:00",
-                        "created": None,
-                        "title": cells[-1] if cells else "",
-                        "status": "Confirmed",
-                        "_playwright_raw": cells,
-                    }
-                )
-            browser.close()
-    except (OSError, TimeoutError):
-        logger.exception("Playwright error for space %s / %s", space_id, date_str)
-    return rows
-
-
-# ---------------------------------------------------------------------------
-# Normalization
-# ---------------------------------------------------------------------------
-
-
-def _parse_dt(s: str | None) -> datetime | None:
-    """Parse a datetime string in common LibCal formats.
-
-    Args:
-        s: Datetime string, or ``None``.
-
-    Returns:
-        Parsed ``datetime``, or ``None`` if unparseable.
-    """
-    if not s:
+        return datetime.strptime(s, "%Y-%m-%d %H:%M:%S")
+    except ValueError:
         return None
-    for fmt in ("%Y-%m-%d %H:%M:%S", "%Y-%m-%dT%H:%M:%S", "%Y-%m-%d"):
-        try:
-            return datetime.strptime(s, fmt)
-        except ValueError:
-            continue
-    return None
 
 
-def normalize_booking(
-    raw: dict,
+def infer_bookings_from_slots(
+    slots: list[dict],
     library: str,
     space_name: str,
     space_id: int,
     fetch_date: date,
-) -> dict | None:
-    """Map a raw API booking dict to the standard CSV schema.
+) -> list[dict]:
+    """Convert consecutive blocked 30-min slots into booking block records.
+
+    Slots with an empty ``className`` are treated as booked.  Adjacent blocked
+    slots on the same date are merged into a single booking record.
 
     Args:
-        raw: Raw booking dict from the LibCal API.
-        library: Normalized branch name (lowercase, no spaces).
+        slots: Raw slot dicts from :func:`fetch_grid_slots`.
+        library: Normalized branch name.
         space_name: Human-readable room name.
         space_id: LibCal space ID.
-        fetch_date: Date this record was scraped.
+        fetch_date: Date this data was scraped.
 
     Returns:
-        Normalized record dict, or ``None`` if the record is malformed or not Confirmed.
+        List of normalized booking records (one per contiguous blocked window).
     """
-    status = raw.get("status", "")
-    if status and status.lower() != "confirmed":
-        return None
+    # Collect blocked slots and sort by start time
+    blocked = [sl for sl in slots if _slot_is_booked(sl)]
+    if not blocked:
+        return []
 
-    booking_id = raw.get("bookId") or raw.get("id")
-    if not booking_id:
-        return None
+    blocked.sort(key=lambda x: x.get("start", ""))
 
-    from_dt = _parse_dt(raw.get("fromDate"))
-    to_dt = _parse_dt(raw.get("toDate"))
-    if not from_dt:
-        return None
+    records: list[dict] = []
+    block_start: datetime | None = None
+    block_end: datetime | None = None
 
-    booking_date = from_dt.date()
-    duration_hrs: float | None = None
-    if to_dt is not None:
-        duration_hrs = round((to_dt - from_dt).total_seconds() / 3600.0, 4)
+    def _flush(bs: datetime, be: datetime) -> None:
+        booking_date = bs.date()
+        duration_hrs = round((be - bs).total_seconds() / 3600.0, 4)
+        # Synthetic ID: stable across runs for the same block
+        booking_id = f"grid_{space_id}_{bs.strftime('%Y%m%d%H%M')}"
+        records.append(
+            {
+                "fetch_date": fetch_date.isoformat(),
+                "booking_date": booking_date.isoformat(),
+                "day_of_week": booking_date.strftime("%A"),
+                "library": library,
+                "space_name": space_name,
+                "space_id": space_id,
+                "booking_id": booking_id,
+                "title": "",
+                "start_time": bs.strftime("%H:%M"),
+                "end_time": be.strftime("%H:%M"),
+                "duration_hrs": duration_hrs,
+                "created_date": "",
+                "lead_days": "",
+                "source": "grid",
+            }
+        )
 
-    created_dt = _parse_dt(raw.get("created"))
-    created_date = created_dt.date() if created_dt else None
-    lead_days: int | None = (booking_date - created_date).days if created_date is not None else None
+    for sl in blocked:
+        sl_start = _parse_slot_dt(sl.get("start", ""))
+        sl_end = _parse_slot_dt(sl.get("end", ""))
+        if not sl_start or not sl_end:
+            continue
 
-    return {
-        "fetch_date": fetch_date.isoformat(),
-        "booking_date": booking_date.isoformat(),
-        "day_of_week": booking_date.strftime("%A"),
-        "library": library,
-        "space_name": space_name,
-        "space_id": space_id,
-        "booking_id": str(booking_id),
-        "title": (raw.get("title") or "").strip(),
-        "start_time": from_dt.strftime("%H:%M"),
-        "end_time": to_dt.strftime("%H:%M") if to_dt else "",
-        "duration_hrs": duration_hrs,
-        "created_date": created_date.isoformat() if created_date else "",
-        "lead_days": lead_days if lead_days is not None else "",
-        "source": "api",
-    }
+        if block_start is None:
+            block_start = sl_start
+            block_end = sl_end
+        elif sl_start == block_end and sl_start.date() == block_start.date():
+            # Contiguous slot on the same day — extend the block
+            block_end = sl_end
+        else:
+            # Gap or new day — flush the previous block
+            _flush(block_start, block_end)  # type: ignore[arg-type]
+            block_start = sl_start
+            block_end = sl_end
+
+    if block_start and block_end:
+        _flush(block_start, block_end)
+
+    return records
 
 
 # ---------------------------------------------------------------------------
@@ -324,7 +363,7 @@ def load_existing_ids(csv_path: Path) -> set[str]:
         csv_path: Path to the bookings CSV file.
 
     Returns:
-        Set of booking ID strings. Empty set if the file does not exist.
+        Set of booking ID strings.  Empty set if the file does not exist.
     """
     if not csv_path.exists():
         return set()
@@ -378,6 +417,41 @@ def append_to_csv(records: list[dict], csv_path: Path) -> int:
 # Main scrape loop
 # ---------------------------------------------------------------------------
 
+# Cache of discovered gid values so we only fetch once per (lid, space_id) pair
+_gid_cache: dict[tuple[int, int], int | None] = {}
+
+
+def _resolve_gid(lib_cfg: dict, space_id: int) -> int | None:
+    """Return a usable gid for the space, discovering it if necessary.
+
+    Args:
+        lib_cfg: Library configuration dict from :data:`LIBRARIES`.
+        space_id: LibCal space identifier.
+
+    Returns:
+        Group ID, or ``None`` if it could not be determined.
+    """
+    lid = lib_cfg.get("lid")
+    if lid is None:
+        return None
+
+    configured_gid: int | None = lib_cfg.get("gid")
+    if configured_gid is not None:
+        return configured_gid
+
+    cache_key = (lid, space_id)
+    if cache_key in _gid_cache:
+        return _gid_cache[cache_key]
+
+    logger.info("  Discovering gid for space %s (lid=%s)…", space_id, lid)
+    gid = _discover_gid(lid, space_id)
+    _gid_cache[cache_key] = gid
+    if gid:
+        logger.info("  Discovered gid=%s for space %s", gid, space_id)
+    else:
+        logger.warning("  Could not discover gid for space %s — skipping", space_id)
+    return gid
+
 
 def run_scrape(days: int = 28, libraries_filter: str = "all") -> dict:
     """Scrape all configured libraries/spaces for the next ``days`` days.
@@ -390,7 +464,7 @@ def run_scrape(days: int = 28, libraries_filter: str = "all") -> dict:
         Run-metadata dict written to ``last_run.json``.
     """
     today = date.today()
-    date_range = [today + timedelta(d) for d in range(days + 1)]
+    end_date = today + timedelta(days + 1)   # exclusive end for grid API
 
     if libraries_filter == "all":
         scope = LIBRARIES
@@ -402,7 +476,6 @@ def run_scrape(days: int = 28, libraries_filter: str = "all") -> dict:
             logger.warning("Unknown libraries: %s", missing)
 
     all_records: list[dict] = []
-    errors: list[str] = []
     fetch_date = today
 
     for lib_name, lib_cfg in scope.items():
@@ -411,35 +484,44 @@ def run_scrape(days: int = 28, libraries_filter: str = "all") -> dict:
             logger.info("Skipping %s: no space IDs configured", lib_name)
             continue
 
+        lid = lib_cfg.get("lid")
+        if lid is None:
+            logger.warning("Skipping %s: lid unknown (needed for grid API)", lib_name)
+            continue
+
         logger.info("Scraping %s", lib_name)
         for space_name, space_id in spaces.items():
             if not space_id:
-                logger.warning("Skipping %s/%s: space_id unknown", lib_name, space_name)
+                logger.warning("  Skipping %s/%s: space_id unknown", lib_name, space_name)
                 continue
-            logger.debug("  %s (id=%s)", space_name, space_id)
 
-            for target_date in date_range:
-                date_str = target_date.isoformat()
-                time.sleep(REQUEST_DELAY)
+            gid = _resolve_gid(lib_cfg, space_id)
+            if gid is None:
+                logger.warning("  Skipping %s/%s: gid unknown", lib_name, space_name)
+                continue
 
-                raw_bookings = fetch_bookings_api(space_id, date_str)
-                for raw in raw_bookings:
-                    norm = normalize_booking(raw, lib_name, space_name, space_id, fetch_date)
-                    if norm:
-                        all_records.append(norm)
+            logger.debug("  %s (space_id=%s, lid=%s, gid=%s)", space_name, space_id, lid, gid)
+            time.sleep(REQUEST_DELAY)
+
+            slots = fetch_grid_slots(lid, gid, space_id, today, end_date)
+            logger.debug("  %s: %d total slots, %d blocked", space_name, len(slots),
+                         sum(1 for sl in slots if _slot_is_booked(sl)))
+
+            records = infer_bookings_from_slots(slots, lib_name, space_name, space_id, fetch_date)
+            all_records.extend(records)
+            logger.info("  %s: %d booking blocks inferred", space_name, len(records))
 
     new_written = append_to_csv(all_records, CSV_PATH)
-    logger.info("Fetched %d records; %d new rows written.", len(all_records), new_written)
+    logger.info("Total booking blocks: %d; %d new rows written.", len(all_records), new_written)
 
     run_meta = {
         "run_date": today.isoformat(),
-        "run_time": datetime.utcnow().strftime("%H:%M:%S"),
+        "run_time": datetime.now().strftime("%H:%M:%S"),
         "range_start": today.isoformat(),
-        "range_end": (today + timedelta(days)).isoformat(),
+        "range_end": end_date.isoformat(),
         "total_fetched": len(all_records),
         "new_written": new_written,
         "libraries_scraped": list(scope.keys()),
-        "errors": errors,
     }
     BOOKINGS_DIR.mkdir(parents=True, exist_ok=True)
     try:

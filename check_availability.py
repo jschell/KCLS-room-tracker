@@ -2,7 +2,7 @@
 """
 KCLS Meeting Room Availability Checker.
 
-Real-time slot checker: queries the LibCal API and shows open time windows.
+Real-time slot checker: queries the LibCal public grid and shows open time windows.
 
 Usage:
   uv run check_availability.py --date 2026-04-05
@@ -18,9 +18,13 @@ import time
 from datetime import date, datetime, timedelta
 from pathlib import Path
 
-import requests.exceptions
-
-from scraper import LIBRARIES, REQUEST_DELAY, fetch_bookings_api
+from scraper import (
+    LIBRARIES,
+    REQUEST_DELAY,
+    _discover_gid,
+    _slot_is_booked,
+    fetch_grid_slots,
+)
 
 logger = logging.getLogger(__name__)
 
@@ -28,7 +32,7 @@ AVAIL_DIR = Path("data") / "availability"
 
 
 # ---------------------------------------------------------------------------
-# Time interval helpers
+# Time helpers
 # ---------------------------------------------------------------------------
 
 
@@ -61,59 +65,6 @@ def _mins_to_ampm(mins: int) -> str:
     return f"{display_h}:{m:02d}{suffix}" if m else f"{display_h}{suffix}"
 
 
-def compute_open_slots(
-    bookings: list[dict],
-    open_hhmm: str,
-    close_hhmm: str,
-    min_hours: float = 0,
-) -> list[tuple[int, int]]:
-    """Compute open time windows by subtracting confirmed bookings from open hours.
-
-    Args:
-        bookings: List of booking dicts with ``start_time`` and ``end_time`` as ``HH:MM``.
-        open_hhmm: Library open time as ``HH:MM``.
-        close_hhmm: Library close time as ``HH:MM``.
-        min_hours: Only return windows at least this many hours long.
-
-    Returns:
-        List of ``(start_mins, end_mins)`` tuples representing free windows.
-    """
-    open_min = _hhmm_to_mins(open_hhmm)
-    close_min = _hhmm_to_mins(close_hhmm)
-
-    booked: list[list[int]] = []
-    for b in bookings:
-        try:
-            bs = _hhmm_to_mins(b.get("start_time", "00:00"))
-            be = _hhmm_to_mins(b.get("end_time", "00:00"))
-        except (ValueError, AttributeError):
-            continue
-        bs = max(bs, open_min)
-        be = min(be, close_min)
-        if be > bs:
-            booked.append([bs, be])
-
-    booked.sort(key=lambda x: x[0])
-    merged: list[list[int]] = []
-    for interval in booked:
-        if merged and interval[0] <= merged[-1][1]:
-            merged[-1][1] = max(merged[-1][1], interval[1])
-        else:
-            merged.append([interval[0], interval[1]])
-
-    free: list[tuple[int, int]] = []
-    cursor = open_min
-    for bs, be in merged:
-        if bs > cursor:
-            free.append((cursor, bs))
-        cursor = max(cursor, be)
-    if cursor < close_min:
-        free.append((cursor, close_min))
-
-    min_mins = int(min_hours * 60)
-    return [(s, e) for s, e in free if e - s >= min_mins]
-
-
 def format_slot(start_min: int, end_min: int) -> str:
     """Format a time window as a human-readable range string.
 
@@ -125,6 +76,72 @@ def format_slot(start_min: int, end_min: int) -> str:
         String like ``"11am–1pm"``.
     """
     return f"{_mins_to_ampm(start_min)}–{_mins_to_ampm(end_min)}"
+
+
+# ---------------------------------------------------------------------------
+# Availability computation from grid slots
+# ---------------------------------------------------------------------------
+
+
+def compute_open_slots_from_grid(
+    slots: list[dict],
+    open_hhmm: str,
+    close_hhmm: str,
+    min_hours: float = 0,
+) -> list[tuple[int, int]]:
+    """Compute contiguous open windows by removing booked slots from library hours.
+
+    Args:
+        slots: Raw 30-min slot dicts from :func:`~scraper.fetch_grid_slots`.
+        open_hhmm: Library open time as ``HH:MM``.
+        close_hhmm: Library close time as ``HH:MM``.
+        min_hours: Only return windows at least this many hours long.
+
+    Returns:
+        List of ``(start_mins, end_mins)`` tuples representing free windows.
+    """
+    open_min = _hhmm_to_mins(open_hhmm)
+    close_min = _hhmm_to_mins(close_hhmm)
+    min_mins = int(min_hours * 60)
+
+    # Collect booked 30-min blocks within library hours
+    booked: list[list[int]] = []
+    for sl in slots:
+        if not _slot_is_booked(sl):
+            continue  # this slot is available — skip
+        try:
+            start_str = sl.get("start", "")
+            end_str = sl.get("end", "")
+            bs = _hhmm_to_mins(start_str[11:16])  # "2026-03-22 11:00:00" → "11:00"
+            be = _hhmm_to_mins(end_str[11:16])
+        except (ValueError, IndexError):
+            continue
+        bs = max(bs, open_min)
+        be = min(be, close_min)
+        if be > bs:
+            booked.append([bs, be])
+
+    booked.sort(key=lambda x: x[0])
+
+    # Merge overlapping booked blocks
+    merged: list[list[int]] = []
+    for interval in booked:
+        if merged and interval[0] <= merged[-1][1]:
+            merged[-1][1] = max(merged[-1][1], interval[1])
+        else:
+            merged.append([interval[0], interval[1]])
+
+    # Invert to get free windows
+    free: list[tuple[int, int]] = []
+    cursor = open_min
+    for bs, be in merged:
+        if bs > cursor:
+            free.append((cursor, bs))
+        cursor = max(cursor, be)
+    if cursor < close_min:
+        free.append((cursor, close_min))
+
+    return [(s, e) for s, e in free if e - s >= min_mins]
 
 
 # ---------------------------------------------------------------------------
@@ -153,13 +170,17 @@ def get_availability_for_date(
         keys = [k.strip() for k in libraries_filter.split(",")]
         scope = {k: LIBRARIES[k] for k in keys if k in LIBRARIES}
 
-    date_str = target_date.isoformat()
     dow = target_date.strftime("%A")
     results: dict[str, dict[str, list[str]]] = {}
 
     for lib_name, lib_cfg in scope.items():
         spaces: dict[str, int | None] = lib_cfg.get("spaces", {})
         if not spaces:
+            continue
+
+        lid = lib_cfg.get("lid")
+        if lid is None:
+            logger.warning("Skipping %s: lid unknown", lib_name)
             continue
 
         if dow == "Saturday":
@@ -172,21 +193,24 @@ def get_availability_for_date(
             open_h, close_h = lib_cfg.get("weekday_hours", ("10:00", "18:00"))
 
         lib_slots: dict[str, list[str]] = {}
+        end_date = target_date + timedelta(days=1)
+
         for space_name, space_id in spaces.items():
             if not space_id:
                 continue
+
+            # Resolve gid
+            gid: int | None = lib_cfg.get("gid")
+            if gid is None:
+                gid = _discover_gid(lid, space_id)
+            if gid is None:
+                logger.warning("  Skipping %s/%s: gid unknown", lib_name, space_name)
+                continue
+
             time.sleep(REQUEST_DELAY)
-            raw = fetch_bookings_api(space_id, date_str)
-            bookings_simple = [
-                {
-                    "start_time": b.get("fromDate", "")[11:16],
-                    "end_time": b.get("toDate", "")[11:16] or close_h,
-                }
-                for b in raw
-                if len(b.get("fromDate", "")) >= 16
-            ]
-            slots = compute_open_slots(bookings_simple, open_h, close_h, min_hours)
-            lib_slots[space_name] = [format_slot(s, e) for s, e in slots]
+            slots = fetch_grid_slots(lid, gid, space_id, target_date, end_date)
+            open_windows = compute_open_slots_from_grid(slots, open_h, close_h, min_hours)
+            lib_slots[space_name] = [format_slot(s, e) for s, e in open_windows]
 
         if lib_slots:
             results[lib_name] = lib_slots
@@ -229,8 +253,8 @@ def save_snapshot(avail: dict[str, dict[str, list[str]]], target_date: date) -> 
     AVAIL_DIR.mkdir(parents=True, exist_ok=True)
     path = AVAIL_DIR / f"{target_date.isoformat()}.json"
     snapshot: dict = {
-        "snapshot_date": datetime.utcnow().date().isoformat(),
-        "snapshot_time": datetime.utcnow().strftime("%H:%M:%S"),
+        "snapshot_date": datetime.now().date().isoformat(),
+        "snapshot_time": datetime.now().strftime("%H:%M:%S"),
         "query_date": target_date.isoformat(),
         "spaces": {},
     }
