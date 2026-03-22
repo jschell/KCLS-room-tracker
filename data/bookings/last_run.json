@@ -1,11 +1,16 @@
 {
   "run_date": "2026-03-22",
-  "run_time": "03:39:51",
+  "run_time": "03:55:15",
   "range_start": "2026-03-22",
-  "range_end": "2026-03-26",
-  "total_fetched": 102,
-  "new_written": 102,
+  "range_end": "2026-04-20",
+  "total_fetched": 1027,
+  "new_written": 925,
   "libraries_scraped": [
-    "redmond"
+    "redmond",
+    "sammamish",
+    "woodinville",
+    "kingsgate",
+    "issaquah",
+    "bellevue"
   ]
 }
