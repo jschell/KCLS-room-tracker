@@ -2,6 +2,7 @@ name: KCLS Room Monitor
 
 on:
   schedule:
+    - cron: "0 7 * * *"   # 11pm Pacific (UTC-8 winter / UTC-7 summer ≈ 07:00 UTC)
     - cron: "0 15 * * *"   # 7am Pacific (UTC-8 winter / UTC-7 summer ≈ 15:00 UTC)
     - cron: "0 23 * * *"   # 3pm Pacific (≈ 23:00 UTC)
   workflow_dispatch:
