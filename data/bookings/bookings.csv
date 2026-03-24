@@ -5519,3 +5519,8 @@ fetch_date,booking_date,day_of_week,library,space_name,space_id,booking_id,title
 2026-03-24,2026-04-21,Tuesday,bellevue,Meeting Room 5,17227,grid_17227_202604211830,,18:30,19:30,1.0,2026-03-24,28,grid_inferred
 2026-03-24,2026-04-21,Tuesday,bellevue,Meeting Room 5,17227,grid_17227_202604211900,,19:00,19:30,0.5,2026-03-24,28,grid_inferred
 2026-03-24,2026-04-21,Tuesday,bellevue,Meeting Room 5,17227,grid_17227_202604211900,,19:00,19:30,0.5,2026-03-24,28,grid_inferred
+2026-03-24,2026-03-28,Saturday,bellevue,Meeting Room 1,17223,grid_17223_202603281300,,13:00,14:00,1.0,2026-03-24,4,grid_inferred
+2026-03-24,2026-03-28,Saturday,bellevue,Meeting Room 2,17225,grid_17225_202603281300,,13:00,14:00,1.0,2026-03-24,4,grid_inferred
+2026-03-24,2026-03-28,Saturday,bellevue,Meeting Room 3,17226,grid_17226_202603281300,,13:00,14:00,1.0,2026-03-24,4,grid_inferred
+2026-03-24,2026-03-28,Saturday,bellevue,Meeting Room 4,176330,grid_176330_202603281300,,13:00,14:00,1.0,2026-03-24,4,grid_inferred
+2026-03-24,2026-03-28,Saturday,bellevue,Meeting Room 5,17227,grid_17227_202603281300,,13:00,14:00,1.0,2026-03-24,4,grid_inferred
