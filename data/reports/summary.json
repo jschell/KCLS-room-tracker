@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-03-23T23:07:59.253196",
-  "total_records": 5155,
+  "generated_at": "2026-03-24T07:24:18.468517",
+  "total_records": 5520,
   "missing_created": 4823,
   "libraries": [
     "bellevue",
@@ -12,7 +12,7 @@
   ],
   "date_range": {
     "min": "2026-03-22",
-    "max": "2026-04-20"
+    "max": "2026-04-21"
   },
   "saturday_windows": {
     "redmond": {
@@ -33,24 +33,24 @@
           "n_booked": 2
         },
         "14:00": {
-          "pct_booked": 0.5,
-          "n_saturdays": 4,
-          "n_booked": 2
-        },
-        "15:00": {
-          "pct_booked": 0.25,
-          "n_saturdays": 4,
-          "n_booked": 1
-        },
-        "16:00": {
-          "pct_booked": 0.5,
-          "n_saturdays": 4,
-          "n_booked": 2
-        },
-        "17:00": {
           "pct_booked": 0.75,
           "n_saturdays": 4,
           "n_booked": 3
+        },
+        "15:00": {
+          "pct_booked": 0.5,
+          "n_saturdays": 4,
+          "n_booked": 2
+        },
+        "16:00": {
+          "pct_booked": 0.75,
+          "n_saturdays": 4,
+          "n_booked": 3
+        },
+        "17:00": {
+          "pct_booked": 1.0,
+          "n_saturdays": 4,
+          "n_booked": 4
         }
       },
       "East Meeting Room 2": {
@@ -70,24 +70,24 @@
           "n_booked": 2
         },
         "14:00": {
-          "pct_booked": 0.5,
-          "n_saturdays": 4,
-          "n_booked": 2
-        },
-        "15:00": {
-          "pct_booked": 0.25,
-          "n_saturdays": 4,
-          "n_booked": 1
-        },
-        "16:00": {
-          "pct_booked": 0.5,
-          "n_saturdays": 4,
-          "n_booked": 2
-        },
-        "17:00": {
           "pct_booked": 0.75,
           "n_saturdays": 4,
           "n_booked": 3
+        },
+        "15:00": {
+          "pct_booked": 0.5,
+          "n_saturdays": 4,
+          "n_booked": 2
+        },
+        "16:00": {
+          "pct_booked": 0.75,
+          "n_saturdays": 4,
+          "n_booked": 3
+        },
+        "17:00": {
+          "pct_booked": 1.0,
+          "n_saturdays": 4,
+          "n_booked": 4
         }
       },
       "Conference Room": {
@@ -107,24 +107,24 @@
           "n_booked": 2
         },
         "14:00": {
-          "pct_booked": 0.5,
-          "n_saturdays": 4,
-          "n_booked": 2
-        },
-        "15:00": {
-          "pct_booked": 0.25,
-          "n_saturdays": 4,
-          "n_booked": 1
-        },
-        "16:00": {
-          "pct_booked": 0.5,
-          "n_saturdays": 4,
-          "n_booked": 2
-        },
-        "17:00": {
           "pct_booked": 0.75,
           "n_saturdays": 4,
           "n_booked": 3
+        },
+        "15:00": {
+          "pct_booked": 0.5,
+          "n_saturdays": 4,
+          "n_booked": 2
+        },
+        "16:00": {
+          "pct_booked": 0.75,
+          "n_saturdays": 4,
+          "n_booked": 3
+        },
+        "17:00": {
+          "pct_booked": 1.0,
+          "n_saturdays": 4,
+          "n_booked": 4
         }
       }
     },
@@ -512,69 +512,69 @@
   "lead_time_summary": [
     {
       "library": "bellevue",
-      "n": 3912,
-      "n_direct": 210,
+      "n": 4182,
+      "n_direct": 480,
       "n_lb": 3702,
-      "median_days": 16.0,
+      "median_days": 17.0,
       "p25": 9.0,
-      "p75": 24.0,
-      "p90": 27.0,
+      "p75": 25.0,
+      "p90": 28.0,
       "pct_same_day": 0.3
     },
     {
       "library": "issaquah",
-      "n": 35,
-      "n_direct": 3,
+      "n": 36,
+      "n_direct": 4,
       "n_lb": 32,
-      "median_days": 15.0,
-      "p25": 7.5,
-      "p75": 24.5,
-      "p90": 27.0,
-      "pct_same_day": 2.9
+      "median_days": 15.5,
+      "p25": 7.8,
+      "p75": 25.2,
+      "p90": 27.5,
+      "pct_same_day": 2.8
     },
     {
       "library": "kingsgate",
-      "n": 32,
-      "n_direct": 3,
+      "n": 33,
+      "n_direct": 4,
       "n_lb": 29,
-      "median_days": 14.5,
-      "p25": 7.8,
-      "p75": 23.2,
-      "p90": 26.9,
+      "median_days": 15.0,
+      "p25": 8.0,
+      "p75": 24.0,
+      "p90": 27.0,
       "pct_same_day": 0.0
     },
     {
       "library": "redmond",
-      "n": 933,
-      "n_direct": 81,
+      "n": 996,
+      "n_direct": 144,
       "n_lb": 852,
-      "median_days": 16.0,
-      "p25": 9.0,
-      "p75": 23.0,
-      "p90": 27.0,
+      "median_days": 18.0,
+      "p25": 10.0,
+      "p75": 25.0,
+      "p90": 28.0,
       "pct_same_day": 0.3
     },
     {
       "library": "sammamish",
-      "n": 211,
-      "n_direct": 33,
+      "n": 239,
+      "n_direct": 61,
       "n_lb": 178,
-      "median_days": 5.0,
-      "p25": 2.0,
+      "median_days": 6.0,
+      "p25": 3.0,
       "p75": 7.0,
-      "p90": 16.0,
-      "pct_same_day": 9.0
+      "p90": 14.2,
+      "pct_same_day": 7.9
     },
     {
       "library": "woodinville",
-      "n": 32,
-      "n_direct": 2,
+      "n": 34,
+      "n_direct": 4,
       "n_lb": 30,
       "median_days": 15.5,
-      "p25": 7.5,
-      "p75": 22.2,
-      "p90": 25.9,
-      "pct_same_day": 0.0
+      "p25": 6.5,
+      "p75": 22.8,
+      "p90": 26.7,
+      "pct_same_day": 2.9
     }
   ]
 }
