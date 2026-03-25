@@ -17,19 +17,19 @@
         "n_booked": 2
       },
       "14:00": {
-        "pct_booked": 0.75,
+        "pct_booked": 1.0,
         "n_saturdays": 4,
-        "n_booked": 3
+        "n_booked": 4
       },
       "15:00": {
-        "pct_booked": 0.5,
-        "n_saturdays": 4,
-        "n_booked": 2
-      },
-      "16:00": {
         "pct_booked": 0.75,
         "n_saturdays": 4,
         "n_booked": 3
+      },
+      "16:00": {
+        "pct_booked": 1.0,
+        "n_saturdays": 4,
+        "n_booked": 4
       },
       "17:00": {
         "pct_booked": 1.0,
@@ -54,19 +54,19 @@
         "n_booked": 2
       },
       "14:00": {
-        "pct_booked": 0.75,
+        "pct_booked": 1.0,
         "n_saturdays": 4,
-        "n_booked": 3
+        "n_booked": 4
       },
       "15:00": {
-        "pct_booked": 0.5,
-        "n_saturdays": 4,
-        "n_booked": 2
-      },
-      "16:00": {
         "pct_booked": 0.75,
         "n_saturdays": 4,
         "n_booked": 3
+      },
+      "16:00": {
+        "pct_booked": 1.0,
+        "n_saturdays": 4,
+        "n_booked": 4
       },
       "17:00": {
         "pct_booked": 1.0,
@@ -91,19 +91,19 @@
         "n_booked": 2
       },
       "14:00": {
-        "pct_booked": 0.75,
+        "pct_booked": 1.0,
         "n_saturdays": 4,
-        "n_booked": 3
+        "n_booked": 4
       },
       "15:00": {
-        "pct_booked": 0.5,
-        "n_saturdays": 4,
-        "n_booked": 2
-      },
-      "16:00": {
         "pct_booked": 0.75,
         "n_saturdays": 4,
         "n_booked": 3
+      },
+      "16:00": {
+        "pct_booked": 1.0,
+        "n_saturdays": 4,
+        "n_booked": 4
       },
       "17:00": {
         "pct_booked": 1.0,

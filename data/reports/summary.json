@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-03-24T23:07:05.339255",
-  "total_records": 5525,
+  "generated_at": "2026-03-25T07:23:43.214264",
+  "total_records": 5903,
   "missing_created": 4823,
   "libraries": [
     "bellevue",
@@ -12,7 +12,7 @@
   ],
   "date_range": {
     "min": "2026-03-22",
-    "max": "2026-04-21"
+    "max": "2026-04-22"
   },
   "saturday_windows": {
     "redmond": {
@@ -33,19 +33,19 @@
           "n_booked": 2
         },
         "14:00": {
-          "pct_booked": 0.75,
+          "pct_booked": 1.0,
           "n_saturdays": 4,
-          "n_booked": 3
+          "n_booked": 4
         },
         "15:00": {
-          "pct_booked": 0.5,
-          "n_saturdays": 4,
-          "n_booked": 2
-        },
-        "16:00": {
           "pct_booked": 0.75,
           "n_saturdays": 4,
           "n_booked": 3
+        },
+        "16:00": {
+          "pct_booked": 1.0,
+          "n_saturdays": 4,
+          "n_booked": 4
         },
         "17:00": {
           "pct_booked": 1.0,
@@ -70,19 +70,19 @@
           "n_booked": 2
         },
         "14:00": {
-          "pct_booked": 0.75,
+          "pct_booked": 1.0,
           "n_saturdays": 4,
-          "n_booked": 3
+          "n_booked": 4
         },
         "15:00": {
-          "pct_booked": 0.5,
-          "n_saturdays": 4,
-          "n_booked": 2
-        },
-        "16:00": {
           "pct_booked": 0.75,
           "n_saturdays": 4,
           "n_booked": 3
+        },
+        "16:00": {
+          "pct_booked": 1.0,
+          "n_saturdays": 4,
+          "n_booked": 4
         },
         "17:00": {
           "pct_booked": 1.0,
@@ -107,19 +107,19 @@
           "n_booked": 2
         },
         "14:00": {
-          "pct_booked": 0.75,
+          "pct_booked": 1.0,
           "n_saturdays": 4,
-          "n_booked": 3
+          "n_booked": 4
         },
         "15:00": {
-          "pct_booked": 0.5,
-          "n_saturdays": 4,
-          "n_booked": 2
-        },
-        "16:00": {
           "pct_booked": 0.75,
           "n_saturdays": 4,
           "n_booked": 3
+        },
+        "16:00": {
+          "pct_booked": 1.0,
+          "n_saturdays": 4,
+          "n_booked": 4
         },
         "17:00": {
           "pct_booked": 1.0,
@@ -512,68 +512,68 @@
   "lead_time_summary": [
     {
       "library": "bellevue",
-      "n": 4187,
-      "n_direct": 485,
+      "n": 4532,
+      "n_direct": 830,
       "n_lb": 3702,
       "median_days": 17.0,
-      "p25": 9.0,
-      "p75": 25.0,
+      "p25": 10.0,
+      "p75": 27.0,
       "p90": 28.0,
       "pct_same_day": 0.3
     },
     {
       "library": "issaquah",
-      "n": 36,
-      "n_direct": 4,
+      "n": 38,
+      "n_direct": 6,
       "n_lb": 32,
       "median_days": 15.5,
-      "p25": 7.8,
-      "p75": 25.2,
-      "p90": 27.5,
-      "pct_same_day": 2.8
+      "p25": 7.2,
+      "p75": 25.8,
+      "p90": 28.0,
+      "pct_same_day": 5.3
     },
     {
       "library": "kingsgate",
-      "n": 33,
-      "n_direct": 4,
+      "n": 36,
+      "n_direct": 7,
       "n_lb": 29,
-      "median_days": 15.0,
-      "p25": 8.0,
+      "median_days": 14.5,
+      "p25": 6.5,
       "p75": 24.0,
-      "p90": 27.0,
-      "pct_same_day": 0.0
+      "p90": 27.5,
+      "pct_same_day": 5.6
     },
     {
       "library": "redmond",
-      "n": 996,
-      "n_direct": 144,
+      "n": 1005,
+      "n_direct": 153,
       "n_lb": 852,
       "median_days": 18.0,
       "p25": 10.0,
       "p75": 25.0,
       "p90": 28.0,
-      "pct_same_day": 0.3
+      "pct_same_day": 0.6
     },
     {
       "library": "sammamish",
-      "n": 239,
-      "n_direct": 61,
+      "n": 257,
+      "n_direct": 79,
       "n_lb": 178,
-      "median_days": 6.0,
+      "median_days": 7.0,
       "p25": 3.0,
       "p75": 7.0,
-      "p90": 14.2,
-      "pct_same_day": 7.9
+      "p90": 14.4,
+      "pct_same_day": 7.4
     },
     {
       "library": "woodinville",
-      "n": 34,
-      "n_direct": 4,
+      "n": 35,
+      "n_direct": 5,
       "n_lb": 30,
-      "median_days": 15.5,
-      "p25": 6.5,
-      "p75": 22.8,
-      "p90": 26.7,
+      "median_days": 16.0,
+      "p25": 7.0,
+      "p75": 23.5,
+      "p90": 27.0,
       "pct_same_day": 2.9
     }
   ]
