@@ -6314,3 +6314,12 @@ fetch_date,booking_date,day_of_week,library,space_name,space_id,booking_id,title
 2026-03-27,2026-04-24,Friday,bellevue,Meeting Room 5,17227,grid_17227_202604241630,,16:30,17:30,1.0,2026-03-27,28,grid_inferred
 2026-03-27,2026-04-24,Friday,bellevue,Meeting Room 5,17227,grid_17227_202604241700,,17:00,17:30,0.5,2026-03-27,28,grid_inferred
 2026-03-27,2026-04-24,Friday,bellevue,Meeting Room 5,17227,grid_17227_202604241700,,17:00,17:30,0.5,2026-03-27,28,grid_inferred
+2026-03-27,2026-04-01,Wednesday,redmond,East Meeting Room 1,17228,grid_17228_202604011500,,15:00,17:30,2.5,2026-03-27,5,grid_inferred
+2026-03-27,2026-04-01,Wednesday,redmond,East Meeting Room 2,17229,grid_17229_202604011500,,15:00,17:30,2.5,2026-03-27,5,grid_inferred
+2026-03-27,2026-04-01,Wednesday,redmond,Conference Room,17230,grid_17230_202604011500,,15:00,17:30,2.5,2026-03-27,5,grid_inferred
+2026-03-27,2026-04-01,Wednesday,sammamish,Sunset Room,134490,grid_134490_202604011630,,16:30,17:00,0.5,2026-03-27,5,grid_inferred
+2026-03-27,2026-04-01,Wednesday,sammamish,Sunset Room,134490,grid_134490_202604011645,,16:45,17:15,0.5,2026-03-27,5,grid_inferred
+2026-03-27,2026-04-01,Wednesday,sammamish,Sunset Room,134490,grid_134490_202604011700,,17:00,17:30,0.5,2026-03-27,5,grid_inferred
+2026-03-27,2026-04-01,Wednesday,sammamish,Sunset Room,134490,grid_134490_202604011715,,17:15,17:45,0.5,2026-03-27,5,grid_inferred
+2026-03-27,2026-04-01,Wednesday,sammamish,Sunset Room,134490,grid_134490_202604011730,,17:30,18:00,0.5,2026-03-27,5,grid_inferred
+2026-03-27,2026-04-01,Wednesday,sammamish,Sunset Room,134490,grid_134490_202604011745,,17:45,19:30,1.75,2026-03-27,5,grid_inferred
