@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-03-28T07:20:49.207245",
-  "total_records": 6636,
+  "generated_at": "2026-03-28T15:08:12.947954",
+  "total_records": 6641,
   "missing_created": 4823,
   "libraries": [
     "bellevue",
@@ -512,8 +512,8 @@
   "lead_time_summary": [
     {
       "library": "bellevue",
-      "n": 5037,
-      "n_direct": 1335,
+      "n": 5042,
+      "n_direct": 1340,
       "n_lb": 3702,
       "median_days": 20.0,
       "p25": 10.0,
