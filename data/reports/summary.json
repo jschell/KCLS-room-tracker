@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-03-29T15:08:17.081686",
-  "total_records": 6905,
+  "generated_at": "2026-03-29T23:07:27.803172",
+  "total_records": 6913,
   "missing_created": 4823,
   "libraries": [
     "bellevue",
@@ -324,24 +324,24 @@
     "bellevue": {
       "Meeting Room 1": {
         "11:00": {
-          "pct_booked": 0.8,
+          "pct_booked": 1.0,
           "n_saturdays": 5,
-          "n_booked": 4
+          "n_booked": 5
         },
         "12:00": {
-          "pct_booked": 0.8,
+          "pct_booked": 1.0,
           "n_saturdays": 5,
-          "n_booked": 4
+          "n_booked": 5
         },
         "13:00": {
+          "pct_booked": 1.0,
+          "n_saturdays": 5,
+          "n_booked": 5
+        },
+        "14:00": {
           "pct_booked": 0.8,
           "n_saturdays": 5,
           "n_booked": 4
-        },
-        "14:00": {
-          "pct_booked": 0.6,
-          "n_saturdays": 5,
-          "n_booked": 3
         },
         "15:00": {
           "pct_booked": 0.6,
@@ -361,24 +361,24 @@
       },
       "Meeting Room 2": {
         "11:00": {
-          "pct_booked": 0.8,
+          "pct_booked": 1.0,
           "n_saturdays": 5,
-          "n_booked": 4
+          "n_booked": 5
         },
         "12:00": {
-          "pct_booked": 0.8,
+          "pct_booked": 1.0,
           "n_saturdays": 5,
-          "n_booked": 4
+          "n_booked": 5
         },
         "13:00": {
+          "pct_booked": 1.0,
+          "n_saturdays": 5,
+          "n_booked": 5
+        },
+        "14:00": {
           "pct_booked": 0.8,
           "n_saturdays": 5,
           "n_booked": 4
-        },
-        "14:00": {
-          "pct_booked": 0.6,
-          "n_saturdays": 5,
-          "n_booked": 3
         },
         "15:00": {
           "pct_booked": 0.6,
@@ -398,24 +398,24 @@
       },
       "Meeting Room 3": {
         "11:00": {
-          "pct_booked": 0.8,
+          "pct_booked": 1.0,
           "n_saturdays": 5,
-          "n_booked": 4
+          "n_booked": 5
         },
         "12:00": {
-          "pct_booked": 0.8,
+          "pct_booked": 1.0,
           "n_saturdays": 5,
-          "n_booked": 4
+          "n_booked": 5
         },
         "13:00": {
+          "pct_booked": 1.0,
+          "n_saturdays": 5,
+          "n_booked": 5
+        },
+        "14:00": {
           "pct_booked": 0.8,
           "n_saturdays": 5,
           "n_booked": 4
-        },
-        "14:00": {
-          "pct_booked": 0.6,
-          "n_saturdays": 5,
-          "n_booked": 3
         },
         "15:00": {
           "pct_booked": 0.6,
@@ -435,24 +435,24 @@
       },
       "Meeting Room 4": {
         "11:00": {
-          "pct_booked": 0.8,
+          "pct_booked": 1.0,
           "n_saturdays": 5,
-          "n_booked": 4
+          "n_booked": 5
         },
         "12:00": {
-          "pct_booked": 0.8,
+          "pct_booked": 1.0,
           "n_saturdays": 5,
-          "n_booked": 4
+          "n_booked": 5
         },
         "13:00": {
+          "pct_booked": 1.0,
+          "n_saturdays": 5,
+          "n_booked": 5
+        },
+        "14:00": {
           "pct_booked": 0.8,
           "n_saturdays": 5,
           "n_booked": 4
-        },
-        "14:00": {
-          "pct_booked": 0.6,
-          "n_saturdays": 5,
-          "n_booked": 3
         },
         "15:00": {
           "pct_booked": 0.6,
@@ -472,24 +472,24 @@
       },
       "Meeting Room 5": {
         "11:00": {
-          "pct_booked": 0.8,
+          "pct_booked": 1.0,
           "n_saturdays": 5,
-          "n_booked": 4
+          "n_booked": 5
         },
         "12:00": {
-          "pct_booked": 0.8,
+          "pct_booked": 1.0,
           "n_saturdays": 5,
-          "n_booked": 4
+          "n_booked": 5
         },
         "13:00": {
+          "pct_booked": 1.0,
+          "n_saturdays": 5,
+          "n_booked": 5
+        },
+        "14:00": {
           "pct_booked": 0.8,
           "n_saturdays": 5,
           "n_booked": 4
-        },
-        "14:00": {
-          "pct_booked": 0.6,
-          "n_saturdays": 5,
-          "n_booked": 3
         },
         "15:00": {
           "pct_booked": 0.6,
@@ -512,8 +512,8 @@
   "lead_time_summary": [
     {
       "library": "bellevue",
-      "n": 5242,
-      "n_direct": 1540,
+      "n": 5247,
+      "n_direct": 1545,
       "n_lb": 3702,
       "median_days": 21.0,
       "p25": 10.0,
@@ -545,8 +545,8 @@
     },
     {
       "library": "redmond",
-      "n": 1152,
-      "n_direct": 300,
+      "n": 1155,
+      "n_direct": 303,
       "n_lb": 852,
       "median_days": 19.0,
       "p25": 11.0,
