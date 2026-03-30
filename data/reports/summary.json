@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-03-29T23:07:27.803172",
-  "total_records": 6913,
+  "generated_at": "2026-03-30T07:33:09.811362",
+  "total_records": 7296,
   "missing_created": 4823,
   "libraries": [
     "bellevue",
@@ -12,7 +12,7 @@
   ],
   "date_range": {
     "min": "2026-03-22",
-    "max": "2026-04-26"
+    "max": "2026-04-27"
   },
   "saturday_windows": {
     "redmond": {
@@ -512,69 +512,69 @@
   "lead_time_summary": [
     {
       "library": "bellevue",
-      "n": 5247,
-      "n_direct": 1545,
+      "n": 5502,
+      "n_direct": 1800,
       "n_lb": 3702,
-      "median_days": 21.0,
-      "p25": 10.0,
+      "median_days": 22.0,
+      "p25": 12.0,
       "p75": 28.0,
       "p90": 28.0,
       "pct_same_day": 0.3
     },
     {
       "library": "issaquah",
-      "n": 47,
-      "n_direct": 15,
+      "n": 48,
+      "n_direct": 16,
       "n_lb": 32,
       "median_days": 17.0,
-      "p25": 7.5,
+      "p25": 7.0,
       "p75": 27.0,
       "p90": 28.0,
-      "pct_same_day": 6.4
+      "pct_same_day": 8.3
     },
     {
       "library": "kingsgate",
-      "n": 44,
-      "n_direct": 15,
+      "n": 45,
+      "n_direct": 16,
       "n_lb": 29,
-      "median_days": 16.5,
-      "p25": 6.5,
+      "median_days": 17.0,
+      "p25": 7.0,
       "p75": 27.0,
       "p90": 28.0,
-      "pct_same_day": 9.1
+      "pct_same_day": 8.9
     },
     {
       "library": "redmond",
-      "n": 1155,
-      "n_direct": 303,
+      "n": 1248,
+      "n_direct": 396,
       "n_lb": 852,
-      "median_days": 19.0,
-      "p25": 11.0,
-      "p75": 27.0,
+      "median_days": 21.0,
+      "p25": 12.0,
+      "p75": 28.0,
       "p90": 28.0,
       "pct_same_day": 0.5
     },
     {
       "library": "sammamish",
-      "n": 380,
-      "n_direct": 202,
+      "n": 412,
+      "n_direct": 234,
       "n_lb": 178,
       "median_days": 7.0,
       "p25": 5.0,
       "p75": 7.0,
-      "p90": 9.1,
-      "pct_same_day": 6.1
+      "p90": 7.0,
+      "pct_same_day": 5.6
     },
     {
       "library": "woodinville",
-      "n": 40,
-      "n_direct": 10,
+      "n": 41,
+      "n_direct": 11,
       "n_lb": 30,
       "median_days": 17.0,
-      "p25": 7.5,
+      "p25": 8.0,
       "p75": 25.0,
       "p90": 28.0,
-      "pct_same_day": 5.0
+      "pct_same_day": 4.9
     }
   ]
 }
