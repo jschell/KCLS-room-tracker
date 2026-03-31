@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-03-31T15:26:09.305689",
-  "total_records": 7738,
+  "generated_at": "2026-03-31T23:08:30.568910",
+  "total_records": 7746,
   "missing_created": 4823,
   "libraries": [
     "bellevue",
@@ -344,9 +344,9 @@
           "n_booked": 4
         },
         "15:00": {
-          "pct_booked": 0.6,
+          "pct_booked": 0.8,
           "n_saturdays": 5,
-          "n_booked": 3
+          "n_booked": 4
         },
         "16:00": {
           "pct_booked": 0.8,
@@ -381,9 +381,9 @@
           "n_booked": 4
         },
         "15:00": {
-          "pct_booked": 0.6,
+          "pct_booked": 0.8,
           "n_saturdays": 5,
-          "n_booked": 3
+          "n_booked": 4
         },
         "16:00": {
           "pct_booked": 0.8,
@@ -418,9 +418,9 @@
           "n_booked": 4
         },
         "15:00": {
-          "pct_booked": 0.6,
+          "pct_booked": 0.8,
           "n_saturdays": 5,
-          "n_booked": 3
+          "n_booked": 4
         },
         "16:00": {
           "pct_booked": 0.8,
@@ -455,9 +455,9 @@
           "n_booked": 4
         },
         "15:00": {
-          "pct_booked": 0.6,
+          "pct_booked": 0.8,
           "n_saturdays": 5,
-          "n_booked": 3
+          "n_booked": 4
         },
         "16:00": {
           "pct_booked": 0.8,
@@ -492,9 +492,9 @@
           "n_booked": 4
         },
         "15:00": {
-          "pct_booked": 0.6,
+          "pct_booked": 0.8,
           "n_saturdays": 5,
-          "n_booked": 3
+          "n_booked": 4
         },
         "16:00": {
           "pct_booked": 0.8,
@@ -512,8 +512,8 @@
   "lead_time_summary": [
     {
       "library": "bellevue",
-      "n": 5847,
-      "n_direct": 2145,
+      "n": 5852,
+      "n_direct": 2150,
       "n_lb": 3702,
       "median_days": 24.0,
       "p25": 12.0,
@@ -545,8 +545,8 @@
     },
     {
       "library": "redmond",
-      "n": 1314,
-      "n_direct": 462,
+      "n": 1317,
+      "n_direct": 465,
       "n_lb": 852,
       "median_days": 22.0,
       "p25": 12.0,
