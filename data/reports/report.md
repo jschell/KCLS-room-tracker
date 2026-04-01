@@ -1,38 +1,38 @@
 # KCLS Room Monitor Report
-*Generated: 2026-03-31 UTC*
+*Generated: 2026-04-01 UTC*
 
 ## Dataset Summary
 | Metric | Value |
 |--------|-------|
-| Total records | 7,746 |
-| Date range | 2026-03-22 to 2026-04-28 |
+| Total records | 8,099 |
+| Date range | 2026-03-22 to 2026-04-29 |
 | Libraries | bellevue, issaquah, kingsgate, redmond, sammamish, woodinville |
-| Missing `created` (affects lead time) | 4,823 (62%) |
+| Missing `created` (affects lead time) | 4,823 (60%) |
 
 ## Booking Volume by Day of Week
 | Day | Bookings |
 |-----|---------|
 | Monday | 1,682 |
 | Tuesday | 1,762 |
-| Wednesday | 1,415 |
+| Wednesday | 1,767 |
 | Thursday | 365 |
 | Friday | 1,094 |
-| Saturday | 714 |
+| Saturday | 715 |
 | Sunday | 714 |
 
 ## Booking Volume by Hour (All Libraries)
 | Hour | Bookings |
 |------|---------|
 | 10am | 480 |
-| 11am | 1,023 |
-| 12pm | 1,049 |
-| 1pm | 1,041 |
-| 2pm | 970 |
-| 3pm | 986 |
-| 4pm | 1,061 |
-| 5pm | 723 |
-| 6pm | 270 |
-| 7pm | 143 |
+| 11am | 1,068 |
+| 12pm | 1,102 |
+| 1pm | 1,085 |
+| 2pm | 1,014 |
+| 3pm | 1,031 |
+| 4pm | 1,105 |
+| 5pm | 756 |
+| 6pm | 300 |
+| 7pm | 158 |
 
 ## Booking Lead Times
 *How far in advance meeting rooms are reserved, inferred from first-seen date.*
@@ -41,24 +41,24 @@
 
 | Library | Median days | p25 | p75 | p90 | % same-day | N (direct / lower-bound) |
 |---------|------------|-----|-----|-----|------------|--------------------------|
-| bellevue | 24.0 | 12.0 | 28.0 | 28.0 | 0.3% | 5852 (2150 / 3702) |
-| issaquah | 17.0 | 7.0 | 27.0 | 28.0 | 10.0% | 50 (18 / 32) |
-| kingsgate | 17.0 | 6.0 | 27.5 | 28.0 | 8.5% | 47 (18 / 29) |
-| redmond | 22.0 | 12.0 | 28.0 | 28.0 | 0.5% | 1317 (465 / 852) |
-| sammamish | 7.0 | 5.0 | 7.0 | 7.0 | 5.3% | 436 (258 / 178) |
-| woodinville | 17.5 | 7.5 | 26.2 | 28.0 | 6.8% | 44 (14 / 30) |
+| bellevue | 24.0 | 14.0 | 28.0 | 28.0 | 0.3% | 6172 (2470 / 3702) |
+| issaquah | 17.0 | 7.0 | 27.0 | 28.0 | 9.8% | 51 (19 / 32) |
+| kingsgate | 17.0 | 6.5 | 28.0 | 28.0 | 8.3% | 48 (19 / 29) |
+| redmond | 22.0 | 12.0 | 28.0 | 28.0 | 0.5% | 1320 (468 / 852) |
+| sammamish | 7.0 | 5.0 | 7.0 | 7.0 | 5.0% | 463 (285 / 178) |
+| woodinville | 18.0 | 8.0 | 27.0 | 28.0 | 6.7% | 45 (15 / 30) |
 
-*7,746 bookings total — 2,923 fresh-caught (accurate), 4,823 initial batch (lower bounds). Accuracy improves as the dataset matures.*
+*8,099 bookings total — 3,276 fresh-caught (accurate), 4,823 initial batch (lower bounds). Accuracy improves as the dataset matures.*
 
 ## Day × Hour Heatmap (Booking Counts)
 | Day | 10am | 11am | 12pm | 1pm | 2pm | 3pm | 4pm | 5pm | 6pm | 7pm |
 |-----|----|----|----|----|----|----|----|----|----|----|
 | Monday | 227 | 159 | 188 | 251 | 233 | 235 | 256 | 133 | 0 | 0 |
 | Tuesday | 0 | 185 | 261 | 239 | 242 | 222 | 228 | 171 | 144 | 70 |
-| Wednesday | 0 | 190 | 212 | 159 | 155 | 168 | 175 | 157 | 126 | 73 |
+| Wednesday | 0 | 235 | 264 | 203 | 199 | 213 | 219 | 190 | 156 | 88 |
 | Thursday | 69 | 23 | 37 | 44 | 39 | 49 | 68 | 36 | 0 | 0 |
 | Friday | 184 | 131 | 164 | 136 | 118 | 141 | 136 | 84 | 0 | 0 |
-| Saturday | 0 | 130 | 90 | 103 | 103 | 91 | 112 | 85 | 0 | 0 |
+| Saturday | 0 | 130 | 91 | 103 | 103 | 91 | 112 | 85 | 0 | 0 |
 | Sunday | 0 | 205 | 97 | 109 | 80 | 80 | 86 | 57 | 0 | 0 |
 
 ## Saturday Availability Windows
@@ -143,7 +143,7 @@
 | 4pm | 0% | ✅ Often available |
 | 5pm | 100% | ⚠️ Usually taken |
 
-**Typical lead time at Woodinville:** median 17.5 days, p90 28.0 days
+**Typical lead time at Woodinville:** median 18.0 days, p90 28.0 days
 
 ### Kingsgate
 **Meeting Room**
@@ -242,17 +242,17 @@
 ## Booking Frequency by Library
 | Library | Bookings |
 |---------|---------|
-| bellevue | 5,852 |
-| redmond | 1,317 |
-| sammamish | 436 |
-| issaquah | 50 |
-| kingsgate | 47 |
-| woodinville | 44 |
+| bellevue | 6,172 |
+| redmond | 1,320 |
+| sammamish | 463 |
+| issaquah | 51 |
+| kingsgate | 48 |
+| woodinville | 45 |
 
 ## Data Quality Notes
-- Total records: 7,746
+- Total records: 8,099
 - Records missing `created` timestamp: 4,823
 - Lead time coverage: 100% of records have lead time data (direct or inferred)
-- Fresh-caught bookings (lead time accurate ±12h): 2,923
+- Fresh-caught bookings (lead time accurate ±12h): 3,276
 - Initial-batch bookings (lead time is lower bound — true lead may be longer): 4,823
-- Data maturity: 38% fresh — grows toward 100% as initial batch ages out
+- Data maturity: 40% fresh — grows toward 100% as initial batch ages out
