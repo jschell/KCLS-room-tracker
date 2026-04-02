@@ -8099,3 +8099,171 @@ fetch_date,booking_date,day_of_week,library,space_name,space_id,booking_id,title
 2026-04-01,2026-04-29,Wednesday,bellevue,Meeting Room 5,17227,grid_17227_202604291900,,19:00,19:30,0.5,2026-04-01,28,grid_inferred
 2026-04-01,2026-04-29,Wednesday,bellevue,Meeting Room 5,17227,grid_17227_202604291900,,19:00,19:30,0.5,2026-04-01,28,grid_inferred
 2026-04-01,2026-04-08,Wednesday,sammamish,Sunset Room,134490,grid_134490_202604081800,,18:00,19:30,1.5,2026-04-01,7,grid_inferred
+2026-04-02,2026-04-30,Thursday,redmond,East Meeting Room 1,17228,grid_17228_202604301000,,10:00,13:00,3.0,2026-04-02,28,grid_inferred
+2026-04-02,2026-04-30,Thursday,redmond,East Meeting Room 1,17228,grid_17228_202604301230,,12:30,13:30,1.0,2026-04-02,28,grid_inferred
+2026-04-02,2026-04-30,Thursday,redmond,East Meeting Room 1,17228,grid_17228_202604301300,,13:00,14:00,1.0,2026-04-02,28,grid_inferred
+2026-04-02,2026-04-30,Thursday,redmond,East Meeting Room 1,17228,grid_17228_202604301330,,13:30,14:30,1.0,2026-04-02,28,grid_inferred
+2026-04-02,2026-04-30,Thursday,redmond,East Meeting Room 1,17228,grid_17228_202604301400,,14:00,15:00,1.0,2026-04-02,28,grid_inferred
+2026-04-02,2026-04-30,Thursday,redmond,East Meeting Room 1,17228,grid_17228_202604301430,,14:30,15:30,1.0,2026-04-02,28,grid_inferred
+2026-04-02,2026-04-30,Thursday,redmond,East Meeting Room 1,17228,grid_17228_202604301500,,15:00,15:30,0.5,2026-04-02,28,grid_inferred
+2026-04-02,2026-04-30,Thursday,redmond,East Meeting Room 1,17228,grid_17228_202604301500,,15:00,16:00,1.0,2026-04-02,28,grid_inferred
+2026-04-02,2026-04-30,Thursday,redmond,East Meeting Room 1,17228,grid_17228_202604301530,,15:30,16:00,0.5,2026-04-02,28,grid_inferred
+2026-04-02,2026-04-30,Thursday,redmond,East Meeting Room 1,17228,grid_17228_202604301530,,15:30,16:30,1.0,2026-04-02,28,grid_inferred
+2026-04-02,2026-04-30,Thursday,redmond,East Meeting Room 1,17228,grid_17228_202604301600,,16:00,16:30,0.5,2026-04-02,28,grid_inferred
+2026-04-02,2026-04-30,Thursday,redmond,East Meeting Room 1,17228,grid_17228_202604301600,,16:00,17:00,1.0,2026-04-02,28,grid_inferred
+2026-04-02,2026-04-30,Thursday,redmond,East Meeting Room 1,17228,grid_17228_202604301630,,16:30,17:00,0.5,2026-04-02,28,grid_inferred
+2026-04-02,2026-04-30,Thursday,redmond,East Meeting Room 1,17228,grid_17228_202604301630,,16:30,17:30,1.0,2026-04-02,28,grid_inferred
+2026-04-02,2026-04-30,Thursday,redmond,East Meeting Room 1,17228,grid_17228_202604301700,,17:00,17:30,0.5,2026-04-02,28,grid_inferred
+2026-04-02,2026-04-30,Thursday,redmond,East Meeting Room 1,17228,grid_17228_202604301700,,17:00,17:30,0.5,2026-04-02,28,grid_inferred
+2026-04-02,2026-04-30,Thursday,redmond,East Meeting Room 2,17229,grid_17229_202604301000,,10:00,13:00,3.0,2026-04-02,28,grid_inferred
+2026-04-02,2026-04-30,Thursday,redmond,East Meeting Room 2,17229,grid_17229_202604301230,,12:30,13:30,1.0,2026-04-02,28,grid_inferred
+2026-04-02,2026-04-30,Thursday,redmond,East Meeting Room 2,17229,grid_17229_202604301300,,13:00,14:00,1.0,2026-04-02,28,grid_inferred
+2026-04-02,2026-04-30,Thursday,redmond,East Meeting Room 2,17229,grid_17229_202604301330,,13:30,14:30,1.0,2026-04-02,28,grid_inferred
+2026-04-02,2026-04-30,Thursday,redmond,East Meeting Room 2,17229,grid_17229_202604301400,,14:00,15:00,1.0,2026-04-02,28,grid_inferred
+2026-04-02,2026-04-30,Thursday,redmond,East Meeting Room 2,17229,grid_17229_202604301430,,14:30,15:30,1.0,2026-04-02,28,grid_inferred
+2026-04-02,2026-04-30,Thursday,redmond,East Meeting Room 2,17229,grid_17229_202604301500,,15:00,15:30,0.5,2026-04-02,28,grid_inferred
+2026-04-02,2026-04-30,Thursday,redmond,East Meeting Room 2,17229,grid_17229_202604301500,,15:00,16:00,1.0,2026-04-02,28,grid_inferred
+2026-04-02,2026-04-30,Thursday,redmond,East Meeting Room 2,17229,grid_17229_202604301530,,15:30,16:00,0.5,2026-04-02,28,grid_inferred
+2026-04-02,2026-04-30,Thursday,redmond,East Meeting Room 2,17229,grid_17229_202604301530,,15:30,16:30,1.0,2026-04-02,28,grid_inferred
+2026-04-02,2026-04-30,Thursday,redmond,East Meeting Room 2,17229,grid_17229_202604301600,,16:00,16:30,0.5,2026-04-02,28,grid_inferred
+2026-04-02,2026-04-30,Thursday,redmond,East Meeting Room 2,17229,grid_17229_202604301600,,16:00,17:00,1.0,2026-04-02,28,grid_inferred
+2026-04-02,2026-04-30,Thursday,redmond,East Meeting Room 2,17229,grid_17229_202604301630,,16:30,17:00,0.5,2026-04-02,28,grid_inferred
+2026-04-02,2026-04-30,Thursday,redmond,East Meeting Room 2,17229,grid_17229_202604301630,,16:30,17:30,1.0,2026-04-02,28,grid_inferred
+2026-04-02,2026-04-30,Thursday,redmond,East Meeting Room 2,17229,grid_17229_202604301700,,17:00,17:30,0.5,2026-04-02,28,grid_inferred
+2026-04-02,2026-04-30,Thursday,redmond,East Meeting Room 2,17229,grid_17229_202604301700,,17:00,17:30,0.5,2026-04-02,28,grid_inferred
+2026-04-02,2026-04-30,Thursday,redmond,Conference Room,17230,grid_17230_202604301000,,10:00,13:00,3.0,2026-04-02,28,grid_inferred
+2026-04-02,2026-04-30,Thursday,redmond,Conference Room,17230,grid_17230_202604301230,,12:30,13:30,1.0,2026-04-02,28,grid_inferred
+2026-04-02,2026-04-30,Thursday,redmond,Conference Room,17230,grid_17230_202604301300,,13:00,14:00,1.0,2026-04-02,28,grid_inferred
+2026-04-02,2026-04-30,Thursday,redmond,Conference Room,17230,grid_17230_202604301330,,13:30,14:30,1.0,2026-04-02,28,grid_inferred
+2026-04-02,2026-04-30,Thursday,redmond,Conference Room,17230,grid_17230_202604301400,,14:00,15:00,1.0,2026-04-02,28,grid_inferred
+2026-04-02,2026-04-30,Thursday,redmond,Conference Room,17230,grid_17230_202604301430,,14:30,15:30,1.0,2026-04-02,28,grid_inferred
+2026-04-02,2026-04-30,Thursday,redmond,Conference Room,17230,grid_17230_202604301500,,15:00,15:30,0.5,2026-04-02,28,grid_inferred
+2026-04-02,2026-04-30,Thursday,redmond,Conference Room,17230,grid_17230_202604301500,,15:00,16:00,1.0,2026-04-02,28,grid_inferred
+2026-04-02,2026-04-30,Thursday,redmond,Conference Room,17230,grid_17230_202604301530,,15:30,16:00,0.5,2026-04-02,28,grid_inferred
+2026-04-02,2026-04-30,Thursday,redmond,Conference Room,17230,grid_17230_202604301530,,15:30,16:30,1.0,2026-04-02,28,grid_inferred
+2026-04-02,2026-04-30,Thursday,redmond,Conference Room,17230,grid_17230_202604301600,,16:00,16:30,0.5,2026-04-02,28,grid_inferred
+2026-04-02,2026-04-30,Thursday,redmond,Conference Room,17230,grid_17230_202604301600,,16:00,17:00,1.0,2026-04-02,28,grid_inferred
+2026-04-02,2026-04-30,Thursday,redmond,Conference Room,17230,grid_17230_202604301630,,16:30,17:00,0.5,2026-04-02,28,grid_inferred
+2026-04-02,2026-04-30,Thursday,redmond,Conference Room,17230,grid_17230_202604301630,,16:30,17:30,1.0,2026-04-02,28,grid_inferred
+2026-04-02,2026-04-30,Thursday,redmond,Conference Room,17230,grid_17230_202604301700,,17:00,17:30,0.5,2026-04-02,28,grid_inferred
+2026-04-02,2026-04-30,Thursday,redmond,Conference Room,17230,grid_17230_202604301700,,17:00,17:30,0.5,2026-04-02,28,grid_inferred
+2026-04-02,2026-04-30,Thursday,sammamish,Meeting Room,17254,grid_17254_202604301000,,10:00,13:30,3.5,2026-04-02,28,grid_inferred
+2026-04-02,2026-04-30,Thursday,sammamish,Meeting Room,17254,grid_17254_202604301630,,16:30,17:30,1.0,2026-04-02,28,grid_inferred
+2026-04-02,2026-04-09,Thursday,sammamish,Sunset Room,134490,grid_134490_202604091000,,10:00,10:15,0.25,2026-04-02,7,grid_inferred
+2026-04-02,2026-04-09,Thursday,sammamish,Sunset Room,134490,grid_134490_202604091000,,10:00,10:30,0.5,2026-04-02,7,grid_inferred
+2026-04-02,2026-04-09,Thursday,sammamish,Sunset Room,134490,grid_134490_202604091015,,10:15,10:45,0.5,2026-04-02,7,grid_inferred
+2026-04-02,2026-04-09,Thursday,sammamish,Sunset Room,134490,grid_134490_202604091030,,10:30,11:00,0.5,2026-04-02,7,grid_inferred
+2026-04-02,2026-04-09,Thursday,sammamish,Sunset Room,134490,grid_134490_202604091045,,10:45,11:15,0.5,2026-04-02,7,grid_inferred
+2026-04-02,2026-04-09,Thursday,sammamish,Sunset Room,134490,grid_134490_202604091100,,11:00,11:30,0.5,2026-04-02,7,grid_inferred
+2026-04-02,2026-04-09,Thursday,sammamish,Sunset Room,134490,grid_134490_202604091115,,11:15,11:45,0.5,2026-04-02,7,grid_inferred
+2026-04-02,2026-04-09,Thursday,sammamish,Sunset Room,134490,grid_134490_202604091130,,11:30,12:00,0.5,2026-04-02,7,grid_inferred
+2026-04-02,2026-04-09,Thursday,sammamish,Sunset Room,134490,grid_134490_202604091145,,11:45,12:15,0.5,2026-04-02,7,grid_inferred
+2026-04-02,2026-04-09,Thursday,sammamish,Sunset Room,134490,grid_134490_202604091200,,12:00,12:30,0.5,2026-04-02,7,grid_inferred
+2026-04-02,2026-04-09,Thursday,sammamish,Sunset Room,134490,grid_134490_202604091215,,12:15,12:45,0.5,2026-04-02,7,grid_inferred
+2026-04-02,2026-04-09,Thursday,sammamish,Sunset Room,134490,grid_134490_202604091230,,12:30,13:00,0.5,2026-04-02,7,grid_inferred
+2026-04-02,2026-04-09,Thursday,sammamish,Sunset Room,134490,grid_134490_202604091245,,12:45,13:15,0.5,2026-04-02,7,grid_inferred
+2026-04-02,2026-04-09,Thursday,sammamish,Sunset Room,134490,grid_134490_202604091300,,13:00,13:30,0.5,2026-04-02,7,grid_inferred
+2026-04-02,2026-04-09,Thursday,sammamish,Sunset Room,134490,grid_134490_202604091315,,13:15,13:45,0.5,2026-04-02,7,grid_inferred
+2026-04-02,2026-04-09,Thursday,sammamish,Sunset Room,134490,grid_134490_202604091330,,13:30,14:00,0.5,2026-04-02,7,grid_inferred
+2026-04-02,2026-04-09,Thursday,sammamish,Sunset Room,134490,grid_134490_202604091345,,13:45,14:15,0.5,2026-04-02,7,grid_inferred
+2026-04-02,2026-04-09,Thursday,sammamish,Sunset Room,134490,grid_134490_202604091400,,14:00,14:30,0.5,2026-04-02,7,grid_inferred
+2026-04-02,2026-04-09,Thursday,sammamish,Sunset Room,134490,grid_134490_202604091415,,14:15,14:45,0.5,2026-04-02,7,grid_inferred
+2026-04-02,2026-04-09,Thursday,sammamish,Sunset Room,134490,grid_134490_202604091430,,14:30,15:00,0.5,2026-04-02,7,grid_inferred
+2026-04-02,2026-04-09,Thursday,sammamish,Sunset Room,134490,grid_134490_202604091445,,14:45,15:15,0.5,2026-04-02,7,grid_inferred
+2026-04-02,2026-04-09,Thursday,sammamish,Sunset Room,134490,grid_134490_202604091500,,15:00,15:30,0.5,2026-04-02,7,grid_inferred
+2026-04-02,2026-04-09,Thursday,sammamish,Sunset Room,134490,grid_134490_202604091515,,15:15,15:45,0.5,2026-04-02,7,grid_inferred
+2026-04-02,2026-04-09,Thursday,sammamish,Sunset Room,134490,grid_134490_202604091530,,15:30,16:00,0.5,2026-04-02,7,grid_inferred
+2026-04-02,2026-04-09,Thursday,sammamish,Sunset Room,134490,grid_134490_202604091545,,15:45,16:15,0.5,2026-04-02,7,grid_inferred
+2026-04-02,2026-04-09,Thursday,sammamish,Sunset Room,134490,grid_134490_202604091600,,16:00,16:30,0.5,2026-04-02,7,grid_inferred
+2026-04-02,2026-04-09,Thursday,sammamish,Sunset Room,134490,grid_134490_202604091615,,16:15,16:45,0.5,2026-04-02,7,grid_inferred
+2026-04-02,2026-04-09,Thursday,sammamish,Sunset Room,134490,grid_134490_202604091630,,16:30,17:00,0.5,2026-04-02,7,grid_inferred
+2026-04-02,2026-04-09,Thursday,sammamish,Sunset Room,134490,grid_134490_202604091645,,16:45,17:15,0.5,2026-04-02,7,grid_inferred
+2026-04-02,2026-04-09,Thursday,sammamish,Sunset Room,134490,grid_134490_202604091700,,17:00,17:30,0.5,2026-04-02,7,grid_inferred
+2026-04-02,2026-04-09,Thursday,sammamish,Sunset Room,134490,grid_134490_202604091715,,17:15,17:30,0.25,2026-04-02,7,grid_inferred
+2026-04-02,2026-04-02,Thursday,woodinville,Meeting Room,17258,grid_17258_202604021300,,13:00,17:30,4.5,2026-04-02,0,grid_inferred
+2026-04-02,2026-04-30,Thursday,woodinville,Meeting Room,17258,grid_17258_202604301230,,12:30,17:30,5.0,2026-04-02,28,grid_inferred
+2026-04-02,2026-04-02,Thursday,kingsgate,Meeting Room,17268,grid_17268_202604021300,,13:00,17:30,4.5,2026-04-02,0,grid_inferred
+2026-04-02,2026-04-25,Saturday,kingsgate,Meeting Room,17268,grid_17268_202604251500,,15:00,17:30,2.5,2026-04-02,23,grid_inferred
+2026-04-02,2026-04-30,Thursday,kingsgate,Meeting Room,17268,grid_17268_202604301330,,13:30,17:30,4.0,2026-04-02,28,grid_inferred
+2026-04-02,2026-04-18,Saturday,issaquah,Meeting Room,17233,grid_17233_202604181700,,17:00,17:30,0.5,2026-04-02,16,grid_inferred
+2026-04-02,2026-04-19,Sunday,issaquah,Meeting Room,17233,grid_17233_202604191630,,16:30,17:30,1.0,2026-04-02,17,grid_inferred
+2026-04-02,2026-04-30,Thursday,bellevue,Meeting Room 1,17223,grid_17223_202604301000,,10:00,10:30,0.5,2026-04-02,28,grid_inferred
+2026-04-02,2026-04-30,Thursday,bellevue,Meeting Room 1,17223,grid_17223_202604301000,,10:00,11:00,1.0,2026-04-02,28,grid_inferred
+2026-04-02,2026-04-30,Thursday,bellevue,Meeting Room 1,17223,grid_17223_202604301030,,10:30,11:30,1.0,2026-04-02,28,grid_inferred
+2026-04-02,2026-04-30,Thursday,bellevue,Meeting Room 1,17223,grid_17223_202604301100,,11:00,12:00,1.0,2026-04-02,28,grid_inferred
+2026-04-02,2026-04-30,Thursday,bellevue,Meeting Room 1,17223,grid_17223_202604301130,,11:30,12:30,1.0,2026-04-02,28,grid_inferred
+2026-04-02,2026-04-30,Thursday,bellevue,Meeting Room 1,17223,grid_17223_202604301200,,12:00,13:00,1.0,2026-04-02,28,grid_inferred
+2026-04-02,2026-04-30,Thursday,bellevue,Meeting Room 1,17223,grid_17223_202604301230,,12:30,13:30,1.0,2026-04-02,28,grid_inferred
+2026-04-02,2026-04-30,Thursday,bellevue,Meeting Room 1,17223,grid_17223_202604301300,,13:00,14:00,1.0,2026-04-02,28,grid_inferred
+2026-04-02,2026-04-30,Thursday,bellevue,Meeting Room 1,17223,grid_17223_202604301330,,13:30,14:30,1.0,2026-04-02,28,grid_inferred
+2026-04-02,2026-04-30,Thursday,bellevue,Meeting Room 1,17223,grid_17223_202604301400,,14:00,15:00,1.0,2026-04-02,28,grid_inferred
+2026-04-02,2026-04-30,Thursday,bellevue,Meeting Room 1,17223,grid_17223_202604301430,,14:30,15:30,1.0,2026-04-02,28,grid_inferred
+2026-04-02,2026-04-30,Thursday,bellevue,Meeting Room 1,17223,grid_17223_202604301500,,15:00,16:00,1.0,2026-04-02,28,grid_inferred
+2026-04-02,2026-04-30,Thursday,bellevue,Meeting Room 1,17223,grid_17223_202604301530,,15:30,16:30,1.0,2026-04-02,28,grid_inferred
+2026-04-02,2026-04-30,Thursday,bellevue,Meeting Room 1,17223,grid_17223_202604301600,,16:00,17:00,1.0,2026-04-02,28,grid_inferred
+2026-04-02,2026-04-30,Thursday,bellevue,Meeting Room 1,17223,grid_17223_202604301630,,16:30,17:30,1.0,2026-04-02,28,grid_inferred
+2026-04-02,2026-04-30,Thursday,bellevue,Meeting Room 1,17223,grid_17223_202604301700,,17:00,17:30,0.5,2026-04-02,28,grid_inferred
+2026-04-02,2026-04-30,Thursday,bellevue,Meeting Room 2,17225,grid_17225_202604301000,,10:00,10:30,0.5,2026-04-02,28,grid_inferred
+2026-04-02,2026-04-30,Thursday,bellevue,Meeting Room 2,17225,grid_17225_202604301000,,10:00,11:00,1.0,2026-04-02,28,grid_inferred
+2026-04-02,2026-04-30,Thursday,bellevue,Meeting Room 2,17225,grid_17225_202604301030,,10:30,11:30,1.0,2026-04-02,28,grid_inferred
+2026-04-02,2026-04-30,Thursday,bellevue,Meeting Room 2,17225,grid_17225_202604301100,,11:00,12:00,1.0,2026-04-02,28,grid_inferred
+2026-04-02,2026-04-30,Thursday,bellevue,Meeting Room 2,17225,grid_17225_202604301130,,11:30,12:30,1.0,2026-04-02,28,grid_inferred
+2026-04-02,2026-04-30,Thursday,bellevue,Meeting Room 2,17225,grid_17225_202604301200,,12:00,13:00,1.0,2026-04-02,28,grid_inferred
+2026-04-02,2026-04-30,Thursday,bellevue,Meeting Room 2,17225,grid_17225_202604301230,,12:30,13:30,1.0,2026-04-02,28,grid_inferred
+2026-04-02,2026-04-30,Thursday,bellevue,Meeting Room 2,17225,grid_17225_202604301300,,13:00,14:00,1.0,2026-04-02,28,grid_inferred
+2026-04-02,2026-04-30,Thursday,bellevue,Meeting Room 2,17225,grid_17225_202604301330,,13:30,14:30,1.0,2026-04-02,28,grid_inferred
+2026-04-02,2026-04-30,Thursday,bellevue,Meeting Room 2,17225,grid_17225_202604301400,,14:00,15:00,1.0,2026-04-02,28,grid_inferred
+2026-04-02,2026-04-30,Thursday,bellevue,Meeting Room 2,17225,grid_17225_202604301430,,14:30,15:30,1.0,2026-04-02,28,grid_inferred
+2026-04-02,2026-04-30,Thursday,bellevue,Meeting Room 2,17225,grid_17225_202604301500,,15:00,16:00,1.0,2026-04-02,28,grid_inferred
+2026-04-02,2026-04-30,Thursday,bellevue,Meeting Room 2,17225,grid_17225_202604301530,,15:30,16:30,1.0,2026-04-02,28,grid_inferred
+2026-04-02,2026-04-30,Thursday,bellevue,Meeting Room 2,17225,grid_17225_202604301600,,16:00,17:00,1.0,2026-04-02,28,grid_inferred
+2026-04-02,2026-04-30,Thursday,bellevue,Meeting Room 2,17225,grid_17225_202604301630,,16:30,17:30,1.0,2026-04-02,28,grid_inferred
+2026-04-02,2026-04-30,Thursday,bellevue,Meeting Room 2,17225,grid_17225_202604301700,,17:00,17:30,0.5,2026-04-02,28,grid_inferred
+2026-04-02,2026-04-30,Thursday,bellevue,Meeting Room 3,17226,grid_17226_202604301000,,10:00,10:30,0.5,2026-04-02,28,grid_inferred
+2026-04-02,2026-04-30,Thursday,bellevue,Meeting Room 3,17226,grid_17226_202604301000,,10:00,11:00,1.0,2026-04-02,28,grid_inferred
+2026-04-02,2026-04-30,Thursday,bellevue,Meeting Room 3,17226,grid_17226_202604301030,,10:30,11:30,1.0,2026-04-02,28,grid_inferred
+2026-04-02,2026-04-30,Thursday,bellevue,Meeting Room 3,17226,grid_17226_202604301100,,11:00,12:00,1.0,2026-04-02,28,grid_inferred
+2026-04-02,2026-04-30,Thursday,bellevue,Meeting Room 3,17226,grid_17226_202604301130,,11:30,12:30,1.0,2026-04-02,28,grid_inferred
+2026-04-02,2026-04-30,Thursday,bellevue,Meeting Room 3,17226,grid_17226_202604301200,,12:00,13:00,1.0,2026-04-02,28,grid_inferred
+2026-04-02,2026-04-30,Thursday,bellevue,Meeting Room 3,17226,grid_17226_202604301230,,12:30,13:30,1.0,2026-04-02,28,grid_inferred
+2026-04-02,2026-04-30,Thursday,bellevue,Meeting Room 3,17226,grid_17226_202604301300,,13:00,14:00,1.0,2026-04-02,28,grid_inferred
+2026-04-02,2026-04-30,Thursday,bellevue,Meeting Room 3,17226,grid_17226_202604301330,,13:30,14:30,1.0,2026-04-02,28,grid_inferred
+2026-04-02,2026-04-30,Thursday,bellevue,Meeting Room 3,17226,grid_17226_202604301400,,14:00,15:00,1.0,2026-04-02,28,grid_inferred
+2026-04-02,2026-04-30,Thursday,bellevue,Meeting Room 3,17226,grid_17226_202604301430,,14:30,15:30,1.0,2026-04-02,28,grid_inferred
+2026-04-02,2026-04-30,Thursday,bellevue,Meeting Room 3,17226,grid_17226_202604301500,,15:00,16:00,1.0,2026-04-02,28,grid_inferred
+2026-04-02,2026-04-30,Thursday,bellevue,Meeting Room 3,17226,grid_17226_202604301530,,15:30,16:30,1.0,2026-04-02,28,grid_inferred
+2026-04-02,2026-04-30,Thursday,bellevue,Meeting Room 3,17226,grid_17226_202604301600,,16:00,17:00,1.0,2026-04-02,28,grid_inferred
+2026-04-02,2026-04-30,Thursday,bellevue,Meeting Room 3,17226,grid_17226_202604301630,,16:30,17:30,1.0,2026-04-02,28,grid_inferred
+2026-04-02,2026-04-30,Thursday,bellevue,Meeting Room 3,17226,grid_17226_202604301700,,17:00,17:30,0.5,2026-04-02,28,grid_inferred
+2026-04-02,2026-04-30,Thursday,bellevue,Meeting Room 4,176330,grid_176330_202604301000,,10:00,10:30,0.5,2026-04-02,28,grid_inferred
+2026-04-02,2026-04-30,Thursday,bellevue,Meeting Room 4,176330,grid_176330_202604301000,,10:00,11:00,1.0,2026-04-02,28,grid_inferred
+2026-04-02,2026-04-30,Thursday,bellevue,Meeting Room 4,176330,grid_176330_202604301030,,10:30,11:30,1.0,2026-04-02,28,grid_inferred
+2026-04-02,2026-04-30,Thursday,bellevue,Meeting Room 4,176330,grid_176330_202604301100,,11:00,12:00,1.0,2026-04-02,28,grid_inferred
+2026-04-02,2026-04-30,Thursday,bellevue,Meeting Room 4,176330,grid_176330_202604301130,,11:30,12:30,1.0,2026-04-02,28,grid_inferred
+2026-04-02,2026-04-30,Thursday,bellevue,Meeting Room 4,176330,grid_176330_202604301200,,12:00,13:00,1.0,2026-04-02,28,grid_inferred
+2026-04-02,2026-04-30,Thursday,bellevue,Meeting Room 4,176330,grid_176330_202604301230,,12:30,13:30,1.0,2026-04-02,28,grid_inferred
+2026-04-02,2026-04-30,Thursday,bellevue,Meeting Room 4,176330,grid_176330_202604301300,,13:00,14:00,1.0,2026-04-02,28,grid_inferred
+2026-04-02,2026-04-30,Thursday,bellevue,Meeting Room 4,176330,grid_176330_202604301330,,13:30,14:30,1.0,2026-04-02,28,grid_inferred
+2026-04-02,2026-04-30,Thursday,bellevue,Meeting Room 4,176330,grid_176330_202604301400,,14:00,15:00,1.0,2026-04-02,28,grid_inferred
+2026-04-02,2026-04-30,Thursday,bellevue,Meeting Room 4,176330,grid_176330_202604301430,,14:30,15:30,1.0,2026-04-02,28,grid_inferred
+2026-04-02,2026-04-30,Thursday,bellevue,Meeting Room 4,176330,grid_176330_202604301500,,15:00,16:00,1.0,2026-04-02,28,grid_inferred
+2026-04-02,2026-04-30,Thursday,bellevue,Meeting Room 4,176330,grid_176330_202604301530,,15:30,16:30,1.0,2026-04-02,28,grid_inferred
+2026-04-02,2026-04-30,Thursday,bellevue,Meeting Room 4,176330,grid_176330_202604301600,,16:00,17:00,1.0,2026-04-02,28,grid_inferred
+2026-04-02,2026-04-30,Thursday,bellevue,Meeting Room 4,176330,grid_176330_202604301630,,16:30,17:30,1.0,2026-04-02,28,grid_inferred
+2026-04-02,2026-04-30,Thursday,bellevue,Meeting Room 4,176330,grid_176330_202604301700,,17:00,17:30,0.5,2026-04-02,28,grid_inferred
+2026-04-02,2026-04-30,Thursday,bellevue,Meeting Room 5,17227,grid_17227_202604301000,,10:00,10:30,0.5,2026-04-02,28,grid_inferred
+2026-04-02,2026-04-30,Thursday,bellevue,Meeting Room 5,17227,grid_17227_202604301000,,10:00,11:00,1.0,2026-04-02,28,grid_inferred
+2026-04-02,2026-04-30,Thursday,bellevue,Meeting Room 5,17227,grid_17227_202604301030,,10:30,11:30,1.0,2026-04-02,28,grid_inferred
+2026-04-02,2026-04-30,Thursday,bellevue,Meeting Room 5,17227,grid_17227_202604301100,,11:00,12:00,1.0,2026-04-02,28,grid_inferred
+2026-04-02,2026-04-30,Thursday,bellevue,Meeting Room 5,17227,grid_17227_202604301130,,11:30,12:30,1.0,2026-04-02,28,grid_inferred
+2026-04-02,2026-04-30,Thursday,bellevue,Meeting Room 5,17227,grid_17227_202604301200,,12:00,13:00,1.0,2026-04-02,28,grid_inferred
+2026-04-02,2026-04-30,Thursday,bellevue,Meeting Room 5,17227,grid_17227_202604301230,,12:30,13:30,1.0,2026-04-02,28,grid_inferred
+2026-04-02,2026-04-30,Thursday,bellevue,Meeting Room 5,17227,grid_17227_202604301300,,13:00,14:00,1.0,2026-04-02,28,grid_inferred
+2026-04-02,2026-04-30,Thursday,bellevue,Meeting Room 5,17227,grid_17227_202604301330,,13:30,14:30,1.0,2026-04-02,28,grid_inferred
+2026-04-02,2026-04-30,Thursday,bellevue,Meeting Room 5,17227,grid_17227_202604301400,,14:00,15:00,1.0,2026-04-02,28,grid_inferred
+2026-04-02,2026-04-30,Thursday,bellevue,Meeting Room 5,17227,grid_17227_202604301430,,14:30,15:30,1.0,2026-04-02,28,grid_inferred
+2026-04-02,2026-04-30,Thursday,bellevue,Meeting Room 5,17227,grid_17227_202604301500,,15:00,16:00,1.0,2026-04-02,28,grid_inferred
+2026-04-02,2026-04-30,Thursday,bellevue,Meeting Room 5,17227,grid_17227_202604301530,,15:30,16:30,1.0,2026-04-02,28,grid_inferred
+2026-04-02,2026-04-30,Thursday,bellevue,Meeting Room 5,17227,grid_17227_202604301600,,16:00,17:00,1.0,2026-04-02,28,grid_inferred
+2026-04-02,2026-04-30,Thursday,bellevue,Meeting Room 5,17227,grid_17227_202604301630,,16:30,17:30,1.0,2026-04-02,28,grid_inferred
+2026-04-02,2026-04-30,Thursday,bellevue,Meeting Room 5,17227,grid_17227_202604301700,,17:00,17:30,0.5,2026-04-02,28,grid_inferred
