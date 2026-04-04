@@ -8966,3 +8966,11 @@ fetch_date,booking_date,day_of_week,library,space_name,space_id,booking_id,title
 2026-04-04,2026-05-02,Saturday,bellevue,Meeting Room 5,17227,grid_17227_202605021700,,17:00,17:30,0.5,2026-04-04,28,grid_inferred
 2026-04-04,2026-05-02,Saturday,bellevue,Meeting Room 5,17227,grid_17227_202605021700,,17:00,17:30,0.5,2026-04-04,28,grid_inferred
 2026-04-04,2026-05-02,Saturday,bellevue,Meeting Room 5,17227,grid_17227_202605021700,,17:00,17:30,0.5,2026-04-04,28,grid_inferred
+2026-04-04,2026-04-11,Saturday,redmond,East Meeting Room 1,17228,grid_17228_202604111200,,12:00,13:00,1.0,2026-04-04,7,grid_inferred
+2026-04-04,2026-04-11,Saturday,redmond,East Meeting Room 1,17228,grid_17228_202604111230,,12:30,13:30,1.0,2026-04-04,7,grid_inferred
+2026-04-04,2026-04-11,Saturday,redmond,East Meeting Room 2,17229,grid_17229_202604111200,,12:00,13:00,1.0,2026-04-04,7,grid_inferred
+2026-04-04,2026-04-11,Saturday,redmond,East Meeting Room 2,17229,grid_17229_202604111230,,12:30,13:30,1.0,2026-04-04,7,grid_inferred
+2026-04-04,2026-04-11,Saturday,redmond,Conference Room,17230,grid_17230_202604111200,,12:00,13:00,1.0,2026-04-04,7,grid_inferred
+2026-04-04,2026-04-11,Saturday,redmond,Conference Room,17230,grid_17230_202604111230,,12:30,13:30,1.0,2026-04-04,7,grid_inferred
+2026-04-04,2026-04-15,Wednesday,woodinville,Meeting Room,17258,grid_17258_202604151430,,14:30,15:00,0.5,2026-04-04,11,grid_inferred
+2026-04-04,2026-04-06,Monday,issaquah,Meeting Room,17233,grid_17233_202604061230,,12:30,13:00,0.5,2026-04-04,2,grid_inferred
