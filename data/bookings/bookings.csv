@@ -9945,3 +9945,16 @@ fetch_date,booking_date,day_of_week,library,space_name,space_id,booking_id,title
 2026-04-07,2026-05-05,Tuesday,bellevue,Meeting Room 5,17227,grid_17227_202605051900,,19:00,19:30,0.5,2026-04-07,28,grid_inferred
 2026-04-07,2026-05-05,Tuesday,bellevue,Meeting Room 5,17227,grid_17227_202605051900,,19:00,19:30,0.5,2026-04-07,28,grid_inferred
 2026-04-07,2026-05-05,Tuesday,issaquah,Meeting Room,17233,grid_17233_202605051430,,14:30,16:30,2.0,2026-04-07,28,grid_inferred
+2026-04-07,2026-04-21,Tuesday,redmond,East Meeting Room 1,17228,grid_17228_202604211730,,17:30,18:30,1.0,2026-04-07,14,grid_inferred
+2026-04-07,2026-04-21,Tuesday,redmond,East Meeting Room 1,17228,grid_17228_202604211800,,18:00,19:00,1.0,2026-04-07,14,grid_inferred
+2026-04-07,2026-04-21,Tuesday,redmond,East Meeting Room 1,17228,grid_17228_202604211830,,18:30,19:30,1.0,2026-04-07,14,grid_inferred
+2026-04-07,2026-04-21,Tuesday,redmond,East Meeting Room 1,17228,grid_17228_202604211900,,19:00,19:30,0.5,2026-04-07,14,grid_inferred
+2026-04-07,2026-04-21,Tuesday,redmond,East Meeting Room 2,17229,grid_17229_202604211730,,17:30,18:30,1.0,2026-04-07,14,grid_inferred
+2026-04-07,2026-04-21,Tuesday,redmond,East Meeting Room 2,17229,grid_17229_202604211800,,18:00,19:00,1.0,2026-04-07,14,grid_inferred
+2026-04-07,2026-04-21,Tuesday,redmond,East Meeting Room 2,17229,grid_17229_202604211830,,18:30,19:30,1.0,2026-04-07,14,grid_inferred
+2026-04-07,2026-04-21,Tuesday,redmond,East Meeting Room 2,17229,grid_17229_202604211900,,19:00,19:30,0.5,2026-04-07,14,grid_inferred
+2026-04-07,2026-04-21,Tuesday,redmond,Conference Room,17230,grid_17230_202604211730,,17:30,18:30,1.0,2026-04-07,14,grid_inferred
+2026-04-07,2026-04-21,Tuesday,redmond,Conference Room,17230,grid_17230_202604211800,,18:00,19:00,1.0,2026-04-07,14,grid_inferred
+2026-04-07,2026-04-21,Tuesday,redmond,Conference Room,17230,grid_17230_202604211830,,18:30,19:30,1.0,2026-04-07,14,grid_inferred
+2026-04-07,2026-04-21,Tuesday,redmond,Conference Room,17230,grid_17230_202604211900,,19:00,19:30,0.5,2026-04-07,14,grid_inferred
+2026-04-07,2026-04-29,Wednesday,woodinville,Meeting Room,17258,grid_17258_202604291700,,17:00,18:00,1.0,2026-04-07,22,grid_inferred
