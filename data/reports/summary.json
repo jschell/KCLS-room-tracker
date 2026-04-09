@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-04-08T23:12:50.280795",
-  "total_records": 10314,
+  "generated_at": "2026-04-09T07:33:12.262307",
+  "total_records": 10451,
   "missing_created": 4823,
   "libraries": [
     "bellevue",
@@ -12,7 +12,7 @@
   ],
   "date_range": {
     "min": "2026-03-22",
-    "max": "2026-05-06"
+    "max": "2026-05-07"
   },
   "saturday_windows": {
     "redmond": {
@@ -512,8 +512,8 @@
   "lead_time_summary": [
     {
       "library": "bellevue",
-      "n": 7737,
-      "n_direct": 4035,
+      "n": 7817,
+      "n_direct": 4115,
       "n_lb": 3702,
       "median_days": 28.0,
       "p25": 16.0,
@@ -523,30 +523,30 @@
     },
     {
       "library": "issaquah",
-      "n": 64,
-      "n_direct": 32,
+      "n": 65,
+      "n_direct": 33,
       "n_lb": 32,
       "median_days": 17.0,
-      "p25": 5.8,
+      "p25": 6.0,
       "p75": 28.0,
       "p90": 28.0,
-      "pct_same_day": 10.9
+      "pct_same_day": 10.8
     },
     {
       "library": "kingsgate",
-      "n": 63,
-      "n_direct": 34,
+      "n": 64,
+      "n_direct": 35,
       "n_lb": 29,
-      "median_days": 21.0,
+      "median_days": 21.5,
       "p25": 8.0,
       "p75": 28.0,
       "p90": 28.0,
-      "pct_same_day": 9.5
+      "pct_same_day": 9.4
     },
     {
       "library": "redmond",
-      "n": 1704,
-      "n_direct": 852,
+      "n": 1734,
+      "n_direct": 882,
       "n_lb": 852,
       "median_days": 26.0,
       "p25": 15.0,
@@ -556,25 +556,25 @@
     },
     {
       "library": "sammamish",
-      "n": 686,
-      "n_direct": 508,
+      "n": 710,
+      "n_direct": 532,
       "n_lb": 178,
       "median_days": 7.0,
       "p25": 7.0,
       "p75": 7.0,
       "p90": 7.0,
-      "pct_same_day": 3.5
+      "pct_same_day": 3.4
     },
     {
       "library": "woodinville",
-      "n": 60,
-      "n_direct": 30,
+      "n": 61,
+      "n_direct": 31,
       "n_lb": 30,
-      "median_days": 19.5,
+      "median_days": 20.0,
       "p25": 6.0,
       "p75": 28.0,
       "p90": 28.0,
-      "pct_same_day": 13.3
+      "pct_same_day": 13.1
     }
   ]
 }
