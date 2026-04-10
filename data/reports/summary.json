@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-04-10T15:16:56.711369",
-  "total_records": 10799,
+  "generated_at": "2026-04-10T23:10:33.019614",
+  "total_records": 10802,
   "missing_created": 4823,
   "libraries": [
     "bellevue",
@@ -545,8 +545,8 @@
     },
     {
       "library": "redmond",
-      "n": 1797,
-      "n_direct": 945,
+      "n": 1800,
+      "n_direct": 948,
       "n_lb": 852,
       "median_days": 27.0,
       "p25": 15.0,
