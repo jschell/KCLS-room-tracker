@@ -130,14 +130,14 @@
         "n_booked": 3
       },
       "14:00": {
-        "pct_booked": 0.2857,
+        "pct_booked": 0.4286,
         "n_saturdays": 7,
-        "n_booked": 2
+        "n_booked": 3
       },
       "15:00": {
-        "pct_booked": 0.2857,
+        "pct_booked": 0.4286,
         "n_saturdays": 7,
-        "n_booked": 2
+        "n_booked": 3
       },
       "16:00": {
         "pct_booked": 0.5714,

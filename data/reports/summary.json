@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-04-12T15:12:46.165564",
-  "total_records": 11365,
+  "generated_at": "2026-04-12T23:09:05.197944",
+  "total_records": 11366,
   "missing_created": 4823,
   "libraries": [
     "bellevue",
@@ -146,14 +146,14 @@
           "n_booked": 3
         },
         "14:00": {
-          "pct_booked": 0.2857,
+          "pct_booked": 0.4286,
           "n_saturdays": 7,
-          "n_booked": 2
+          "n_booked": 3
         },
         "15:00": {
-          "pct_booked": 0.2857,
+          "pct_booked": 0.4286,
           "n_saturdays": 7,
-          "n_booked": 2
+          "n_booked": 3
         },
         "16:00": {
           "pct_booked": 0.5714,
@@ -556,8 +556,8 @@
     },
     {
       "library": "sammamish",
-      "n": 797,
-      "n_direct": 619,
+      "n": 798,
+      "n_direct": 620,
       "n_lb": 178,
       "median_days": 7.0,
       "p25": 7.0,
