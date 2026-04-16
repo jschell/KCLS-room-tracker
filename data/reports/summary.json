@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-04-16T15:32:03.236840",
-  "total_records": 12544,
+  "generated_at": "2026-04-16T23:13:58.267621",
+  "total_records": 12545,
   "missing_created": 4823,
   "libraries": [
     "bellevue",
@@ -295,29 +295,29 @@
           "n_booked": 1
         },
         "13:00": {
-          "pct_booked": 0.2857,
+          "pct_booked": 0.4286,
           "n_saturdays": 7,
-          "n_booked": 2
+          "n_booked": 3
         },
         "14:00": {
-          "pct_booked": 0.1429,
+          "pct_booked": 0.2857,
           "n_saturdays": 7,
-          "n_booked": 1
+          "n_booked": 2
         },
         "15:00": {
-          "pct_booked": 0.1429,
+          "pct_booked": 0.2857,
           "n_saturdays": 7,
-          "n_booked": 1
+          "n_booked": 2
         },
         "16:00": {
-          "pct_booked": 0.2857,
+          "pct_booked": 0.4286,
           "n_saturdays": 7,
-          "n_booked": 2
+          "n_booked": 3
         },
         "17:00": {
-          "pct_booked": 0.2857,
+          "pct_booked": 0.4286,
           "n_saturdays": 7,
-          "n_booked": 2
+          "n_booked": 3
         }
       }
     },
@@ -523,14 +523,14 @@
     },
     {
       "library": "issaquah",
-      "n": 75,
-      "n_direct": 43,
+      "n": 76,
+      "n_direct": 44,
       "n_lb": 32,
-      "median_days": 19.0,
-      "p25": 5.5,
+      "median_days": 18.5,
+      "p25": 5.8,
       "p75": 28.0,
       "p90": 28.0,
-      "pct_same_day": 12.0
+      "pct_same_day": 11.8
     },
     {
       "library": "kingsgate",

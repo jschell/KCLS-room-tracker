@@ -12543,3 +12543,4 @@ fetch_date,booking_date,day_of_week,library,space_name,space_id,booking_id,title
 2026-04-16,2026-05-14,Thursday,bellevue,Meeting Room 5,17227,grid_17227_202605141630,,16:30,17:30,1.0,2026-04-16,28,grid_inferred
 2026-04-16,2026-05-14,Thursday,bellevue,Meeting Room 5,17227,grid_17227_202605141700,,17:00,17:30,0.5,2026-04-16,28,grid_inferred
 2026-04-16,2026-05-14,Thursday,kingsgate,Meeting Room,17268,grid_17268_202605141300,,13:00,17:30,4.5,2026-04-16,28,grid_inferred
+2026-04-16,2026-05-02,Saturday,issaquah,Meeting Room,17233,grid_17233_202605021300,,13:00,17:30,4.5,2026-04-16,16,grid_inferred
