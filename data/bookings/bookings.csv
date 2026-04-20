@@ -13504,3 +13504,22 @@ fetch_date,booking_date,day_of_week,library,space_name,space_id,booking_id,title
 2026-04-20,2026-05-18,Monday,bellevue,Meeting Room 5,17227,grid_17227_202605181700,,17:00,17:30,0.5,2026-04-20,28,grid_inferred
 2026-04-20,2026-05-18,Monday,bellevue,Meeting Room 5,17227,grid_17227_202605181700,,17:00,17:30,0.5,2026-04-20,28,grid_inferred
 2026-04-20,2026-05-18,Monday,bellevue,Meeting Room 5,17227,grid_17227_202605181700,,17:00,17:30,0.5,2026-04-20,28,grid_inferred
+2026-04-20,2026-05-18,Monday,redmond,East Meeting Room 1,17228,grid_17228_202605181030,,10:30,11:30,1.0,2026-04-20,28,grid_inferred
+2026-04-20,2026-05-18,Monday,redmond,East Meeting Room 1,17228,grid_17228_202605181100,,11:00,12:00,1.0,2026-04-20,28,grid_inferred
+2026-04-20,2026-05-18,Monday,redmond,East Meeting Room 1,17228,grid_17228_202605181130,,11:30,12:30,1.0,2026-04-20,28,grid_inferred
+2026-04-20,2026-05-18,Monday,redmond,East Meeting Room 1,17228,grid_17228_202605181200,,12:00,13:00,1.0,2026-04-20,28,grid_inferred
+2026-04-20,2026-05-18,Monday,redmond,East Meeting Room 1,17228,grid_17228_202605181230,,12:30,13:30,1.0,2026-04-20,28,grid_inferred
+2026-04-20,2026-05-18,Monday,redmond,East Meeting Room 1,17228,grid_17228_202605181300,,13:00,14:00,1.0,2026-04-20,28,grid_inferred
+2026-04-20,2026-05-18,Monday,redmond,East Meeting Room 2,17229,grid_17229_202605181030,,10:30,11:30,1.0,2026-04-20,28,grid_inferred
+2026-04-20,2026-05-18,Monday,redmond,East Meeting Room 2,17229,grid_17229_202605181100,,11:00,12:00,1.0,2026-04-20,28,grid_inferred
+2026-04-20,2026-05-18,Monday,redmond,East Meeting Room 2,17229,grid_17229_202605181130,,11:30,12:30,1.0,2026-04-20,28,grid_inferred
+2026-04-20,2026-05-18,Monday,redmond,East Meeting Room 2,17229,grid_17229_202605181200,,12:00,13:00,1.0,2026-04-20,28,grid_inferred
+2026-04-20,2026-05-18,Monday,redmond,East Meeting Room 2,17229,grid_17229_202605181230,,12:30,13:30,1.0,2026-04-20,28,grid_inferred
+2026-04-20,2026-05-18,Monday,redmond,East Meeting Room 2,17229,grid_17229_202605181300,,13:00,14:00,1.0,2026-04-20,28,grid_inferred
+2026-04-20,2026-05-18,Monday,redmond,Conference Room,17230,grid_17230_202605181030,,10:30,11:30,1.0,2026-04-20,28,grid_inferred
+2026-04-20,2026-05-18,Monday,redmond,Conference Room,17230,grid_17230_202605181100,,11:00,12:00,1.0,2026-04-20,28,grid_inferred
+2026-04-20,2026-05-18,Monday,redmond,Conference Room,17230,grid_17230_202605181130,,11:30,12:30,1.0,2026-04-20,28,grid_inferred
+2026-04-20,2026-05-18,Monday,redmond,Conference Room,17230,grid_17230_202605181200,,12:00,13:00,1.0,2026-04-20,28,grid_inferred
+2026-04-20,2026-05-18,Monday,redmond,Conference Room,17230,grid_17230_202605181230,,12:30,13:30,1.0,2026-04-20,28,grid_inferred
+2026-04-20,2026-05-18,Monday,redmond,Conference Room,17230,grid_17230_202605181300,,13:00,14:00,1.0,2026-04-20,28,grid_inferred
+2026-04-20,2026-04-21,Tuesday,sammamish,Sunset Room,134490,grid_134490_202604211430,,14:30,14:45,0.25,2026-04-20,1,grid_inferred
