@@ -14398,3 +14398,9 @@ fetch_date,booking_date,day_of_week,library,space_name,space_id,booking_id,title
 2026-04-23,2026-05-21,Thursday,bellevue,Meeting Room 5,17227,grid_17227_202605211630,,16:30,17:30,1.0,2026-04-23,28,grid_inferred
 2026-04-23,2026-05-21,Thursday,bellevue,Meeting Room 5,17227,grid_17227_202605211700,,17:00,17:30,0.5,2026-04-23,28,grid_inferred
 2026-04-23,2026-04-23,Thursday,sammamish,Sunset Room,134490,grid_134490_202604231300,,13:00,15:15,2.25,2026-04-23,0,grid_inferred
+2026-04-23,2026-04-29,Wednesday,redmond,East Meeting Room 1,17228,grid_17228_202604291500,,15:00,18:00,3.0,2026-04-23,6,grid_inferred
+2026-04-23,2026-04-29,Wednesday,redmond,East Meeting Room 2,17229,grid_17229_202604291500,,15:00,18:00,3.0,2026-04-23,6,grid_inferred
+2026-04-23,2026-04-29,Wednesday,redmond,Conference Room,17230,grid_17230_202604291500,,15:00,18:00,3.0,2026-04-23,6,grid_inferred
+2026-04-23,2026-05-07,Thursday,kingsgate,Meeting Room,17268,grid_17268_202605071200,,12:00,17:30,5.5,2026-04-23,14,grid_inferred
+2026-04-23,2026-05-07,Thursday,issaquah,Meeting Room,17233,grid_17233_202605071230,,12:30,14:30,2.0,2026-04-23,14,grid_inferred
+2026-04-23,2026-05-21,Thursday,issaquah,Meeting Room,17233,grid_17233_202605211230,,12:30,14:30,2.0,2026-04-23,28,grid_inferred
