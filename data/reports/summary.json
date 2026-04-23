@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-04-22T23:16:16.096401",
-  "total_records": 14201,
+  "generated_at": "2026-04-23T07:34:54.723742",
+  "total_records": 14398,
   "missing_created": 4823,
   "libraries": [
     "bellevue",
@@ -12,7 +12,7 @@
   ],
   "date_range": {
     "min": "2026-03-22",
-    "max": "2026-05-20"
+    "max": "2026-05-21"
   },
   "saturday_windows": {
     "redmond": {
@@ -512,8 +512,8 @@
   "lead_time_summary": [
     {
       "library": "bellevue",
-      "n": 10627,
-      "n_direct": 6925,
+      "n": 10707,
+      "n_direct": 7005,
       "n_lb": 3702,
       "median_days": 28.0,
       "p25": 21.0,
@@ -523,30 +523,30 @@
     },
     {
       "library": "issaquah",
-      "n": 90,
-      "n_direct": 58,
+      "n": 92,
+      "n_direct": 60,
       "n_lb": 32,
       "median_days": 21.5,
-      "p25": 8.0,
+      "p25": 7.8,
       "p75": 28.0,
       "p90": 28.0,
-      "pct_same_day": 10.0
+      "pct_same_day": 10.9
     },
     {
       "library": "kingsgate",
-      "n": 91,
-      "n_direct": 62,
+      "n": 92,
+      "n_direct": 63,
       "n_lb": 29,
-      "median_days": 24.0,
+      "median_days": 24.5,
       "p25": 8.0,
       "p75": 28.0,
       "p90": 28.0,
-      "pct_same_day": 12.1
+      "pct_same_day": 12.0
     },
     {
       "library": "redmond",
-      "n": 2223,
-      "n_direct": 1371,
+      "n": 2301,
+      "n_direct": 1449,
       "n_lb": 852,
       "median_days": 28.0,
       "p25": 16.0,
@@ -556,8 +556,8 @@
     },
     {
       "library": "sammamish",
-      "n": 1088,
-      "n_direct": 910,
+      "n": 1123,
+      "n_direct": 945,
       "n_lb": 178,
       "median_days": 7.0,
       "p25": 7.0,
@@ -567,14 +567,14 @@
     },
     {
       "library": "woodinville",
-      "n": 82,
-      "n_direct": 52,
+      "n": 83,
+      "n_direct": 53,
       "n_lb": 30,
-      "median_days": 21.5,
+      "median_days": 22.0,
       "p25": 6.0,
       "p75": 28.0,
       "p90": 28.0,
-      "pct_same_day": 15.9
+      "pct_same_day": 15.7
     }
   ]
 }
