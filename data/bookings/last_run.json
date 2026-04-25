@@ -1,9 +1,9 @@
 {
   "run_date": "2026-04-25",
-  "run_time": "15:14:36",
+  "run_time": "23:11:39",
   "range_start": "2026-04-25",
   "range_end": "2026-05-24",
-  "total_fetched": 4961,
+  "total_fetched": 4878,
   "new_written": 0,
   "libraries_scraped": [
     "redmond",
