@@ -4,7 +4,7 @@
 ## Dataset Summary
 | Metric | Value |
 |--------|-------|
-| Total records | 17,063 |
+| Total records | 17,072 |
 | Date range | 2026-03-22 to 2026-05-31 |
 | Libraries | bellevue, issaquah, kingsgate, redmond, sammamish, woodinville |
 | Missing `created` (affects lead time) | 4,823 (28%) |
@@ -18,15 +18,15 @@
 | Thursday | 1,189 |
 | Friday | 2,879 |
 | Saturday | 2,035 |
-| Sunday | 1,909 |
+| Sunday | 1,918 |
 
 ## Booking Volume by Hour (All Libraries)
 | Hour | Bookings |
 |------|---------|
 | 10am | 1,043 |
-| 11am | 2,256 |
-| 12pm | 2,309 |
-| 1pm | 2,292 |
+| 11am | 2,259 |
+| 12pm | 2,312 |
+| 1pm | 2,295 |
 | 2pm | 2,154 |
 | 3pm | 2,203 |
 | 4pm | 2,365 |
@@ -44,11 +44,11 @@
 | bellevue | 28.0 | 25.0 | 28.0 | 28.0 | 0.2% | 12652 (8950 / 3702) |
 | issaquah | 26.0 | 9.0 | 28.0 | 28.0 | 9.5% | 105 (73 / 32) |
 | kingsgate | 27.0 | 8.0 | 28.0 | 28.0 | 11.9% | 109 (80 / 29) |
-| redmond | 28.0 | 19.0 | 28.0 | 28.0 | 0.5% | 2754 (1902 / 852) |
+| redmond | 28.0 | 19.0 | 28.0 | 28.0 | 0.5% | 2763 (1911 / 852) |
 | sammamish | 7.0 | 7.0 | 7.0 | 7.0 | 2.4% | 1347 (1169 / 178) |
 | woodinville | 22.0 | 4.8 | 28.0 | 28.0 | 18.8% | 96 (66 / 30) |
 
-*17,063 bookings total — 12,240 fresh-caught (accurate), 4,823 initial batch (lower bounds). Accuracy improves as the dataset matures.*
+*17,072 bookings total — 12,249 fresh-caught (accurate), 4,823 initial batch (lower bounds). Accuracy improves as the dataset matures.*
 
 ## Day × Hour Heatmap (Booking Counts)
 | Day | 10am | 11am | 12pm | 1pm | 2pm | 3pm | 4pm | 5pm | 6pm | 7pm |
@@ -59,7 +59,7 @@
 | Thursday | 204 | 98 | 128 | 152 | 140 | 168 | 199 | 100 | 0 | 0 |
 | Friday | 472 | 353 | 390 | 372 | 354 | 386 | 352 | 200 | 0 | 0 |
 | Saturday | 0 | 375 | 288 | 303 | 292 | 263 | 312 | 202 | 0 | 0 |
-| Sunday | 0 | 436 | 276 | 273 | 230 | 242 | 291 | 161 | 0 | 0 |
+| Sunday | 0 | 439 | 279 | 276 | 230 | 242 | 291 | 161 | 0 | 0 |
 
 ## Saturday Availability Windows
 *Based on 10 Saturdays observed (2026-03-28 to 2026-05-30):*
@@ -243,16 +243,16 @@
 | Library | Bookings |
 |---------|---------|
 | bellevue | 12,652 |
-| redmond | 2,754 |
+| redmond | 2,763 |
 | sammamish | 1,347 |
 | kingsgate | 109 |
 | issaquah | 105 |
 | woodinville | 96 |
 
 ## Data Quality Notes
-- Total records: 17,063
+- Total records: 17,072
 - Records missing `created` timestamp: 4,823
 - Lead time coverage: 100% of records have lead time data (direct or inferred)
-- Fresh-caught bookings (lead time accurate ±12h): 12,240
+- Fresh-caught bookings (lead time accurate ±12h): 12,249
 - Initial-batch bookings (lead time is lower bound — true lead may be longer): 4,823
 - Data maturity: 72% fresh — grows toward 100% as initial batch ages out
