@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-05-07T15:47:13.465743",
-  "total_records": 18382,
+  "generated_at": "2026-05-07T23:17:43.413315",
+  "total_records": 18384,
   "missing_created": 4823,
   "libraries": [
     "bellevue",
@@ -556,8 +556,8 @@
     },
     {
       "library": "sammamish",
-      "n": 1480,
-      "n_direct": 1302,
+      "n": 1481,
+      "n_direct": 1303,
       "n_lb": 178,
       "median_days": 7.0,
       "p25": 7.0,
@@ -567,14 +567,14 @@
     },
     {
       "library": "woodinville",
-      "n": 104,
-      "n_direct": 74,
+      "n": 105,
+      "n_direct": 75,
       "n_lb": 30,
       "median_days": 22.0,
       "p25": 4.0,
       "p75": 28.0,
       "p90": 28.0,
-      "pct_same_day": 20.2
+      "pct_same_day": 20.0
     }
   ]
 }
