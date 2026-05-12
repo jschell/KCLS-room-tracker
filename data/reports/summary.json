@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-05-11T23:18:21.115706",
-  "total_records": 19626,
+  "generated_at": "2026-05-12T07:57:45.126540",
+  "total_records": 19983,
   "missing_created": 4823,
   "libraries": [
     "bellevue",
@@ -12,7 +12,7 @@
   ],
   "date_range": {
     "min": "2026-03-22",
-    "max": "2026-06-08"
+    "max": "2026-06-09"
   },
   "saturday_windows": {
     "redmond": {
@@ -232,14 +232,14 @@
           "n_booked": 2
         },
         "16:00": {
-          "pct_booked": 0.1818,
+          "pct_booked": 0.2727,
           "n_saturdays": 11,
-          "n_booked": 2
+          "n_booked": 3
         },
         "17:00": {
-          "pct_booked": 0.7273,
+          "pct_booked": 0.8182,
           "n_saturdays": 11,
-          "n_booked": 8
+          "n_booked": 9
         }
       }
     },
@@ -512,52 +512,52 @@
   "lead_time_summary": [
     {
       "library": "bellevue",
-      "n": 14497,
-      "n_direct": 10795,
+      "n": 14752,
+      "n_direct": 11050,
       "n_lb": 3702,
       "median_days": 28.0,
       "p25": 28.0,
       "p75": 28.0,
       "p90": 28.0,
-      "pct_same_day": 0.2
+      "pct_same_day": 0.1
     },
     {
       "library": "issaquah",
-      "n": 117,
-      "n_direct": 85,
+      "n": 119,
+      "n_direct": 87,
       "n_lb": 32,
       "median_days": 26.0,
-      "p25": 9.0,
+      "p25": 8.5,
       "p75": 28.0,
       "p90": 28.0,
-      "pct_same_day": 11.1
+      "pct_same_day": 11.8
     },
     {
       "library": "kingsgate",
-      "n": 125,
-      "n_direct": 96,
+      "n": 126,
+      "n_direct": 97,
       "n_lb": 29,
       "median_days": 28.0,
-      "p25": 8.0,
+      "p25": 8.2,
       "p75": 28.0,
       "p90": 28.0,
-      "pct_same_day": 13.6
+      "pct_same_day": 13.5
     },
     {
       "library": "redmond",
-      "n": 3201,
-      "n_direct": 2349,
+      "n": 3273,
+      "n_direct": 2421,
       "n_lb": 852,
       "median_days": 28.0,
-      "p25": 22.0,
+      "p25": 23.0,
       "p75": 28.0,
       "p90": 28.0,
       "pct_same_day": 0.5
     },
     {
       "library": "sammamish",
-      "n": 1574,
-      "n_direct": 1396,
+      "n": 1599,
+      "n_direct": 1421,
       "n_lb": 178,
       "median_days": 7.0,
       "p25": 7.0,
@@ -567,14 +567,14 @@
     },
     {
       "library": "woodinville",
-      "n": 112,
-      "n_direct": 82,
+      "n": 114,
+      "n_direct": 84,
       "n_lb": 30,
       "median_days": 22.0,
-      "p25": 3.8,
+      "p25": 4.0,
       "p75": 28.0,
       "p90": 28.0,
-      "pct_same_day": 20.5
+      "pct_same_day": 20.2
     }
   ]
 }
