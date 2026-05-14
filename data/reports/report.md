@@ -1,11 +1,11 @@
 # KCLS Room Monitor Report
-*Generated: 2026-05-13 UTC*
+*Generated: 2026-05-14 UTC*
 
 ## Dataset Summary
 | Metric | Value |
 |--------|-------|
-| Total records | 20,366 |
-| Date range | 2026-03-22 to 2026-06-10 |
+| Total records | 20,485 |
+| Date range | 2026-03-22 to 2026-06-11 |
 | Libraries | bellevue, issaquah, kingsgate, redmond, sammamish, woodinville |
 | Missing `created` (affects lead time) | 4,823 (24%) |
 
@@ -15,7 +15,7 @@
 | Monday | 3,503 |
 | Tuesday | 3,935 |
 | Wednesday | 3,883 |
-| Thursday | 1,334 |
+| Thursday | 1,453 |
 | Friday | 3,299 |
 | Saturday | 2,290 |
 | Sunday | 2,122 |
@@ -23,14 +23,14 @@
 ## Booking Volume by Hour (All Libraries)
 | Hour | Bookings |
 |------|---------|
-| 10am | 1,232 |
-| 11am | 2,654 |
-| 12pm | 2,744 |
-| 1pm | 2,740 |
-| 2pm | 2,569 |
-| 3pm | 2,629 |
-| 4pm | 2,820 |
-| 5pm | 1,824 |
+| 10am | 1,256 |
+| 11am | 2,664 |
+| 12pm | 2,756 |
+| 1pm | 2,755 |
+| 2pm | 2,583 |
+| 3pm | 2,643 |
+| 4pm | 2,837 |
+| 5pm | 1,837 |
 | 6pm | 758 |
 | 7pm | 396 |
 
@@ -41,14 +41,14 @@
 
 | Library | Median days | p25 | p75 | p90 | % same-day | N (direct / lower-bound) |
 |---------|------------|-----|-----|-----|------------|--------------------------|
-| bellevue | 28.0 | 28.0 | 28.0 | 28.0 | 0.1% | 15072 (11370 / 3702) |
-| issaquah | 26.5 | 8.8 | 28.0 | 28.0 | 11.7% | 120 (88 / 32) |
-| kingsgate | 28.0 | 9.0 | 28.0 | 28.0 | 13.2% | 129 (100 / 29) |
-| redmond | 28.0 | 23.0 | 28.0 | 28.0 | 0.5% | 3306 (2454 / 852) |
-| sammamish | 7.0 | 7.0 | 7.0 | 7.0 | 2.2% | 1619 (1441 / 178) |
-| woodinville | 22.0 | 4.0 | 28.0 | 28.0 | 20.0% | 120 (90 / 30) |
+| bellevue | 28.0 | 28.0 | 28.0 | 28.0 | 0.1% | 15152 (11450 / 3702) |
+| issaquah | 27.0 | 9.0 | 28.0 | 28.0 | 11.6% | 121 (89 / 32) |
+| kingsgate | 28.0 | 9.2 | 28.0 | 28.0 | 13.1% | 130 (101 / 29) |
+| redmond | 28.0 | 23.0 | 28.0 | 28.0 | 0.5% | 3318 (2466 / 852) |
+| sammamish | 7.0 | 7.0 | 7.0 | 7.0 | 2.2% | 1643 (1465 / 178) |
+| woodinville | 22.0 | 4.0 | 28.0 | 28.0 | 19.8% | 121 (91 / 30) |
 
-*20,366 bookings total — 15,543 fresh-caught (accurate), 4,823 initial batch (lower bounds). Accuracy improves as the dataset matures.*
+*20,485 bookings total — 15,662 fresh-caught (accurate), 4,823 initial batch (lower bounds). Accuracy improves as the dataset matures.*
 
 ## Day × Hour Heatmap (Booking Counts)
 | Day | 10am | 11am | 12pm | 1pm | 2pm | 3pm | 4pm | 5pm | 6pm | 7pm |
@@ -56,7 +56,7 @@
 | Monday | 459 | 325 | 381 | 538 | 499 | 504 | 528 | 269 | 0 | 0 |
 | Tuesday | 0 | 400 | 558 | 494 | 494 | 487 | 505 | 415 | 388 | 194 |
 | Wednesday | 0 | 495 | 572 | 449 | 432 | 463 | 494 | 406 | 370 | 202 |
-| Thursday | 233 | 112 | 147 | 169 | 155 | 182 | 222 | 114 | 0 | 0 |
+| Thursday | 257 | 122 | 159 | 184 | 169 | 196 | 239 | 127 | 0 | 0 |
 | Friday | 540 | 409 | 446 | 434 | 410 | 437 | 400 | 223 | 0 | 0 |
 | Saturday | 0 | 421 | 322 | 341 | 327 | 297 | 358 | 224 | 0 | 0 |
 | Sunday | 0 | 492 | 318 | 315 | 252 | 259 | 313 | 173 | 0 | 0 |
@@ -173,7 +173,7 @@
 | 4pm | 45% | 🟡 Moderate demand |
 | 5pm | 45% | 🟡 Moderate demand |
 
-**Typical lead time at Issaquah:** median 26.5 days, p90 28.0 days
+**Typical lead time at Issaquah:** median 27.0 days, p90 28.0 days
 
 ### Bellevue
 **Meeting Room 1**
@@ -242,17 +242,17 @@
 ## Booking Frequency by Library
 | Library | Bookings |
 |---------|---------|
-| bellevue | 15,072 |
-| redmond | 3,306 |
-| sammamish | 1,619 |
-| kingsgate | 129 |
-| issaquah | 120 |
-| woodinville | 120 |
+| bellevue | 15,152 |
+| redmond | 3,318 |
+| sammamish | 1,643 |
+| kingsgate | 130 |
+| issaquah | 121 |
+| woodinville | 121 |
 
 ## Data Quality Notes
-- Total records: 20,366
+- Total records: 20,485
 - Records missing `created` timestamp: 4,823
 - Lead time coverage: 100% of records have lead time data (direct or inferred)
-- Fresh-caught bookings (lead time accurate ±12h): 15,543
+- Fresh-caught bookings (lead time accurate ±12h): 15,662
 - Initial-batch bookings (lead time is lower bound — true lead may be longer): 4,823
 - Data maturity: 76% fresh — grows toward 100% as initial batch ages out
