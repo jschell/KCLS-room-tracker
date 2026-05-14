@@ -20489,3 +20489,4 @@ fetch_date,booking_date,day_of_week,library,space_name,space_id,booking_id,title
 2026-05-14,2026-05-27,Wednesday,redmond,Conference Room,17230,grid_17230_202605271630,,16:30,18:00,1.5,2026-05-14,13,grid_inferred
 2026-05-14,2026-05-21,Thursday,sammamish,Sunset Room,134490,grid_134490_202605211200,,12:00,12:45,0.75,2026-05-14,7,grid_inferred
 2026-05-14,2026-06-11,Thursday,kingsgate,Meeting Room,17268,grid_17268_202606111300,,13:00,17:30,4.5,2026-05-14,28,grid_inferred
+2026-05-14,2026-05-15,Friday,issaquah,Meeting Room,17233,grid_17233_202605151300,,13:00,14:00,1.0,2026-05-14,1,grid_inferred
