@@ -1,13 +1,13 @@
 # KCLS Room Monitor Report
-*Generated: 2026-05-14 UTC*
+*Generated: 2026-05-15 UTC*
 
 ## Dataset Summary
 | Metric | Value |
 |--------|-------|
-| Total records | 20,491 |
-| Date range | 2026-03-22 to 2026-06-11 |
+| Total records | 20,869 |
+| Date range | 2026-03-22 to 2026-06-12 |
 | Libraries | bellevue, issaquah, kingsgate, redmond, sammamish, woodinville |
-| Missing `created` (affects lead time) | 4,823 (24%) |
+| Missing `created` (affects lead time) | 4,823 (23%) |
 
 ## Booking Volume by Day of Week
 | Day | Bookings |
@@ -16,21 +16,21 @@
 | Tuesday | 3,935 |
 | Wednesday | 3,886 |
 | Thursday | 1,455 |
-| Friday | 3,300 |
-| Saturday | 2,290 |
-| Sunday | 2,122 |
+| Friday | 3,676 |
+| Saturday | 2,291 |
+| Sunday | 2,123 |
 
 ## Booking Volume by Hour (All Libraries)
 | Hour | Bookings |
 |------|---------|
-| 10am | 1,256 |
-| 11am | 2,664 |
-| 12pm | 2,757 |
-| 1pm | 2,757 |
-| 2pm | 2,583 |
-| 3pm | 2,643 |
-| 4pm | 2,840 |
-| 5pm | 1,837 |
+| 10am | 1,325 |
+| 11am | 2,715 |
+| 12pm | 2,804 |
+| 1pm | 2,806 |
+| 2pm | 2,629 |
+| 3pm | 2,689 |
+| 4pm | 2,886 |
+| 5pm | 1,861 |
 | 6pm | 758 |
 | 7pm | 396 |
 
@@ -41,14 +41,14 @@
 
 | Library | Median days | p25 | p75 | p90 | % same-day | N (direct / lower-bound) |
 |---------|------------|-----|-----|-----|------------|--------------------------|
-| bellevue | 28.0 | 28.0 | 28.0 | 28.0 | 0.1% | 15152 (11450 / 3702) |
-| issaquah | 26.5 | 8.2 | 28.0 | 28.0 | 11.5% | 122 (90 / 32) |
-| kingsgate | 28.0 | 9.5 | 28.0 | 28.0 | 13.0% | 131 (102 / 29) |
-| redmond | 28.0 | 23.0 | 28.0 | 28.0 | 0.5% | 3321 (2469 / 852) |
-| sammamish | 7.0 | 7.0 | 7.0 | 7.0 | 2.2% | 1644 (1466 / 178) |
-| woodinville | 22.0 | 4.0 | 28.0 | 28.0 | 19.8% | 121 (91 / 30) |
+| bellevue | 28.0 | 28.0 | 28.0 | 28.0 | 0.1% | 15397 (11695 / 3702) |
+| issaquah | 26.5 | 8.0 | 28.0 | 28.0 | 12.1% | 124 (92 / 32) |
+| kingsgate | 28.0 | 9.0 | 28.0 | 28.0 | 13.5% | 133 (104 / 29) |
+| redmond | 28.0 | 23.0 | 28.0 | 28.0 | 0.5% | 3414 (2562 / 852) |
+| sammamish | 7.0 | 7.0 | 7.0 | 7.0 | 2.2% | 1679 (1501 / 178) |
+| woodinville | 22.0 | 4.2 | 28.0 | 28.0 | 19.7% | 122 (92 / 30) |
 
-*20,491 bookings total — 15,668 fresh-caught (accurate), 4,823 initial batch (lower bounds). Accuracy improves as the dataset matures.*
+*20,869 bookings total — 16,046 fresh-caught (accurate), 4,823 initial batch (lower bounds). Accuracy improves as the dataset matures.*
 
 ## Day × Hour Heatmap (Booking Counts)
 | Day | 10am | 11am | 12pm | 1pm | 2pm | 3pm | 4pm | 5pm | 6pm | 7pm |
@@ -57,9 +57,9 @@
 | Tuesday | 0 | 400 | 558 | 494 | 494 | 487 | 505 | 415 | 388 | 194 |
 | Wednesday | 0 | 495 | 572 | 449 | 432 | 463 | 497 | 406 | 370 | 202 |
 | Thursday | 257 | 122 | 160 | 185 | 169 | 196 | 239 | 127 | 0 | 0 |
-| Friday | 540 | 409 | 446 | 435 | 410 | 437 | 400 | 223 | 0 | 0 |
-| Saturday | 0 | 421 | 322 | 341 | 327 | 297 | 358 | 224 | 0 | 0 |
-| Sunday | 0 | 492 | 318 | 315 | 252 | 259 | 313 | 173 | 0 | 0 |
+| Friday | 609 | 460 | 492 | 484 | 456 | 483 | 446 | 246 | 0 | 0 |
+| Saturday | 0 | 421 | 323 | 341 | 327 | 297 | 358 | 224 | 0 | 0 |
+| Sunday | 0 | 492 | 318 | 315 | 252 | 259 | 313 | 174 | 0 | 0 |
 
 ## Saturday Availability Windows
 *Based on 11 Saturdays observed (2026-03-28 to 2026-06-06):*
@@ -242,17 +242,17 @@
 ## Booking Frequency by Library
 | Library | Bookings |
 |---------|---------|
-| bellevue | 15,152 |
-| redmond | 3,321 |
-| sammamish | 1,644 |
-| kingsgate | 131 |
-| issaquah | 122 |
-| woodinville | 121 |
+| bellevue | 15,397 |
+| redmond | 3,414 |
+| sammamish | 1,679 |
+| kingsgate | 133 |
+| issaquah | 124 |
+| woodinville | 122 |
 
 ## Data Quality Notes
-- Total records: 20,491
+- Total records: 20,869
 - Records missing `created` timestamp: 4,823
 - Lead time coverage: 100% of records have lead time data (direct or inferred)
-- Fresh-caught bookings (lead time accurate ±12h): 15,668
+- Fresh-caught bookings (lead time accurate ±12h): 16,046
 - Initial-batch bookings (lead time is lower bound — true lead may be longer): 4,823
-- Data maturity: 76% fresh — grows toward 100% as initial batch ages out
+- Data maturity: 77% fresh — grows toward 100% as initial batch ages out
