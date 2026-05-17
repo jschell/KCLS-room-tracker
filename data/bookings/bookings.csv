@@ -21265,3 +21265,5 @@ fetch_date,booking_date,day_of_week,library,space_name,space_id,booking_id,title
 2026-05-17,2026-06-14,Sunday,bellevue,Meeting Room 5,17227,grid_17227_202606141700,,17:00,17:30,0.5,2026-05-17,28,grid_inferred
 2026-05-17,2026-06-14,Sunday,bellevue,Meeting Room 5,17227,grid_17227_202606141700,,17:00,17:30,0.5,2026-05-17,28,grid_inferred
 2026-05-17,2026-06-14,Sunday,bellevue,Meeting Room 5,17227,grid_17227_202606141700,,17:00,17:30,0.5,2026-05-17,28,grid_inferred
+2026-05-17,2026-05-24,Sunday,sammamish,Meeting Room,17254,grid_17254_202605241100,,11:00,13:00,2.0,2026-05-17,7,grid_inferred
+2026-05-17,2026-05-18,Monday,woodinville,Meeting Room,17258,grid_17258_202605181600,,16:00,17:30,1.5,2026-05-17,1,grid_inferred
