@@ -22587,3 +22587,4 @@ fetch_date,booking_date,day_of_week,library,space_name,space_id,booking_id,title
 2026-05-22,2026-05-22,Friday,kingsgate,Meeting Room,17268,grid_17268_202605221330,,13:30,17:30,4.0,2026-05-22,0,grid_inferred
 2026-05-22,2026-06-10,Wednesday,kingsgate,Meeting Room,17268,grid_17268_202606101630,,16:30,17:30,1.0,2026-05-22,19,grid_inferred
 2026-05-22,2026-05-22,Friday,issaquah,Meeting Room,17233,grid_17233_202605221330,,13:30,15:00,1.5,2026-05-22,0,grid_inferred
+2026-05-22,2026-06-18,Thursday,woodinville,Meeting Room,17258,grid_17258_202606181630,,16:30,17:30,1.0,2026-05-22,27,grid_inferred
