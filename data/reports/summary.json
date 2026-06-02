@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-06-02T16:31:27.730119",
-  "total_records": 25958,
+  "generated_at": "2026-06-02T23:31:54.793493",
+  "total_records": 25959,
   "missing_created": 4823,
   "libraries": [
     "bellevue",
@@ -523,14 +523,14 @@
     },
     {
       "library": "issaquah",
-      "n": 149,
-      "n_direct": 117,
+      "n": 150,
+      "n_direct": 118,
       "n_lb": 32,
       "median_days": 27.0,
-      "p25": 8.0,
+      "p25": 8.2,
       "p75": 28.0,
       "p90": 28.0,
-      "pct_same_day": 12.8
+      "pct_same_day": 12.7
     },
     {
       "library": "kingsgate",
