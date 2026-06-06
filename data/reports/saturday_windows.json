@@ -152,39 +152,39 @@
     },
     "Sunset Room": {
       "11:00": {
-        "pct_booked": 0.7857,
+        "pct_booked": 0.8571,
         "n_saturdays": 14,
-        "n_booked": 11
+        "n_booked": 12
       },
       "12:00": {
-        "pct_booked": 0.7857,
+        "pct_booked": 0.8571,
         "n_saturdays": 14,
-        "n_booked": 11
+        "n_booked": 12
       },
       "13:00": {
-        "pct_booked": 0.7857,
+        "pct_booked": 0.8571,
         "n_saturdays": 14,
-        "n_booked": 11
+        "n_booked": 12
       },
       "14:00": {
-        "pct_booked": 0.7857,
+        "pct_booked": 0.8571,
         "n_saturdays": 14,
-        "n_booked": 11
+        "n_booked": 12
       },
       "15:00": {
-        "pct_booked": 0.7857,
+        "pct_booked": 0.8571,
         "n_saturdays": 14,
-        "n_booked": 11
+        "n_booked": 12
       },
       "16:00": {
-        "pct_booked": 0.7857,
+        "pct_booked": 0.8571,
         "n_saturdays": 14,
-        "n_booked": 11
+        "n_booked": 12
       },
       "17:00": {
-        "pct_booked": 0.7857,
+        "pct_booked": 0.8571,
         "n_saturdays": 14,
-        "n_booked": 11
+        "n_booked": 12
       }
     }
   },

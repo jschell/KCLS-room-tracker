@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-06-05T23:25:27.809549",
-  "total_records": 26861,
+  "generated_at": "2026-06-06T07:57:09.826944",
+  "total_records": 26882,
   "missing_created": 4823,
   "libraries": [
     "bellevue",
@@ -168,39 +168,39 @@
       },
       "Sunset Room": {
         "11:00": {
-          "pct_booked": 0.7857,
+          "pct_booked": 0.8571,
           "n_saturdays": 14,
-          "n_booked": 11
+          "n_booked": 12
         },
         "12:00": {
-          "pct_booked": 0.7857,
+          "pct_booked": 0.8571,
           "n_saturdays": 14,
-          "n_booked": 11
+          "n_booked": 12
         },
         "13:00": {
-          "pct_booked": 0.7857,
+          "pct_booked": 0.8571,
           "n_saturdays": 14,
-          "n_booked": 11
+          "n_booked": 12
         },
         "14:00": {
-          "pct_booked": 0.7857,
+          "pct_booked": 0.8571,
           "n_saturdays": 14,
-          "n_booked": 11
+          "n_booked": 12
         },
         "15:00": {
-          "pct_booked": 0.7857,
+          "pct_booked": 0.8571,
           "n_saturdays": 14,
-          "n_booked": 11
+          "n_booked": 12
         },
         "16:00": {
-          "pct_booked": 0.7857,
+          "pct_booked": 0.8571,
           "n_saturdays": 14,
-          "n_booked": 11
+          "n_booked": 12
         },
         "17:00": {
-          "pct_booked": 0.7857,
+          "pct_booked": 0.8571,
           "n_saturdays": 14,
-          "n_booked": 11
+          "n_booked": 12
         }
       }
     },
@@ -556,14 +556,14 @@
     },
     {
       "library": "sammamish",
-      "n": 2223,
-      "n_direct": 2045,
+      "n": 2244,
+      "n_direct": 2066,
       "n_lb": 178,
       "median_days": 7.0,
       "p25": 7.0,
       "p75": 7.0,
       "p90": 7.0,
-      "pct_same_day": 2.2
+      "pct_same_day": 2.1
     },
     {
       "library": "woodinville",
