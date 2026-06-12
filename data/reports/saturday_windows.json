@@ -115,9 +115,9 @@
   "sammamish": {
     "Meeting Room": {
       "11:00": {
-        "pct_booked": 0.6429,
+        "pct_booked": 0.7143,
         "n_saturdays": 14,
-        "n_booked": 9
+        "n_booked": 10
       },
       "12:00": {
         "pct_booked": 0.6429,

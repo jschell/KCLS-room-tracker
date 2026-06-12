@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-06-12T16:04:08.864453",
-  "total_records": 28866,
+  "generated_at": "2026-06-12T23:28:47.429008",
+  "total_records": 28867,
   "missing_created": 4823,
   "libraries": [
     "bellevue",
@@ -131,9 +131,9 @@
     "sammamish": {
       "Meeting Room": {
         "11:00": {
-          "pct_booked": 0.6429,
+          "pct_booked": 0.7143,
           "n_saturdays": 14,
-          "n_booked": 9
+          "n_booked": 10
         },
         "12:00": {
           "pct_booked": 0.6429,
@@ -556,8 +556,8 @@
     },
     {
       "library": "sammamish",
-      "n": 2379,
-      "n_direct": 2201,
+      "n": 2380,
+      "n_direct": 2202,
       "n_lb": 178,
       "median_days": 7.0,
       "p25": 7.0,
