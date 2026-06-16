@@ -1,11 +1,11 @@
 # KCLS Room Monitor Report
-*Generated: 2026-06-15 UTC*
+*Generated: 2026-06-16 UTC*
 
 ## Dataset Summary
 | Metric | Value |
 |--------|-------|
-| Total records | 29,705 |
-| Date range | 2026-03-22 to 2026-07-13 |
+| Total records | 30,037 |
+| Date range | 2026-03-22 to 2026-07-14 |
 | Libraries | bellevue, issaquah, kingsgate, redmond, sammamish, woodinville |
 | Missing `created` (affects lead time) | 4,823 (16%) |
 
@@ -13,7 +13,7 @@
 | Day | Bookings |
 |-----|---------|
 | Monday | 5,414 |
-| Tuesday | 5,493 |
+| Tuesday | 5,825 |
 | Wednesday | 5,275 |
 | Thursday | 2,103 |
 | Friday | 4,846 |
@@ -24,15 +24,15 @@
 | Hour | Bookings |
 |------|---------|
 | 10am | 1,860 |
-| 11am | 3,890 |
-| 12pm | 3,989 |
-| 1pm | 4,008 |
-| 2pm | 3,825 |
-| 3pm | 3,847 |
-| 4pm | 4,086 |
-| 5pm | 2,605 |
-| 6pm | 1,042 |
-| 7pm | 553 |
+| 11am | 3,930 |
+| 12pm | 4,030 |
+| 1pm | 4,047 |
+| 2pm | 3,869 |
+| 3pm | 3,887 |
+| 4pm | 4,126 |
+| 5pm | 2,639 |
+| 6pm | 1,076 |
+| 7pm | 573 |
 
 ## Booking Lead Times
 *How far in advance meeting rooms are reserved, inferred from first-seen date.*
@@ -41,20 +41,20 @@
 
 | Library | Median days | p25 | p75 | p90 | % same-day | N (direct / lower-bound) |
 |---------|------------|-----|-----|-----|------------|--------------------------|
-| bellevue | 28.0 | 28.0 | 28.0 | 28.0 | 0.1% | 21887 (18185 / 3702) |
-| issaquah | 28.0 | 8.0 | 28.0 | 28.0 | 13.7% | 175 (143 / 32) |
-| kingsgate | 28.0 | 8.0 | 28.0 | 28.0 | 17.8% | 191 (162 / 29) |
-| redmond | 28.0 | 28.0 | 28.0 | 28.0 | 0.7% | 4836 (3984 / 852) |
-| sammamish | 7.0 | 7.0 | 7.0 | 7.0 | 2.2% | 2450 (2272 / 178) |
-| woodinville | 25.0 | 3.2 | 28.0 | 28.0 | 21.7% | 166 (136 / 30) |
+| bellevue | 28.0 | 28.0 | 28.0 | 28.0 | 0.1% | 22182 (18480 / 3702) |
+| issaquah | 28.0 | 8.0 | 28.0 | 28.0 | 14.1% | 177 (145 / 32) |
+| kingsgate | 28.0 | 8.0 | 28.0 | 28.0 | 18.1% | 193 (164 / 29) |
+| redmond | 28.0 | 28.0 | 28.0 | 28.0 | 0.7% | 4842 (3990 / 852) |
+| sammamish | 7.0 | 7.0 | 7.0 | 7.0 | 2.2% | 2475 (2297 / 178) |
+| woodinville | 25.0 | 2.8 | 28.0 | 28.0 | 22.0% | 168 (138 / 30) |
 
-*29,705 bookings total — 24,882 fresh-caught (accurate), 4,823 initial batch (lower bounds). Accuracy improves as the dataset matures.*
+*30,037 bookings total — 25,214 fresh-caught (accurate), 4,823 initial batch (lower bounds). Accuracy improves as the dataset matures.*
 
 ## Day × Hour Heatmap (Booking Counts)
 | Day | 10am | 11am | 12pm | 1pm | 2pm | 3pm | 4pm | 5pm | 6pm | 7pm |
 |-----|----|----|----|----|----|----|----|----|----|----|
 | Monday | 709 | 511 | 598 | 818 | 784 | 781 | 806 | 407 | 0 | 0 |
-| Tuesday | 0 | 570 | 797 | 712 | 697 | 689 | 683 | 552 | 520 | 273 |
+| Tuesday | 0 | 610 | 838 | 751 | 741 | 729 | 723 | 586 | 554 | 293 |
 | Wednesday | 0 | 655 | 755 | 597 | 597 | 626 | 680 | 563 | 522 | 280 |
 | Thursday | 364 | 183 | 232 | 270 | 267 | 284 | 329 | 174 | 0 | 0 |
 | Friday | 787 | 600 | 634 | 634 | 620 | 641 | 604 | 326 | 0 | 0 |
@@ -242,17 +242,17 @@
 ## Booking Frequency by Library
 | Library | Bookings |
 |---------|---------|
-| bellevue | 21,887 |
-| redmond | 4,836 |
-| sammamish | 2,450 |
-| kingsgate | 191 |
-| issaquah | 175 |
-| woodinville | 166 |
+| bellevue | 22,182 |
+| redmond | 4,842 |
+| sammamish | 2,475 |
+| kingsgate | 193 |
+| issaquah | 177 |
+| woodinville | 168 |
 
 ## Data Quality Notes
-- Total records: 29,705
+- Total records: 30,037
 - Records missing `created` timestamp: 4,823
 - Lead time coverage: 100% of records have lead time data (direct or inferred)
-- Fresh-caught bookings (lead time accurate ±12h): 24,882
+- Fresh-caught bookings (lead time accurate ±12h): 25,214
 - Initial-batch bookings (lead time is lower bound — true lead may be longer): 4,823
 - Data maturity: 84% fresh — grows toward 100% as initial batch ages out
