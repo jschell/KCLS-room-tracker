@@ -31378,3 +31378,9 @@ fetch_date,booking_date,day_of_week,library,space_name,space_id,booking_id,title
 2026-06-21,2026-07-18,Saturday,redmond,East Meeting Room 2,17229,grid_17229_202607181600,,16:00,17:30,1.5,2026-06-21,27,grid_inferred
 2026-06-21,2026-07-18,Saturday,redmond,Conference Room,17230,grid_17230_202607181600,,16:00,17:30,1.5,2026-06-21,27,grid_inferred
 2026-06-21,2026-07-10,Friday,sammamish,Meeting Room,17254,grid_17254_202607101700,,17:00,17:30,0.5,2026-06-21,19,grid_inferred
+2026-06-21,2026-06-28,Sunday,redmond,East Meeting Room 1,17228,grid_17228_202606281300,,13:00,14:00,1.0,2026-06-21,7,grid_inferred
+2026-06-21,2026-07-01,Wednesday,redmond,East Meeting Room 1,17228,grid_17228_202607011630,,16:30,17:30,1.0,2026-06-21,10,grid_inferred
+2026-06-21,2026-06-28,Sunday,redmond,East Meeting Room 2,17229,grid_17229_202606281300,,13:00,14:00,1.0,2026-06-21,7,grid_inferred
+2026-06-21,2026-07-01,Wednesday,redmond,East Meeting Room 2,17229,grid_17229_202607011630,,16:30,17:30,1.0,2026-06-21,10,grid_inferred
+2026-06-21,2026-06-28,Sunday,redmond,Conference Room,17230,grid_17230_202606281300,,13:00,14:00,1.0,2026-06-21,7,grid_inferred
+2026-06-21,2026-07-01,Wednesday,redmond,Conference Room,17230,grid_17230_202607011630,,16:30,17:30,1.0,2026-06-21,10,grid_inferred
