@@ -32811,3 +32811,7 @@ fetch_date,booking_date,day_of_week,library,space_name,space_id,booking_id,title
 2026-06-25,2026-07-23,Thursday,bellevue,Meeting Room 5,17227,grid_17227_202607231600,,16:00,17:00,1.0,2026-06-25,28,grid_inferred
 2026-06-25,2026-07-23,Thursday,bellevue,Meeting Room 5,17227,grid_17227_202607231630,,16:30,17:30,1.0,2026-06-25,28,grid_inferred
 2026-06-25,2026-07-23,Thursday,bellevue,Meeting Room 5,17227,grid_17227_202607231700,,17:00,17:30,0.5,2026-06-25,28,grid_inferred
+2026-06-25,2026-06-28,Sunday,sammamish,Sunset Room,134490,grid_134490_202606281300,,13:00,16:00,3.0,2026-06-25,3,grid_inferred
+2026-06-25,2026-07-01,Wednesday,woodinville,Meeting Room,17258,grid_17258_202607011400,,14:00,15:30,1.5,2026-06-25,6,grid_inferred
+2026-06-25,2026-07-12,Sunday,kingsgate,Meeting Room,17268,grid_17268_202607121330,,13:30,15:30,2.0,2026-06-25,17,grid_inferred
+2026-06-25,2026-06-26,Friday,issaquah,Meeting Room,17233,grid_17233_202606261300,,13:00,17:30,4.5,2026-06-25,1,grid_inferred
