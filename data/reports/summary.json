@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-07-01T15:52:03.724790",
-  "total_records": 34905,
+  "generated_at": "2026-07-01T23:27:38.685151",
+  "total_records": 34908,
   "missing_created": 4823,
   "libraries": [
     "bellevue",
@@ -523,11 +523,11 @@
     },
     {
       "library": "issaquah",
-      "n": 211,
-      "n_direct": 179,
+      "n": 212,
+      "n_direct": 180,
       "n_lb": 32,
       "median_days": 28.0,
-      "p25": 7.5,
+      "p25": 7.8,
       "p75": 28.0,
       "p90": 28.0,
       "pct_same_day": 15.6
@@ -556,8 +556,8 @@
     },
     {
       "library": "sammamish",
-      "n": 2886,
-      "n_direct": 2708,
+      "n": 2887,
+      "n_direct": 2709,
       "n_lb": 178,
       "median_days": 7.0,
       "p25": 7.0,
@@ -567,14 +567,14 @@
     },
     {
       "library": "woodinville",
-      "n": 187,
-      "n_direct": 157,
+      "n": 188,
+      "n_direct": 158,
       "n_lb": 30,
       "median_days": 26.0,
-      "p25": 3.5,
+      "p25": 3.8,
       "p75": 28.0,
       "p90": 28.0,
-      "pct_same_day": 21.9
+      "pct_same_day": 21.8
     }
   ]
 }
