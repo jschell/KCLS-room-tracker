@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-07-01T23:27:38.685151",
-  "total_records": 34908,
+  "generated_at": "2026-07-02T08:03:06.856031",
+  "total_records": 35077,
   "missing_created": 4823,
   "libraries": [
     "bellevue",
@@ -12,7 +12,7 @@
   ],
   "date_range": {
     "min": "2026-03-22",
-    "max": "2026-07-29"
+    "max": "2026-07-30"
   },
   "saturday_windows": {
     "redmond": {
@@ -512,8 +512,8 @@
   "lead_time_summary": [
     {
       "library": "bellevue",
-      "n": 25867,
-      "n_direct": 22165,
+      "n": 25947,
+      "n_direct": 22245,
       "n_lb": 3702,
       "median_days": 28.0,
       "p25": 28.0,
@@ -523,30 +523,30 @@
     },
     {
       "library": "issaquah",
-      "n": 212,
-      "n_direct": 180,
+      "n": 214,
+      "n_direct": 182,
       "n_lb": 32,
+      "median_days": 28.0,
+      "p25": 7.2,
+      "p75": 28.0,
+      "p90": 28.0,
+      "pct_same_day": 15.9
+    },
+    {
+      "library": "kingsgate",
+      "n": 224,
+      "n_direct": 195,
+      "n_lb": 29,
       "median_days": 28.0,
       "p25": 7.8,
       "p75": 28.0,
       "p90": 28.0,
-      "pct_same_day": 15.6
-    },
-    {
-      "library": "kingsgate",
-      "n": 222,
-      "n_direct": 193,
-      "n_lb": 29,
-      "median_days": 28.0,
-      "p25": 8.0,
-      "p75": 28.0,
-      "p90": 28.0,
-      "pct_same_day": 18.9
+      "pct_same_day": 19.2
     },
     {
       "library": "redmond",
-      "n": 5532,
-      "n_direct": 4680,
+      "n": 5583,
+      "n_direct": 4731,
       "n_lb": 852,
       "median_days": 28.0,
       "p25": 28.0,
@@ -556,25 +556,25 @@
     },
     {
       "library": "sammamish",
-      "n": 2887,
-      "n_direct": 2709,
+      "n": 2919,
+      "n_direct": 2741,
       "n_lb": 178,
       "median_days": 7.0,
       "p25": 7.0,
       "p75": 7.0,
       "p90": 7.0,
-      "pct_same_day": 2.3
+      "pct_same_day": 2.2
     },
     {
       "library": "woodinville",
-      "n": 188,
-      "n_direct": 158,
+      "n": 190,
+      "n_direct": 160,
       "n_lb": 30,
       "median_days": 26.0,
-      "p25": 3.8,
+      "p25": 3.2,
       "p75": 28.0,
       "p90": 28.0,
-      "pct_same_day": 21.8
+      "pct_same_day": 22.1
     }
   ]
 }
