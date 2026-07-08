@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-07-08T09:22:21.092888",
-  "total_records": 37253,
+  "generated_at": "2026-07-08T16:25:28.651753",
+  "total_records": 37254,
   "missing_created": 4823,
   "libraries": [
     "bellevue",
@@ -556,14 +556,14 @@
     },
     {
       "library": "sammamish",
-      "n": 3071,
-      "n_direct": 2893,
+      "n": 3072,
+      "n_direct": 2894,
       "n_lb": 178,
       "median_days": 7.0,
       "p25": 7.0,
       "p75": 7.0,
       "p90": 7.0,
-      "pct_same_day": 2.2
+      "pct_same_day": 2.3
     },
     {
       "library": "woodinville",
