@@ -1,11 +1,11 @@
 # KCLS Room Monitor Report
-*Generated: 2026-07-21 UTC*
+*Generated: 2026-07-22 UTC*
 
 ## Dataset Summary
 | Metric | Value |
 |--------|-------|
-| Total records | 41,318 |
-| Date range | 2026-03-22 to 2026-08-18 |
+| Total records | 41,667 |
+| Date range | 2026-03-22 to 2026-08-19 |
 | Libraries | bellevue, issaquah, kingsgate, redmond, sammamish, woodinville |
 | Missing `created` (affects lead time) | 4,823 (12%) |
 
@@ -14,9 +14,9 @@
 |-----|---------|
 | Monday | 7,287 |
 | Tuesday | 7,960 |
-| Wednesday | 6,957 |
+| Wednesday | 7,305 |
 | Thursday | 2,938 |
-| Friday | 6,766 |
+| Friday | 6,767 |
 | Saturday | 4,650 |
 | Sunday | 4,760 |
 
@@ -24,15 +24,15 @@
 | Hour | Bookings |
 |------|---------|
 | 10am | 2,517 |
-| 11am | 5,419 |
-| 12pm | 5,508 |
-| 1pm | 5,522 |
-| 2pm | 5,357 |
-| 3pm | 5,389 |
-| 4pm | 5,691 |
-| 5pm | 3,641 |
-| 6pm | 1,478 |
-| 7pm | 796 |
+| 11am | 5,454 |
+| 12pm | 5,549 |
+| 1pm | 5,560 |
+| 2pm | 5,402 |
+| 3pm | 5,433 |
+| 4pm | 5,736 |
+| 5pm | 3,682 |
+| 6pm | 1,518 |
+| 7pm | 816 |
 
 ## Booking Lead Times
 *How far in advance meeting rooms are reserved, inferred from first-seen date.*
@@ -41,23 +41,23 @@
 
 | Library | Median days | p25 | p75 | p90 | % same-day | N (direct / lower-bound) |
 |---------|------------|-----|-----|-----|------------|--------------------------|
-| bellevue | 28.0 | 28.0 | 28.0 | 28.0 | 0.1% | 30487 (26785 / 3702) |
-| issaquah | 28.0 | 6.0 | 28.0 | 28.0 | 17.4% | 258 (226 / 32) |
-| kingsgate | 28.0 | 7.0 | 28.0 | 28.0 | 20.7% | 271 (242 / 29) |
-| redmond | 28.0 | 28.0 | 28.0 | 28.0 | 1.2% | 6663 (5811 / 852) |
-| sammamish | 7.0 | 7.0 | 7.0 | 7.0 | 2.1% | 3415 (3237 / 178) |
-| woodinville | 27.0 | 1.0 | 28.0 | 28.0 | 23.2% | 224 (194 / 30) |
+| bellevue | 28.0 | 28.0 | 28.0 | 28.0 | 0.1% | 30782 (27080 / 3702) |
+| issaquah | 28.0 | 6.0 | 28.0 | 28.0 | 17.4% | 259 (227 / 32) |
+| kingsgate | 28.0 | 7.0 | 28.0 | 28.0 | 20.9% | 273 (244 / 29) |
+| redmond | 28.0 | 28.0 | 28.0 | 28.0 | 1.2% | 6684 (5832 / 852) |
+| sammamish | 7.0 | 7.0 | 7.0 | 7.0 | 2.1% | 3444 (3266 / 178) |
+| woodinville | 27.0 | 1.0 | 28.0 | 28.0 | 23.1% | 225 (195 / 30) |
 
-*41,318 bookings total — 36,495 fresh-caught (accurate), 4,823 initial batch (lower bounds). Accuracy improves as the dataset matures.*
+*41,667 bookings total — 36,844 fresh-caught (accurate), 4,823 initial batch (lower bounds). Accuracy improves as the dataset matures.*
 
 ## Day × Hour Heatmap (Booking Counts)
 | Day | 10am | 11am | 12pm | 1pm | 2pm | 3pm | 4pm | 5pm | 6pm | 7pm |
 |-----|----|----|----|----|----|----|----|----|----|----|
 | Monday | 947 | 686 | 793 | 1094 | 1066 | 1062 | 1090 | 549 | 0 | 0 |
 | Tuesday | 0 | 820 | 1125 | 1016 | 1002 | 996 | 987 | 815 | 780 | 419 |
-| Wednesday | 0 | 870 | 983 | 783 | 788 | 821 | 889 | 748 | 698 | 377 |
+| Wednesday | 0 | 905 | 1024 | 821 | 833 | 865 | 934 | 788 | 738 | 397 |
 | Thursday | 494 | 267 | 334 | 388 | 379 | 400 | 445 | 231 | 0 | 0 |
-| Friday | 1076 | 828 | 864 | 875 | 881 | 914 | 867 | 461 | 0 | 0 |
+| Friday | 1076 | 828 | 864 | 875 | 881 | 914 | 867 | 462 | 0 | 0 |
 | Saturday | 0 | 895 | 679 | 666 | 651 | 603 | 714 | 442 | 0 | 0 |
 | Sunday | 0 | 1053 | 730 | 700 | 590 | 593 | 699 | 395 | 0 | 0 |
 
@@ -242,17 +242,17 @@
 ## Booking Frequency by Library
 | Library | Bookings |
 |---------|---------|
-| bellevue | 30,487 |
-| redmond | 6,663 |
-| sammamish | 3,415 |
-| kingsgate | 271 |
-| issaquah | 258 |
-| woodinville | 224 |
+| bellevue | 30,782 |
+| redmond | 6,684 |
+| sammamish | 3,444 |
+| kingsgate | 273 |
+| issaquah | 259 |
+| woodinville | 225 |
 
 ## Data Quality Notes
-- Total records: 41,318
+- Total records: 41,667
 - Records missing `created` timestamp: 4,823
 - Lead time coverage: 100% of records have lead time data (direct or inferred)
-- Fresh-caught bookings (lead time accurate ±12h): 36,495
+- Fresh-caught bookings (lead time accurate ±12h): 36,844
 - Initial-batch bookings (lead time is lower bound — true lead may be longer): 4,823
 - Data maturity: 88% fresh — grows toward 100% as initial batch ages out

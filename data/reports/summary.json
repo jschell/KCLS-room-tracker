@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-07-21T23:47:51.477891",
-  "total_records": 41318,
+  "generated_at": "2026-07-22T09:22:58.585539",
+  "total_records": 41667,
   "missing_created": 4823,
   "libraries": [
     "bellevue",
@@ -12,7 +12,7 @@
   ],
   "date_range": {
     "min": "2026-03-22",
-    "max": "2026-08-18"
+    "max": "2026-08-19"
   },
   "saturday_windows": {
     "redmond": {
@@ -512,8 +512,8 @@
   "lead_time_summary": [
     {
       "library": "bellevue",
-      "n": 30487,
-      "n_direct": 26785,
+      "n": 30782,
+      "n_direct": 27080,
       "n_lb": 3702,
       "median_days": 28.0,
       "p25": 28.0,
@@ -523,8 +523,8 @@
     },
     {
       "library": "issaquah",
-      "n": 258,
-      "n_direct": 226,
+      "n": 259,
+      "n_direct": 227,
       "n_lb": 32,
       "median_days": 28.0,
       "p25": 6.0,
@@ -534,19 +534,19 @@
     },
     {
       "library": "kingsgate",
-      "n": 271,
-      "n_direct": 242,
+      "n": 273,
+      "n_direct": 244,
       "n_lb": 29,
       "median_days": 28.0,
       "p25": 7.0,
       "p75": 28.0,
       "p90": 28.0,
-      "pct_same_day": 20.7
+      "pct_same_day": 20.9
     },
     {
       "library": "redmond",
-      "n": 6663,
-      "n_direct": 5811,
+      "n": 6684,
+      "n_direct": 5832,
       "n_lb": 852,
       "median_days": 28.0,
       "p25": 28.0,
@@ -556,8 +556,8 @@
     },
     {
       "library": "sammamish",
-      "n": 3415,
-      "n_direct": 3237,
+      "n": 3444,
+      "n_direct": 3266,
       "n_lb": 178,
       "median_days": 7.0,
       "p25": 7.0,
@@ -567,14 +567,14 @@
     },
     {
       "library": "woodinville",
-      "n": 224,
-      "n_direct": 194,
+      "n": 225,
+      "n_direct": 195,
       "n_lb": 30,
       "median_days": 27.0,
       "p25": 1.0,
       "p75": 28.0,
       "p90": 28.0,
-      "pct_same_day": 23.2
+      "pct_same_day": 23.1
     }
   ]
 }
