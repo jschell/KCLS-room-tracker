@@ -1,11 +1,11 @@
 # KCLS Room Monitor Report
-*Generated: 2026-07-31 UTC*
+*Generated: 2026-08-01 UTC*
 
 ## Dataset Summary
 | Metric | Value |
 |--------|-------|
-| Total records | 44,431 |
-| Date range | 2026-03-22 to 2026-08-28 |
+| Total records | 44,662 |
+| Date range | 2026-03-22 to 2026-08-29 |
 | Libraries | bellevue, issaquah, kingsgate, redmond, sammamish, woodinville |
 | Missing `created` (affects lead time) | 4,823 (11%) |
 
@@ -17,20 +17,20 @@
 | Wednesday | 7,656 |
 | Thursday | 3,200 |
 | Friday | 7,514 |
-| Saturday | 4,910 |
+| Saturday | 5,141 |
 | Sunday | 5,063 |
 
 ## Booking Volume by Hour (All Libraries)
 | Hour | Bookings |
 |------|---------|
 | 10am | 2,750 |
-| 11am | 5,822 |
-| 12pm | 5,916 |
-| 1pm | 5,931 |
-| 2pm | 5,760 |
-| 3pm | 5,789 |
-| 4pm | 6,089 |
-| 5pm | 3,907 |
+| 11am | 5,868 |
+| 12pm | 5,950 |
+| 1pm | 5,965 |
+| 2pm | 5,796 |
+| 3pm | 5,819 |
+| 4pm | 6,122 |
+| 5pm | 3,925 |
 | 6pm | 1,605 |
 | 7pm | 862 |
 
@@ -41,14 +41,14 @@
 
 | Library | Median days | p25 | p75 | p90 | % same-day | N (direct / lower-bound) |
 |---------|------------|-----|-----|-----|------------|--------------------------|
-| bellevue | 28.0 | 28.0 | 28.0 | 28.0 | 0.1% | 32937 (29235 / 3702) |
-| issaquah | 28.0 | 6.0 | 28.0 | 28.0 | 17.6% | 279 (247 / 32) |
-| kingsgate | 28.0 | 5.0 | 28.0 | 28.0 | 21.5% | 297 (268 / 29) |
-| redmond | 28.0 | 28.0 | 28.0 | 28.0 | 1.2% | 7017 (6165 / 852) |
-| sammamish | 7.0 | 7.0 | 7.0 | 7.0 | 2.0% | 3659 (3481 / 178) |
-| woodinville | 27.5 | 1.0 | 28.0 | 28.0 | 24.0% | 242 (212 / 30) |
+| bellevue | 28.0 | 28.0 | 28.0 | 28.0 | 0.1% | 33137 (29435 / 3702) |
+| issaquah | 28.0 | 6.0 | 28.0 | 28.0 | 17.5% | 280 (248 / 32) |
+| kingsgate | 28.0 | 5.0 | 28.0 | 28.0 | 21.5% | 298 (269 / 29) |
+| redmond | 28.0 | 28.0 | 28.0 | 28.0 | 1.2% | 7020 (6168 / 852) |
+| sammamish | 7.0 | 7.0 | 7.0 | 7.0 | 2.0% | 3682 (3504 / 178) |
+| woodinville | 28.0 | 1.0 | 28.0 | 28.0 | 24.1% | 245 (215 / 30) |
 
-*44,431 bookings total — 39,608 fresh-caught (accurate), 4,823 initial batch (lower bounds). Accuracy improves as the dataset matures.*
+*44,662 bookings total — 39,839 fresh-caught (accurate), 4,823 initial batch (lower bounds). Accuracy improves as the dataset matures.*
 
 ## Day × Hour Heatmap (Booking Counts)
 | Day | 10am | 11am | 12pm | 1pm | 2pm | 3pm | 4pm | 5pm | 6pm | 7pm |
@@ -58,11 +58,11 @@
 | Wednesday | 0 | 950 | 1071 | 862 | 874 | 908 | 977 | 824 | 775 | 415 |
 | Thursday | 552 | 297 | 364 | 424 | 415 | 431 | 469 | 248 | 0 | 0 |
 | Friday | 1202 | 928 | 965 | 977 | 972 | 1004 | 960 | 506 | 0 | 0 |
-| Saturday | 0 | 951 | 724 | 701 | 685 | 633 | 746 | 470 | 0 | 0 |
+| Saturday | 0 | 997 | 758 | 735 | 721 | 663 | 779 | 488 | 0 | 0 |
 | Sunday | 0 | 1109 | 774 | 742 | 634 | 641 | 745 | 418 | 0 | 0 |
 
 ## Saturday Availability Windows
-*Based on 21 Saturdays observed (2026-03-28 to 2026-08-22):*
+*Based on 22 Saturdays observed (2026-03-28 to 2026-08-29):*
 
 ### Redmond
 **East Meeting Room 1**
@@ -73,7 +73,7 @@
 | 12pm | 86% | ⚠️ Usually taken |
 | 1pm | 86% | ⚠️ Usually taken |
 | 2pm | 95% | ⚠️ Usually taken |
-| 3pm | 90% | ⚠️ Usually taken |
+| 3pm | 91% | ⚠️ Usually taken |
 | 4pm | 95% | ⚠️ Usually taken |
 | 5pm | 95% | ⚠️ Usually taken |
 
@@ -85,7 +85,7 @@
 | 12pm | 86% | ⚠️ Usually taken |
 | 1pm | 86% | ⚠️ Usually taken |
 | 2pm | 95% | ⚠️ Usually taken |
-| 3pm | 90% | ⚠️ Usually taken |
+| 3pm | 91% | ⚠️ Usually taken |
 | 4pm | 95% | ⚠️ Usually taken |
 | 5pm | 95% | ⚠️ Usually taken |
 
@@ -97,7 +97,7 @@
 | 12pm | 86% | ⚠️ Usually taken |
 | 1pm | 86% | ⚠️ Usually taken |
 | 2pm | 95% | ⚠️ Usually taken |
-| 3pm | 90% | ⚠️ Usually taken |
+| 3pm | 91% | ⚠️ Usually taken |
 | 4pm | 95% | ⚠️ Usually taken |
 | 5pm | 95% | ⚠️ Usually taken |
 
@@ -108,13 +108,13 @@
 
 | Hour | Booking rate | Status |
 |------|-------------|--------|
-| 11am | 76% | ⚠️ Usually taken |
-| 12pm | 71% | ⚠️ Usually taken |
-| 1pm | 62% | 🟡 Moderate demand |
-| 2pm | 33% | 🟡 Moderate demand |
-| 3pm | 29% | ✅ Often available |
-| 4pm | 67% | 🟡 Moderate demand |
-| 5pm | 81% | ⚠️ Usually taken |
+| 11am | 77% | ⚠️ Usually taken |
+| 12pm | 73% | ⚠️ Usually taken |
+| 1pm | 64% | 🟡 Moderate demand |
+| 2pm | 41% | 🟡 Moderate demand |
+| 3pm | 36% | 🟡 Moderate demand |
+| 4pm | 68% | 🟡 Moderate demand |
+| 5pm | 82% | ⚠️ Usually taken |
 
 **Sunset Room**
 
@@ -135,28 +135,28 @@
 
 | Hour | Booking rate | Status |
 |------|-------------|--------|
-| 11am | 57% | 🟡 Moderate demand |
-| 12pm | 19% | ✅ Often available |
-| 1pm | 24% | ✅ Often available |
-| 2pm | 19% | ✅ Often available |
-| 3pm | 29% | ✅ Often available |
-| 4pm | 38% | 🟡 Moderate demand |
-| 5pm | 81% | ⚠️ Usually taken |
+| 11am | 59% | 🟡 Moderate demand |
+| 12pm | 23% | ✅ Often available |
+| 1pm | 23% | ✅ Often available |
+| 2pm | 18% | ✅ Often available |
+| 3pm | 27% | ✅ Often available |
+| 4pm | 36% | 🟡 Moderate demand |
+| 5pm | 82% | ⚠️ Usually taken |
 
-**Typical lead time at Woodinville:** median 27.5 days, p90 28.0 days
+**Typical lead time at Woodinville:** median 28.0 days, p90 28.0 days
 
 ### Kingsgate
 **Meeting Room**
 
 | Hour | Booking rate | Status |
 |------|-------------|--------|
-| 11am | 67% | 🟡 Moderate demand |
-| 12pm | 52% | 🟡 Moderate demand |
-| 1pm | 14% | ✅ Often available |
-| 2pm | 29% | ✅ Often available |
-| 3pm | 33% | 🟡 Moderate demand |
-| 4pm | 43% | 🟡 Moderate demand |
-| 5pm | 71% | ⚠️ Usually taken |
+| 11am | 68% | 🟡 Moderate demand |
+| 12pm | 55% | 🟡 Moderate demand |
+| 1pm | 18% | ✅ Often available |
+| 2pm | 32% | 🟡 Moderate demand |
+| 3pm | 36% | 🟡 Moderate demand |
+| 4pm | 45% | 🟡 Moderate demand |
+| 5pm | 73% | ⚠️ Usually taken |
 
 **Typical lead time at Kingsgate:** median 28.0 days, p90 28.0 days
 
@@ -165,13 +165,13 @@
 
 | Hour | Booking rate | Status |
 |------|-------------|--------|
-| 11am | 52% | 🟡 Moderate demand |
-| 12pm | 52% | 🟡 Moderate demand |
-| 1pm | 52% | 🟡 Moderate demand |
-| 2pm | 38% | 🟡 Moderate demand |
-| 3pm | 43% | 🟡 Moderate demand |
-| 4pm | 57% | 🟡 Moderate demand |
-| 5pm | 57% | 🟡 Moderate demand |
+| 11am | 50% | 🟡 Moderate demand |
+| 12pm | 50% | 🟡 Moderate demand |
+| 1pm | 50% | 🟡 Moderate demand |
+| 2pm | 36% | 🟡 Moderate demand |
+| 3pm | 41% | 🟡 Moderate demand |
+| 4pm | 59% | 🟡 Moderate demand |
+| 5pm | 59% | 🟡 Moderate demand |
 
 **Typical lead time at Issaquah:** median 28.0 days, p90 28.0 days
 
@@ -242,17 +242,17 @@
 ## Booking Frequency by Library
 | Library | Bookings |
 |---------|---------|
-| bellevue | 32,937 |
-| redmond | 7,017 |
-| sammamish | 3,659 |
-| kingsgate | 297 |
-| issaquah | 279 |
-| woodinville | 242 |
+| bellevue | 33,137 |
+| redmond | 7,020 |
+| sammamish | 3,682 |
+| kingsgate | 298 |
+| issaquah | 280 |
+| woodinville | 245 |
 
 ## Data Quality Notes
-- Total records: 44,431
+- Total records: 44,662
 - Records missing `created` timestamp: 4,823
 - Lead time coverage: 100% of records have lead time data (direct or inferred)
-- Fresh-caught bookings (lead time accurate ±12h): 39,608
+- Fresh-caught bookings (lead time accurate ±12h): 39,839
 - Initial-batch bookings (lead time is lower bound — true lead may be longer): 4,823
 - Data maturity: 89% fresh — grows toward 100% as initial batch ages out
