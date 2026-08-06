@@ -1,11 +1,11 @@
 # KCLS Room Monitor Report
-*Generated: 2026-08-05 UTC*
+*Generated: 2026-08-06 UTC*
 
 ## Dataset Summary
 | Metric | Value |
 |--------|-------|
-| Total records | 46,189 |
-| Date range | 2026-03-22 to 2026-09-02 |
+| Total records | 46,349 |
+| Date range | 2026-03-22 to 2026-09-03 |
 | Libraries | bellevue, issaquah, kingsgate, redmond, sammamish, woodinville |
 | Missing `created` (affects lead time) | 4,823 (10%) |
 
@@ -13,24 +13,24 @@
 | Day | Bookings |
 |-----|---------|
 | Monday | 8,044 |
-| Tuesday | 8,889 |
+| Tuesday | 8,890 |
 | Wednesday | 8,027 |
-| Thursday | 3,200 |
-| Friday | 7,517 |
+| Thursday | 3,358 |
+| Friday | 7,518 |
 | Saturday | 5,143 |
 | Sunday | 5,369 |
 
 ## Booking Volume by Hour (All Libraries)
 | Hour | Bookings |
 |------|---------|
-| 10am | 2,799 |
-| 11am | 6,055 |
-| 12pm | 6,157 |
-| 1pm | 6,168 |
-| 2pm | 6,006 |
-| 3pm | 6,018 |
-| 4pm | 6,322 |
-| 5pm | 4,062 |
+| 10am | 2,827 |
+| 11am | 6,072 |
+| 12pm | 6,176 |
+| 1pm | 6,184 |
+| 2pm | 6,024 |
+| 3pm | 6,040 |
+| 4pm | 6,348 |
+| 5pm | 4,076 |
 | 6pm | 1,695 |
 | 7pm | 907 |
 
@@ -41,23 +41,23 @@
 
 | Library | Median days | p25 | p75 | p90 | % same-day | N (direct / lower-bound) |
 |---------|------------|-----|-----|-----|------------|--------------------------|
-| bellevue | 28.0 | 28.0 | 28.0 | 28.0 | 0.1% | 34252 (30550 / 3702) |
-| issaquah | 28.0 | 6.0 | 28.0 | 28.0 | 17.1% | 292 (260 / 32) |
-| kingsgate | 28.0 | 5.0 | 28.0 | 28.0 | 21.6% | 306 (277 / 29) |
-| redmond | 28.0 | 28.0 | 28.0 | 28.0 | 1.2% | 7275 (6423 / 852) |
-| sammamish | 7.0 | 7.0 | 7.0 | 7.0 | 2.0% | 3813 (3635 / 178) |
-| woodinville | 28.0 | 1.0 | 28.0 | 28.0 | 24.3% | 251 (221 / 30) |
+| bellevue | 28.0 | 28.0 | 28.0 | 28.0 | 0.1% | 34332 (30630 / 3702) |
+| issaquah | 28.0 | 5.0 | 28.0 | 28.0 | 17.2% | 296 (264 / 32) |
+| kingsgate | 28.0 | 5.0 | 28.0 | 28.0 | 21.8% | 308 (279 / 29) |
+| redmond | 28.0 | 28.0 | 28.0 | 28.0 | 1.1% | 7332 (6480 / 852) |
+| sammamish | 7.0 | 7.0 | 7.0 | 7.0 | 2.0% | 3829 (3651 / 178) |
+| woodinville | 28.0 | 1.0 | 28.0 | 28.0 | 24.2% | 252 (222 / 30) |
 
-*46,189 bookings total — 41,366 fresh-caught (accurate), 4,823 initial batch (lower bounds). Accuracy improves as the dataset matures.*
+*46,349 bookings total — 41,526 fresh-caught (accurate), 4,823 initial batch (lower bounds). Accuracy improves as the dataset matures.*
 
 ## Day × Hour Heatmap (Booking Counts)
 | Day | 10am | 11am | 12pm | 1pm | 2pm | 3pm | 4pm | 5pm | 6pm | 7pm |
 |-----|----|----|----|----|----|----|----|----|----|----|
 | Monday | 1045 | 758 | 875 | 1208 | 1178 | 1172 | 1204 | 604 | 0 | 0 |
-| Tuesday | 0 | 910 | 1249 | 1129 | 1115 | 1112 | 1102 | 915 | 885 | 472 |
+| Tuesday | 0 | 910 | 1249 | 1129 | 1115 | 1112 | 1102 | 916 | 885 | 472 |
 | Wednesday | 0 | 995 | 1123 | 906 | 919 | 955 | 1023 | 861 | 810 | 435 |
-| Thursday | 552 | 297 | 364 | 424 | 415 | 431 | 469 | 248 | 0 | 0 |
-| Friday | 1202 | 928 | 967 | 977 | 972 | 1004 | 960 | 507 | 0 | 0 |
+| Thursday | 580 | 313 | 383 | 440 | 433 | 453 | 495 | 261 | 0 | 0 |
+| Friday | 1202 | 929 | 967 | 977 | 972 | 1004 | 960 | 507 | 0 | 0 |
 | Saturday | 0 | 997 | 759 | 735 | 721 | 663 | 779 | 489 | 0 | 0 |
 | Sunday | 0 | 1170 | 820 | 789 | 686 | 681 | 785 | 438 | 0 | 0 |
 
@@ -242,17 +242,17 @@
 ## Booking Frequency by Library
 | Library | Bookings |
 |---------|---------|
-| bellevue | 34,252 |
-| redmond | 7,275 |
-| sammamish | 3,813 |
-| kingsgate | 306 |
-| issaquah | 292 |
-| woodinville | 251 |
+| bellevue | 34,332 |
+| redmond | 7,332 |
+| sammamish | 3,829 |
+| kingsgate | 308 |
+| issaquah | 296 |
+| woodinville | 252 |
 
 ## Data Quality Notes
-- Total records: 46,189
+- Total records: 46,349
 - Records missing `created` timestamp: 4,823
 - Lead time coverage: 100% of records have lead time data (direct or inferred)
-- Fresh-caught bookings (lead time accurate ±12h): 41,366
+- Fresh-caught bookings (lead time accurate ±12h): 41,526
 - Initial-batch bookings (lead time is lower bound — true lead may be longer): 4,823
 - Data maturity: 90% fresh — grows toward 100% as initial batch ages out

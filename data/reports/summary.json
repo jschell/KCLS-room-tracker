@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-08-05T23:48:36.999100",
-  "total_records": 46189,
+  "generated_at": "2026-08-06T09:36:00.496622",
+  "total_records": 46349,
   "missing_created": 4823,
   "libraries": [
     "bellevue",
@@ -12,7 +12,7 @@
   ],
   "date_range": {
     "min": "2026-03-22",
-    "max": "2026-09-02"
+    "max": "2026-09-03"
   },
   "saturday_windows": {
     "redmond": {
@@ -512,8 +512,8 @@
   "lead_time_summary": [
     {
       "library": "bellevue",
-      "n": 34252,
-      "n_direct": 30550,
+      "n": 34332,
+      "n_direct": 30630,
       "n_lb": 3702,
       "median_days": 28.0,
       "p25": 28.0,
@@ -523,41 +523,41 @@
     },
     {
       "library": "issaquah",
-      "n": 292,
-      "n_direct": 260,
+      "n": 296,
+      "n_direct": 264,
       "n_lb": 32,
       "median_days": 28.0,
-      "p25": 6.0,
+      "p25": 5.0,
       "p75": 28.0,
       "p90": 28.0,
-      "pct_same_day": 17.1
+      "pct_same_day": 17.2
     },
     {
       "library": "kingsgate",
-      "n": 306,
-      "n_direct": 277,
+      "n": 308,
+      "n_direct": 279,
       "n_lb": 29,
       "median_days": 28.0,
       "p25": 5.0,
       "p75": 28.0,
       "p90": 28.0,
-      "pct_same_day": 21.6
+      "pct_same_day": 21.8
     },
     {
       "library": "redmond",
-      "n": 7275,
-      "n_direct": 6423,
+      "n": 7332,
+      "n_direct": 6480,
       "n_lb": 852,
       "median_days": 28.0,
       "p25": 28.0,
       "p75": 28.0,
       "p90": 28.0,
-      "pct_same_day": 1.2
+      "pct_same_day": 1.1
     },
     {
       "library": "sammamish",
-      "n": 3813,
-      "n_direct": 3635,
+      "n": 3829,
+      "n_direct": 3651,
       "n_lb": 178,
       "median_days": 7.0,
       "p25": 7.0,
@@ -567,14 +567,14 @@
     },
     {
       "library": "woodinville",
-      "n": 251,
-      "n_direct": 221,
+      "n": 252,
+      "n_direct": 222,
       "n_lb": 30,
       "median_days": 28.0,
       "p25": 1.0,
       "p75": 28.0,
       "p90": 28.0,
-      "pct_same_day": 24.3
+      "pct_same_day": 24.2
     }
   ]
 }
