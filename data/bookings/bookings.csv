@@ -47469,3 +47469,4 @@ fetch_date,booking_date,day_of_week,library,space_name,space_id,booking_id,title
 2026-08-10,2026-08-17,Monday,sammamish,Sunset Room,134490,grid_134490_202608171715,,17:15,17:30,0.25,2026-08-10,7,grid_inferred
 2026-08-10,2026-08-10,Monday,woodinville,Meeting Room,17258,grid_17258_202608101330,,13:30,17:30,4.0,2026-08-10,0,grid_inferred
 2026-08-10,2026-08-10,Monday,issaquah,Meeting Room,17233,grid_17233_202608101330,,13:30,17:30,4.0,2026-08-10,0,grid_inferred
+2026-08-10,2026-08-30,Sunday,sammamish,Meeting Room,17254,grid_17254_202608301630,,16:30,17:30,1.0,2026-08-10,20,grid_inferred
