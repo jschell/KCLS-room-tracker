@@ -140,14 +140,14 @@
         "n_booked": 8
       },
       "16:00": {
-        "pct_booked": 0.6522,
+        "pct_booked": 0.6957,
         "n_saturdays": 23,
-        "n_booked": 15
+        "n_booked": 16
       },
       "17:00": {
-        "pct_booked": 0.7826,
+        "pct_booked": 0.8261,
         "n_saturdays": 23,
-        "n_booked": 18
+        "n_booked": 19
       }
     },
     "Sunset Room": {

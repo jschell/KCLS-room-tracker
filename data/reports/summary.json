@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-08-11T15:52:24.666869",
-  "total_records": 47837,
+  "generated_at": "2026-08-11T23:28:56.735203",
+  "total_records": 47840,
   "missing_created": 4823,
   "libraries": [
     "bellevue",
@@ -156,14 +156,14 @@
           "n_booked": 8
         },
         "16:00": {
-          "pct_booked": 0.6522,
+          "pct_booked": 0.6957,
           "n_saturdays": 23,
-          "n_booked": 15
+          "n_booked": 16
         },
         "17:00": {
-          "pct_booked": 0.7826,
+          "pct_booked": 0.8261,
           "n_saturdays": 23,
-          "n_booked": 18
+          "n_booked": 19
         }
       },
       "Sunset Room": {
@@ -523,14 +523,14 @@
     },
     {
       "library": "issaquah",
-      "n": 305,
-      "n_direct": 273,
+      "n": 306,
+      "n_direct": 274,
       "n_lb": 32,
       "median_days": 28.0,
-      "p25": 5.0,
+      "p25": 5.2,
       "p75": 28.0,
       "p90": 28.0,
-      "pct_same_day": 17.4
+      "pct_same_day": 17.3
     },
     {
       "library": "kingsgate",
@@ -556,8 +556,8 @@
     },
     {
       "library": "sammamish",
-      "n": 3964,
-      "n_direct": 3786,
+      "n": 3966,
+      "n_direct": 3788,
       "n_lb": 178,
       "median_days": 7.0,
       "p25": 7.0,
