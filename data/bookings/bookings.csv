@@ -48371,3 +48371,9 @@ fetch_date,booking_date,day_of_week,library,space_name,space_id,booking_id,title
 2026-08-13,2026-09-10,Thursday,bellevue,Meeting Room 5,17227,grid_17227_202609101600,,16:00,17:00,1.0,2026-08-13,28,grid_inferred
 2026-08-13,2026-09-10,Thursday,bellevue,Meeting Room 5,17227,grid_17227_202609101630,,16:30,17:30,1.0,2026-08-13,28,grid_inferred
 2026-08-13,2026-09-10,Thursday,bellevue,Meeting Room 5,17227,grid_17227_202609101700,,17:00,17:30,0.5,2026-08-13,28,grid_inferred
+2026-08-13,2026-08-15,Saturday,sammamish,Sunset Room,134490,grid_134490_202608151500,,15:00,15:30,0.5,2026-08-13,2,grid_inferred
+2026-08-13,2026-08-15,Saturday,sammamish,Sunset Room,134490,grid_134490_202608151515,,15:15,15:45,0.5,2026-08-13,2,grid_inferred
+2026-08-13,2026-08-20,Thursday,sammamish,Sunset Room,134490,grid_134490_202608201430,,14:30,15:00,0.5,2026-08-13,7,grid_inferred
+2026-08-13,2026-08-20,Thursday,sammamish,Sunset Room,134490,grid_134490_202608201600,,16:00,17:30,1.5,2026-08-13,7,grid_inferred
+2026-08-13,2026-08-14,Friday,woodinville,Meeting Room,17258,grid_17258_202608141330,,13:30,14:00,0.5,2026-08-13,1,grid_inferred
+2026-08-13,2026-08-14,Friday,woodinville,Meeting Room,17258,grid_17258_202608141530,,15:30,17:30,2.0,2026-08-13,1,grid_inferred
