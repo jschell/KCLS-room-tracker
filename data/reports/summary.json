@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-08-12T23:29:16.206420",
-  "total_records": 48216,
+  "generated_at": "2026-08-13T08:14:14.869082",
+  "total_records": 48372,
   "missing_created": 4823,
   "libraries": [
     "bellevue",
@@ -12,7 +12,7 @@
   ],
   "date_range": {
     "min": "2026-03-22",
-    "max": "2026-09-09"
+    "max": "2026-09-10"
   },
   "saturday_windows": {
     "redmond": {
@@ -512,8 +512,8 @@
   "lead_time_summary": [
     {
       "library": "bellevue",
-      "n": 35727,
-      "n_direct": 32025,
+      "n": 35807,
+      "n_direct": 32105,
       "n_lb": 3702,
       "median_days": 28.0,
       "p25": 28.0,
@@ -523,30 +523,30 @@
     },
     {
       "library": "issaquah",
-      "n": 308,
-      "n_direct": 276,
+      "n": 312,
+      "n_direct": 280,
       "n_lb": 32,
       "median_days": 28.0,
       "p25": 5.0,
       "p75": 28.0,
       "p90": 28.0,
-      "pct_same_day": 17.5
+      "pct_same_day": 17.3
     },
     {
       "library": "kingsgate",
-      "n": 318,
-      "n_direct": 289,
+      "n": 319,
+      "n_direct": 290,
       "n_lb": 29,
       "median_days": 28.0,
-      "p25": 5.2,
+      "p25": 5.5,
       "p75": 28.0,
       "p90": 28.0,
-      "pct_same_day": 21.4
+      "pct_same_day": 21.3
     },
     {
       "library": "redmond",
-      "n": 7608,
-      "n_direct": 6756,
+      "n": 7674,
+      "n_direct": 6822,
       "n_lb": 852,
       "median_days": 28.0,
       "p25": 28.0,
@@ -556,25 +556,25 @@
     },
     {
       "library": "sammamish",
-      "n": 3995,
-      "n_direct": 3817,
+      "n": 3999,
+      "n_direct": 3821,
       "n_lb": 178,
       "median_days": 7.0,
       "p25": 7.0,
       "p75": 7.0,
       "p90": 7.0,
-      "pct_same_day": 2.0
+      "pct_same_day": 2.1
     },
     {
       "library": "woodinville",
-      "n": 260,
-      "n_direct": 230,
+      "n": 261,
+      "n_direct": 231,
       "n_lb": 30,
       "median_days": 28.0,
       "p25": 1.0,
       "p75": 28.0,
       "p90": 28.0,
-      "pct_same_day": 24.2
+      "pct_same_day": 24.1
     }
   ]
 }
