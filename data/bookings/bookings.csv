@@ -50002,3 +50002,6 @@ fetch_date,booking_date,day_of_week,library,space_name,space_id,booking_id,title
 2026-08-18,2026-09-15,Tuesday,bellevue,Meeting Room 5,17227,grid_17227_202609151900,,19:00,19:30,0.5,2026-08-18,28,grid_inferred
 2026-08-18,2026-09-15,Tuesday,bellevue,Meeting Room 5,17227,grid_17227_202609151900,,19:00,19:30,0.5,2026-08-18,28,grid_inferred
 2026-08-18,2026-09-15,Tuesday,bellevue,Meeting Room 5,17227,grid_17227_202609151900,,19:00,19:30,0.5,2026-08-18,28,grid_inferred
+2026-08-18,2026-09-01,Tuesday,woodinville,Meeting Room,17258,grid_17258_202609011630,,16:30,19:30,3.0,2026-08-18,14,grid_inferred
+2026-08-18,2026-08-25,Tuesday,kingsgate,Meeting Room,17268,grid_17268_202608251700,,17:00,19:30,2.5,2026-08-18,7,grid_inferred
+2026-08-18,2026-09-01,Tuesday,kingsgate,Meeting Room,17268,grid_17268_202609011500,,15:00,19:30,4.5,2026-08-18,14,grid_inferred
