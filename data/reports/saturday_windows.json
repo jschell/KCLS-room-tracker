@@ -115,39 +115,39 @@
   "sammamish": {
     "Meeting Room": {
       "11:00": {
-        "pct_booked": 0.7083,
+        "pct_booked": 0.7917,
         "n_saturdays": 24,
-        "n_booked": 17
+        "n_booked": 19
       },
       "12:00": {
+        "pct_booked": 0.75,
+        "n_saturdays": 24,
+        "n_booked": 18
+      },
+      "13:00": {
         "pct_booked": 0.6667,
         "n_saturdays": 24,
         "n_booked": 16
       },
-      "13:00": {
-        "pct_booked": 0.5833,
-        "n_saturdays": 24,
-        "n_booked": 14
-      },
       "14:00": {
+        "pct_booked": 0.4167,
+        "n_saturdays": 24,
+        "n_booked": 10
+      },
+      "15:00": {
         "pct_booked": 0.375,
         "n_saturdays": 24,
         "n_booked": 9
       },
-      "15:00": {
-        "pct_booked": 0.3333,
-        "n_saturdays": 24,
-        "n_booked": 8
-      },
       "16:00": {
-        "pct_booked": 0.6667,
+        "pct_booked": 0.75,
         "n_saturdays": 24,
-        "n_booked": 16
+        "n_booked": 18
       },
       "17:00": {
-        "pct_booked": 0.7917,
+        "pct_booked": 0.875,
         "n_saturdays": 24,
-        "n_booked": 19
+        "n_booked": 21
       }
     },
     "Sunset Room": {
