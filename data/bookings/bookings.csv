@@ -54249,3 +54249,7 @@ fetch_date,booking_date,day_of_week,library,space_name,space_id,booking_id,title
 2026-09-01,2026-09-02,Wednesday,redmond,East Meeting Room 1,17228,grid_17228_202609021500,,15:00,17:30,2.5,2026-09-01,1,grid_inferred
 2026-09-01,2026-09-02,Wednesday,redmond,East Meeting Room 2,17229,grid_17229_202609021500,,15:00,17:30,2.5,2026-09-01,1,grid_inferred
 2026-09-01,2026-09-02,Wednesday,redmond,Conference Room,17230,grid_17230_202609021500,,15:00,17:30,2.5,2026-09-01,1,grid_inferred
+2026-09-02,2026-09-02,Wednesday,redmond,East Meeting Room 1,17228,grid_17228_202609021400,,14:00,17:30,3.5,2026-09-02,0,grid_inferred
+2026-09-02,2026-09-02,Wednesday,redmond,East Meeting Room 2,17229,grid_17229_202609021400,,14:00,17:30,3.5,2026-09-02,0,grid_inferred
+2026-09-02,2026-09-02,Wednesday,redmond,Conference Room,17230,grid_17230_202609021400,,14:00,17:30,3.5,2026-09-02,0,grid_inferred
+2026-09-02,2026-09-08,Tuesday,woodinville,Meeting Room,17258,grid_17258_202609081700,,17:00,18:00,1.0,2026-09-02,6,grid_inferred
