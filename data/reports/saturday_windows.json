@@ -191,24 +191,24 @@
   "woodinville": {
     "Meeting Room": {
       "11:00": {
-        "pct_booked": 0.5385,
+        "pct_booked": 0.5769,
         "n_saturdays": 26,
-        "n_booked": 14
+        "n_booked": 15
       },
       "12:00": {
-        "pct_booked": 0.1923,
+        "pct_booked": 0.2308,
         "n_saturdays": 26,
-        "n_booked": 5
+        "n_booked": 6
       },
       "13:00": {
-        "pct_booked": 0.1923,
+        "pct_booked": 0.2308,
         "n_saturdays": 26,
-        "n_booked": 5
+        "n_booked": 6
       },
       "14:00": {
-        "pct_booked": 0.1923,
+        "pct_booked": 0.2308,
         "n_saturdays": 26,
-        "n_booked": 5
+        "n_booked": 6
       },
       "15:00": {
         "pct_booked": 0.3077,
