@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-09-03T18:15:46.654850",
-  "total_records": 54767,
+  "generated_at": "2026-09-04T00:31:31.374255",
+  "total_records": 54771,
   "missing_created": 4823,
   "libraries": [
     "bellevue",
@@ -207,9 +207,9 @@
     "woodinville": {
       "Meeting Room": {
         "11:00": {
-          "pct_booked": 0.5769,
+          "pct_booked": 0.6154,
           "n_saturdays": 26,
-          "n_booked": 15
+          "n_booked": 16
         },
         "12:00": {
           "pct_booked": 0.2308,
@@ -232,14 +232,14 @@
           "n_booked": 8
         },
         "16:00": {
-          "pct_booked": 0.3846,
+          "pct_booked": 0.4231,
           "n_saturdays": 26,
-          "n_booked": 10
+          "n_booked": 11
         },
         "17:00": {
-          "pct_booked": 0.8077,
+          "pct_booked": 0.8462,
           "n_saturdays": 26,
-          "n_booked": 21
+          "n_booked": 22
         }
       }
     },
@@ -556,8 +556,8 @@
     },
     {
       "library": "sammamish",
-      "n": 4456,
-      "n_direct": 4278,
+      "n": 4457,
+      "n_direct": 4279,
       "n_lb": 178,
       "median_days": 7.0,
       "p25": 7.0,
@@ -567,14 +567,14 @@
     },
     {
       "library": "woodinville",
-      "n": 295,
-      "n_direct": 265,
+      "n": 298,
+      "n_direct": 268,
       "n_lb": 30,
       "median_days": 28.0,
       "p25": 1.0,
       "p75": 28.0,
       "p90": 28.0,
-      "pct_same_day": 23.4
+      "pct_same_day": 23.2
     }
   ]
 }
