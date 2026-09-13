@@ -57636,3 +57636,4 @@ fetch_date,booking_date,day_of_week,library,space_name,space_id,booking_id,title
 2026-09-12,2026-10-10,Saturday,redmond,East Meeting Room 2,17229,grid_17229_202610101700,,17:00,17:30,0.5,2026-09-12,28,grid_inferred
 2026-09-12,2026-10-10,Saturday,redmond,Conference Room,17230,grid_17230_202610101700,,17:00,17:30,0.5,2026-09-12,28,grid_inferred
 2026-09-12,2026-09-20,Sunday,sammamish,Meeting Room,17254,grid_17254_202609201600,,16:00,17:30,1.5,2026-09-12,8,grid_inferred
+2026-09-13,2026-09-13,Sunday,kingsgate,Meeting Room,17268,grid_17268_202609131400,,14:00,16:00,2.0,2026-09-13,0,grid_inferred
