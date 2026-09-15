@@ -58494,3 +58494,10 @@ fetch_date,booking_date,day_of_week,library,space_name,space_id,booking_id,title
 2026-09-15,2026-10-13,Tuesday,bellevue,Meeting Room 5,17227,grid_17227_202610131830,,18:30,19:30,1.0,2026-09-15,28,grid_inferred
 2026-09-15,2026-10-13,Tuesday,bellevue,Meeting Room 5,17227,grid_17227_202610131900,,19:00,19:30,0.5,2026-09-15,28,grid_inferred
 2026-09-15,2026-10-13,Tuesday,bellevue,Meeting Room 5,17227,grid_17227_202610131900,,19:00,19:30,0.5,2026-09-15,28,grid_inferred
+2026-09-15,2026-10-03,Saturday,redmond,East Meeting Room 1,17228,grid_17228_202610031700,,17:00,17:30,0.5,2026-09-15,18,grid_inferred
+2026-09-15,2026-10-03,Saturday,redmond,East Meeting Room 2,17229,grid_17229_202610031700,,17:00,17:30,0.5,2026-09-15,18,grid_inferred
+2026-09-15,2026-10-03,Saturday,redmond,Conference Room,17230,grid_17230_202610031700,,17:00,17:30,0.5,2026-09-15,18,grid_inferred
+2026-09-15,2026-09-21,Monday,sammamish,Meeting Room,17254,grid_17254_202609211700,,17:00,17:30,0.5,2026-09-15,6,grid_inferred
+2026-09-15,2026-10-13,Tuesday,woodinville,Meeting Room,17258,grid_17258_202610131600,,16:00,18:00,2.0,2026-09-15,28,grid_inferred
+2026-09-15,2026-09-28,Monday,kingsgate,Meeting Room,17268,grid_17268_202609281600,,16:00,17:30,1.5,2026-09-15,13,grid_inferred
+2026-09-15,2026-10-13,Tuesday,issaquah,Meeting Room,17233,grid_17233_202610131630,,16:30,17:30,1.0,2026-09-15,28,grid_inferred
