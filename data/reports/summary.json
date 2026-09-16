@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-09-15T18:36:51.573988",
-  "total_records": 58502,
+  "generated_at": "2026-09-16T00:53:19.357461",
+  "total_records": 58503,
   "missing_created": 4823,
   "libraries": [
     "bellevue",
@@ -567,14 +567,14 @@
     },
     {
       "library": "woodinville",
-      "n": 320,
-      "n_direct": 290,
+      "n": 321,
+      "n_direct": 291,
       "n_lb": 30,
       "median_days": 28.0,
       "p25": 1.0,
       "p75": 28.0,
       "p90": 28.0,
-      "pct_same_day": 22.8
+      "pct_same_day": 22.7
     }
   ]
 }
