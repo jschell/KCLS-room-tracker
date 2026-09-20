@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-09-19T17:36:49.492635",
-  "total_records": 59614,
+  "generated_at": "2026-09-20T00:30:02.328040",
+  "total_records": 59618,
   "missing_created": 4823,
   "libraries": [
     "bellevue",
@@ -545,8 +545,8 @@
     },
     {
       "library": "redmond",
-      "n": 9465,
-      "n_direct": 8613,
+      "n": 9468,
+      "n_direct": 8616,
       "n_lb": 852,
       "median_days": 28.0,
       "p25": 28.0,
@@ -567,14 +567,14 @@
     },
     {
       "library": "woodinville",
-      "n": 329,
-      "n_direct": 299,
+      "n": 330,
+      "n_direct": 300,
       "n_lb": 30,
       "median_days": 28.0,
       "p25": 1.0,
       "p75": 28.0,
       "p90": 28.0,
-      "pct_same_day": 22.8
+      "pct_same_day": 22.7
     }
   ]
 }
