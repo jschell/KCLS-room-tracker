@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-09-23T01:02:40.239200",
-  "total_records": 60580,
+  "generated_at": "2026-09-23T12:29:08.602432",
+  "total_records": 60848,
   "missing_created": 4823,
   "libraries": [
     "bellevue",
@@ -12,7 +12,7 @@
   ],
   "date_range": {
     "min": "2026-03-22",
-    "max": "2026-10-20"
+    "max": "2026-10-21"
   },
   "saturday_windows": {
     "redmond": {
@@ -512,8 +512,8 @@
   "lead_time_summary": [
     {
       "library": "bellevue",
-      "n": 44892,
-      "n_direct": 41190,
+      "n": 45122,
+      "n_direct": 41420,
       "n_lb": 3702,
       "median_days": 28.0,
       "p25": 28.0,
@@ -523,41 +523,41 @@
     },
     {
       "library": "issaquah",
-      "n": 395,
-      "n_direct": 363,
+      "n": 397,
+      "n_direct": 365,
       "n_lb": 32,
       "median_days": 28.0,
       "p25": 6.0,
       "p75": 28.0,
       "p90": 28.0,
-      "pct_same_day": 17.7
+      "pct_same_day": 17.9
     },
     {
       "library": "kingsgate",
-      "n": 399,
-      "n_direct": 370,
+      "n": 400,
+      "n_direct": 371,
       "n_lb": 29,
       "median_days": 28.0,
       "p25": 6.0,
       "p75": 28.0,
       "p90": 28.0,
-      "pct_same_day": 21.1
+      "pct_same_day": 21.0
     },
     {
       "library": "redmond",
-      "n": 9633,
-      "n_direct": 8781,
+      "n": 9639,
+      "n_direct": 8787,
       "n_lb": 852,
       "median_days": 28.0,
       "p25": 28.0,
       "p75": 28.0,
       "p90": 28.0,
-      "pct_same_day": 1.0
+      "pct_same_day": 1.1
     },
     {
       "library": "sammamish",
-      "n": 4929,
-      "n_direct": 4751,
+      "n": 4956,
+      "n_direct": 4778,
       "n_lb": 178,
       "median_days": 7.0,
       "p25": 7.0,
@@ -567,14 +567,14 @@
     },
     {
       "library": "woodinville",
-      "n": 332,
-      "n_direct": 302,
+      "n": 334,
+      "n_direct": 304,
       "n_lb": 30,
       "median_days": 28.0,
       "p25": 1.0,
       "p75": 28.0,
       "p90": 28.0,
-      "pct_same_day": 22.6
+      "pct_same_day": 22.8
     }
   ]
 }
