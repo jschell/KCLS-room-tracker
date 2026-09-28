@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-09-27T18:47:44.886646",
-  "total_records": 62011,
+  "generated_at": "2026-09-28T01:17:49.459657",
+  "total_records": 62015,
   "missing_created": 4823,
   "libraries": [
     "bellevue",
@@ -545,8 +545,8 @@
     },
     {
       "library": "redmond",
-      "n": 9855,
-      "n_direct": 9003,
+      "n": 9858,
+      "n_direct": 9006,
       "n_lb": 852,
       "median_days": 28.0,
       "p25": 28.0,
@@ -556,8 +556,8 @@
     },
     {
       "library": "sammamish",
-      "n": 5074,
-      "n_direct": 4896,
+      "n": 5075,
+      "n_direct": 4897,
       "n_lb": 178,
       "median_days": 7.0,
       "p25": 7.0,
