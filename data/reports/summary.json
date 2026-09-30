@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-09-30T13:14:36.264688",
-  "total_records": 63159,
+  "generated_at": "2026-09-30T19:45:24.721185",
+  "total_records": 63160,
   "missing_created": 4823,
   "libraries": [
     "bellevue",
@@ -556,8 +556,8 @@
     },
     {
       "library": "sammamish",
-      "n": 5167,
-      "n_direct": 4989,
+      "n": 5168,
+      "n_direct": 4990,
       "n_lb": 178,
       "median_days": 7.0,
       "p25": 7.0,
