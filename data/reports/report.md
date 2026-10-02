@@ -4,8 +4,8 @@
 ## Dataset Summary
 | Metric | Value |
 |--------|-------|
-| Total records | 63,332 |
-| Date range | 2026-03-22 to 2026-10-29 |
+| Total records | 63,671 |
+| Date range | 2026-03-22 to 2026-10-30 |
 | Libraries | bellevue, issaquah, kingsgate, redmond, sammamish, woodinville |
 | Missing `created` (affects lead time) | 4,823 (8%) |
 
@@ -13,24 +13,24 @@
 | Day | Bookings |
 |-----|---------|
 | Monday | 10,562 |
-| Tuesday | 12,130 |
-| Wednesday | 10,744 |
+| Tuesday | 12,131 |
+| Wednesday | 10,745 |
 | Thursday | 4,652 |
-| Friday | 10,630 |
+| Friday | 10,967 |
 | Saturday | 7,277 |
 | Sunday | 7,337 |
 
 ## Booking Volume by Hour (All Libraries)
 | Hour | Bookings |
 |------|---------|
-| 10am | 4,064 |
-| 11am | 8,343 |
-| 12pm | 8,471 |
-| 1pm | 8,441 |
-| 2pm | 8,253 |
-| 3pm | 8,286 |
-| 4pm | 8,543 |
-| 5pm | 5,480 |
+| 10am | 4,119 |
+| 11am | 8,387 |
+| 12pm | 8,516 |
+| 1pm | 8,482 |
+| 2pm | 8,294 |
+| 3pm | 8,331 |
+| 4pm | 8,588 |
+| 5pm | 5,503 |
 | 6pm | 2,254 |
 | 7pm | 1,197 |
 
@@ -41,23 +41,23 @@
 
 | Library | Median days | p25 | p75 | p90 | % same-day | N (direct / lower-bound) |
 |---------|------------|-----|-----|-----|------------|--------------------------|
-| bellevue | 28.0 | 28.0 | 28.0 | 28.0 | 0.0% | 46832 (43130 / 3702) |
-| issaquah | 28.0 | 6.0 | 28.0 | 28.0 | 17.4% | 414 (382 / 32) |
-| kingsgate | 28.0 | 7.0 | 28.0 | 28.0 | 20.2% | 416 (387 / 29) |
-| redmond | 28.0 | 28.0 | 28.0 | 28.0 | 1.1% | 10137 (9285 / 852) |
-| sammamish | 7.0 | 7.0 | 7.0 | 7.0 | 2.0% | 5188 (5010 / 178) |
-| woodinville | 28.0 | 2.0 | 28.0 | 28.0 | 22.0% | 345 (315 / 30) |
+| bellevue | 28.0 | 28.0 | 28.0 | 28.0 | 0.0% | 47137 (43435 / 3702) |
+| issaquah | 28.0 | 6.0 | 28.0 | 28.0 | 17.3% | 416 (384 / 32) |
+| kingsgate | 28.0 | 7.0 | 28.0 | 28.0 | 20.1% | 418 (389 / 29) |
+| redmond | 28.0 | 28.0 | 28.0 | 28.0 | 1.1% | 10140 (9288 / 852) |
+| sammamish | 7.0 | 7.0 | 7.0 | 7.0 | 2.0% | 5213 (5035 / 178) |
+| woodinville | 28.0 | 2.5 | 28.0 | 28.0 | 21.9% | 347 (317 / 30) |
 
-*63,332 bookings total — 58,509 fresh-caught (accurate), 4,823 initial batch (lower bounds). Accuracy improves as the dataset matures.*
+*63,671 bookings total — 58,848 fresh-caught (accurate), 4,823 initial batch (lower bounds). Accuracy improves as the dataset matures.*
 
 ## Day × Hour Heatmap (Booking Counts)
 | Day | 10am | 11am | 12pm | 1pm | 2pm | 3pm | 4pm | 5pm | 6pm | 7pm |
 |-----|----|----|----|----|----|----|----|----|----|----|
 | Monday | 1370 | 992 | 1147 | 1584 | 1547 | 1553 | 1578 | 791 | 0 | 0 |
-| Tuesday | 128 | 1279 | 1708 | 1543 | 1539 | 1520 | 1427 | 1212 | 1159 | 615 |
-| Wednesday | 126 | 1344 | 1495 | 1192 | 1209 | 1241 | 1329 | 1131 | 1095 | 582 |
+| Tuesday | 128 | 1279 | 1708 | 1543 | 1539 | 1520 | 1427 | 1213 | 1159 | 615 |
+| Wednesday | 126 | 1344 | 1495 | 1192 | 1209 | 1241 | 1330 | 1131 | 1095 | 582 |
 | Thursday | 780 | 413 | 553 | 606 | 609 | 642 | 688 | 361 | 0 | 0 |
-| Friday | 1660 | 1297 | 1364 | 1395 | 1386 | 1427 | 1376 | 725 | 0 | 0 |
+| Friday | 1715 | 1341 | 1409 | 1436 | 1427 | 1472 | 1420 | 747 | 0 | 0 |
 | Saturday | 0 | 1431 | 1085 | 1026 | 1011 | 945 | 1098 | 681 | 0 | 0 |
 | Sunday | 0 | 1587 | 1119 | 1095 | 952 | 958 | 1047 | 579 | 0 | 0 |
 
@@ -242,17 +242,17 @@
 ## Booking Frequency by Library
 | Library | Bookings |
 |---------|---------|
-| bellevue | 46,832 |
-| redmond | 10,137 |
-| sammamish | 5,188 |
-| kingsgate | 416 |
-| issaquah | 414 |
-| woodinville | 345 |
+| bellevue | 47,137 |
+| redmond | 10,140 |
+| sammamish | 5,213 |
+| kingsgate | 418 |
+| issaquah | 416 |
+| woodinville | 347 |
 
 ## Data Quality Notes
-- Total records: 63,332
+- Total records: 63,671
 - Records missing `created` timestamp: 4,823
 - Lead time coverage: 100% of records have lead time data (direct or inferred)
-- Fresh-caught bookings (lead time accurate ±12h): 58,509
+- Fresh-caught bookings (lead time accurate ±12h): 58,848
 - Initial-batch bookings (lead time is lower bound — true lead may be longer): 4,823
 - Data maturity: 92% fresh — grows toward 100% as initial batch ages out
