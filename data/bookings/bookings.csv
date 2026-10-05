@@ -64147,3 +64147,18 @@ fetch_date,booking_date,day_of_week,library,space_name,space_id,booking_id,title
 2026-10-04,2026-11-01,Sunday,bellevue,Meeting Room 5,17227,grid_17227_202611011630,,16:30,17:30,1.0,2026-10-04,28,grid_inferred
 2026-10-04,2026-11-01,Sunday,bellevue,Meeting Room 5,17227,grid_17227_202611011700,,17:00,17:30,0.5,2026-10-04,28,grid_inferred
 2026-10-04,2026-11-01,Sunday,bellevue,Meeting Room 5,17227,grid_17227_202611011700,,17:00,17:30,0.5,2026-10-04,28,grid_inferred
+2026-10-05,2026-10-07,Wednesday,redmond,East Meeting Room 1,17228,grid_17228_202610071700,,17:00,19:30,2.5,2026-10-05,2,grid_inferred
+2026-10-05,2026-10-24,Saturday,redmond,East Meeting Room 1,17228,grid_17228_202610241300,,13:00,14:00,1.0,2026-10-05,19,grid_inferred
+2026-10-05,2026-10-07,Wednesday,redmond,East Meeting Room 2,17229,grid_17229_202610071700,,17:00,19:30,2.5,2026-10-05,2,grid_inferred
+2026-10-05,2026-10-24,Saturday,redmond,East Meeting Room 2,17229,grid_17229_202610241300,,13:00,14:00,1.0,2026-10-05,19,grid_inferred
+2026-10-05,2026-10-07,Wednesday,redmond,Conference Room,17230,grid_17230_202610071700,,17:00,19:30,2.5,2026-10-05,2,grid_inferred
+2026-10-05,2026-10-24,Saturday,redmond,Conference Room,17230,grid_17230_202610241300,,13:00,14:00,1.0,2026-10-05,19,grid_inferred
+2026-10-05,2026-10-08,Thursday,sammamish,Sunset Room,134490,grid_134490_202610081315,,13:15,13:45,0.5,2026-10-05,3,grid_inferred
+2026-10-05,2026-10-08,Thursday,sammamish,Sunset Room,134490,grid_134490_202610081330,,13:30,14:00,0.5,2026-10-05,3,grid_inferred
+2026-10-05,2026-10-08,Thursday,sammamish,Sunset Room,134490,grid_134490_202610081345,,13:45,14:15,0.5,2026-10-05,3,grid_inferred
+2026-10-05,2026-10-08,Thursday,sammamish,Sunset Room,134490,grid_134490_202610081400,,14:00,14:30,0.5,2026-10-05,3,grid_inferred
+2026-10-05,2026-10-08,Thursday,sammamish,Sunset Room,134490,grid_134490_202610081415,,14:15,14:45,0.5,2026-10-05,3,grid_inferred
+2026-10-05,2026-10-08,Thursday,sammamish,Sunset Room,134490,grid_134490_202610081430,,14:30,15:00,0.5,2026-10-05,3,grid_inferred
+2026-10-05,2026-10-08,Thursday,sammamish,Sunset Room,134490,grid_134490_202610081445,,14:45,17:15,2.5,2026-10-05,3,grid_inferred
+2026-10-05,2026-10-05,Monday,kingsgate,Meeting Room,17268,grid_17268_202610051330,,13:30,16:30,3.0,2026-10-05,0,grid_inferred
+2026-10-05,2026-10-31,Saturday,kingsgate,Meeting Room,17268,grid_17268_202610311400,,14:00,17:30,3.5,2026-10-05,26,grid_inferred
