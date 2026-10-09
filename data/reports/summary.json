@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-10-09T14:03:04.434108",
-  "total_records": 65897,
+  "generated_at": "2026-10-09T19:56:18.330970",
+  "total_records": 65898,
   "missing_created": 4823,
   "libraries": [
     "bellevue",
@@ -534,8 +534,8 @@
     },
     {
       "library": "kingsgate",
-      "n": 433,
-      "n_direct": 404,
+      "n": 434,
+      "n_direct": 405,
       "n_lb": 29,
       "median_days": 28.0,
       "p25": 7.0,
