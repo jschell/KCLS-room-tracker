@@ -65897,3 +65897,30 @@ fetch_date,booking_date,day_of_week,library,space_name,space_id,booking_id,title
 2026-10-09,2026-11-06,Friday,bellevue,Meeting Room 5,17227,grid_17227_202611061700,,17:00,17:30,0.5,2026-10-09,28,grid_inferred
 2026-10-09,2026-11-06,Friday,bellevue,Meeting Room 5,17227,grid_17227_202611061700,,17:00,17:30,0.5,2026-10-09,28,grid_inferred
 2026-10-09,2026-11-01,Sunday,kingsgate,Meeting Room,17268,grid_17268_202611011700,,17:00,17:30,0.5,2026-10-09,23,grid_inferred
+2026-10-10,2026-11-01,Sunday,redmond,East Meeting Room 1,17228,grid_17228_202611011130,,11:30,12:30,1.0,2026-10-10,22,grid_inferred
+2026-10-10,2026-11-01,Sunday,redmond,East Meeting Room 1,17228,grid_17228_202611011200,,12:00,13:00,1.0,2026-10-10,22,grid_inferred
+2026-10-10,2026-11-01,Sunday,redmond,East Meeting Room 1,17228,grid_17228_202611011230,,12:30,13:30,1.0,2026-10-10,22,grid_inferred
+2026-10-10,2026-11-01,Sunday,redmond,East Meeting Room 1,17228,grid_17228_202611011300,,13:00,14:00,1.0,2026-10-10,22,grid_inferred
+2026-10-10,2026-11-01,Sunday,redmond,East Meeting Room 1,17228,grid_17228_202611011330,,13:30,14:30,1.0,2026-10-10,22,grid_inferred
+2026-10-10,2026-11-01,Sunday,redmond,East Meeting Room 1,17228,grid_17228_202611011400,,14:00,15:00,1.0,2026-10-10,22,grid_inferred
+2026-10-10,2026-11-01,Sunday,redmond,East Meeting Room 1,17228,grid_17228_202611011430,,14:30,15:30,1.0,2026-10-10,22,grid_inferred
+2026-10-10,2026-11-01,Sunday,redmond,East Meeting Room 1,17228,grid_17228_202611011500,,15:00,16:00,1.0,2026-10-10,22,grid_inferred
+2026-10-10,2026-11-01,Sunday,redmond,East Meeting Room 1,17228,grid_17228_202611011530,,15:30,17:30,2.0,2026-10-10,22,grid_inferred
+2026-10-10,2026-11-01,Sunday,redmond,East Meeting Room 2,17229,grid_17229_202611011130,,11:30,12:30,1.0,2026-10-10,22,grid_inferred
+2026-10-10,2026-11-01,Sunday,redmond,East Meeting Room 2,17229,grid_17229_202611011200,,12:00,13:00,1.0,2026-10-10,22,grid_inferred
+2026-10-10,2026-11-01,Sunday,redmond,East Meeting Room 2,17229,grid_17229_202611011230,,12:30,13:30,1.0,2026-10-10,22,grid_inferred
+2026-10-10,2026-11-01,Sunday,redmond,East Meeting Room 2,17229,grid_17229_202611011300,,13:00,14:00,1.0,2026-10-10,22,grid_inferred
+2026-10-10,2026-11-01,Sunday,redmond,East Meeting Room 2,17229,grid_17229_202611011330,,13:30,14:30,1.0,2026-10-10,22,grid_inferred
+2026-10-10,2026-11-01,Sunday,redmond,East Meeting Room 2,17229,grid_17229_202611011400,,14:00,15:00,1.0,2026-10-10,22,grid_inferred
+2026-10-10,2026-11-01,Sunday,redmond,East Meeting Room 2,17229,grid_17229_202611011430,,14:30,15:30,1.0,2026-10-10,22,grid_inferred
+2026-10-10,2026-11-01,Sunday,redmond,East Meeting Room 2,17229,grid_17229_202611011500,,15:00,16:00,1.0,2026-10-10,22,grid_inferred
+2026-10-10,2026-11-01,Sunday,redmond,East Meeting Room 2,17229,grid_17229_202611011530,,15:30,17:30,2.0,2026-10-10,22,grid_inferred
+2026-10-10,2026-11-01,Sunday,redmond,Conference Room,17230,grid_17230_202611011130,,11:30,12:30,1.0,2026-10-10,22,grid_inferred
+2026-10-10,2026-11-01,Sunday,redmond,Conference Room,17230,grid_17230_202611011200,,12:00,13:00,1.0,2026-10-10,22,grid_inferred
+2026-10-10,2026-11-01,Sunday,redmond,Conference Room,17230,grid_17230_202611011230,,12:30,13:30,1.0,2026-10-10,22,grid_inferred
+2026-10-10,2026-11-01,Sunday,redmond,Conference Room,17230,grid_17230_202611011300,,13:00,14:00,1.0,2026-10-10,22,grid_inferred
+2026-10-10,2026-11-01,Sunday,redmond,Conference Room,17230,grid_17230_202611011330,,13:30,14:30,1.0,2026-10-10,22,grid_inferred
+2026-10-10,2026-11-01,Sunday,redmond,Conference Room,17230,grid_17230_202611011400,,14:00,15:00,1.0,2026-10-10,22,grid_inferred
+2026-10-10,2026-11-01,Sunday,redmond,Conference Room,17230,grid_17230_202611011430,,14:30,15:30,1.0,2026-10-10,22,grid_inferred
+2026-10-10,2026-11-01,Sunday,redmond,Conference Room,17230,grid_17230_202611011500,,15:00,16:00,1.0,2026-10-10,22,grid_inferred
+2026-10-10,2026-11-01,Sunday,redmond,Conference Room,17230,grid_17230_202611011530,,15:30,17:30,2.0,2026-10-10,22,grid_inferred
