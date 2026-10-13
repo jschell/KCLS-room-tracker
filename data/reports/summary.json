@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-10-13T03:16:15.964396",
-  "total_records": 66697,
+  "generated_at": "2026-10-13T14:43:47.918427",
+  "total_records": 67151,
   "missing_created": 4823,
   "libraries": [
     "bellevue",
@@ -12,7 +12,7 @@
   ],
   "date_range": {
     "min": "2026-03-22",
-    "max": "2026-11-09"
+    "max": "2026-11-10"
   },
   "saturday_windows": {
     "redmond": {
@@ -512,8 +512,8 @@
   "lead_time_summary": [
     {
       "library": "bellevue",
-      "n": 49342,
-      "n_direct": 45640,
+      "n": 49642,
+      "n_direct": 45940,
       "n_lb": 3702,
       "median_days": 28.0,
       "p25": 28.0,
@@ -523,30 +523,30 @@
     },
     {
       "library": "issaquah",
-      "n": 428,
-      "n_direct": 396,
+      "n": 429,
+      "n_direct": 397,
       "n_lb": 32,
       "median_days": 28.0,
-      "p25": 6.8,
+      "p25": 7.0,
       "p75": 28.0,
       "p90": 28.0,
       "pct_same_day": 16.8
     },
     {
       "library": "kingsgate",
-      "n": 440,
-      "n_direct": 411,
+      "n": 442,
+      "n_direct": 413,
       "n_lb": 29,
       "median_days": 28.0,
-      "p25": 7.0,
+      "p25": 7.2,
       "p75": 28.0,
       "p90": 28.0,
-      "pct_same_day": 19.3
+      "pct_same_day": 19.2
     },
     {
       "library": "redmond",
-      "n": 10695,
-      "n_direct": 9843,
+      "n": 10812,
+      "n_direct": 9960,
       "n_lb": 852,
       "median_days": 28.0,
       "p25": 28.0,
@@ -556,25 +556,25 @@
     },
     {
       "library": "sammamish",
-      "n": 5433,
-      "n_direct": 5255,
+      "n": 5465,
+      "n_direct": 5287,
       "n_lb": 178,
       "median_days": 7.0,
       "p25": 7.0,
       "p75": 7.0,
       "p90": 7.0,
-      "pct_same_day": 2.0
+      "pct_same_day": 1.9
     },
     {
       "library": "woodinville",
-      "n": 359,
-      "n_direct": 329,
+      "n": 361,
+      "n_direct": 331,
       "n_lb": 30,
       "median_days": 28.0,
       "p25": 4.0,
       "p75": 28.0,
       "p90": 28.0,
-      "pct_same_day": 21.2
+      "pct_same_day": 21.1
     }
   ]
 }
