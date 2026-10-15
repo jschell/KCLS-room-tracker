@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-10-15T01:04:58.271063",
-  "total_records": 67194,
+  "generated_at": "2026-10-15T12:22:43.115953",
+  "total_records": 67358,
   "missing_created": 4823,
   "libraries": [
     "bellevue",
@@ -12,7 +12,7 @@
   ],
   "date_range": {
     "min": "2026-03-22",
-    "max": "2026-11-10"
+    "max": "2026-11-12"
   },
   "saturday_windows": {
     "redmond": {
@@ -512,8 +512,8 @@
   "lead_time_summary": [
     {
       "library": "bellevue",
-      "n": 49642,
-      "n_direct": 45940,
+      "n": 49722,
+      "n_direct": 46020,
       "n_lb": 3702,
       "median_days": 28.0,
       "p25": 28.0,
@@ -523,41 +523,41 @@
     },
     {
       "library": "issaquah",
-      "n": 429,
-      "n_direct": 397,
+      "n": 431,
+      "n_direct": 399,
       "n_lb": 32,
       "median_days": 28.0,
       "p25": 7.0,
       "p75": 28.0,
       "p90": 28.0,
-      "pct_same_day": 16.8
+      "pct_same_day": 16.7
     },
     {
       "library": "kingsgate",
-      "n": 444,
-      "n_direct": 415,
+      "n": 445,
+      "n_direct": 416,
       "n_lb": 29,
       "median_days": 28.0,
-      "p25": 7.8,
+      "p25": 8.0,
       "p75": 28.0,
       "p90": 28.0,
       "pct_same_day": 19.1
     },
     {
       "library": "redmond",
-      "n": 10815,
-      "n_direct": 9963,
+      "n": 10881,
+      "n_direct": 10029,
       "n_lb": 852,
       "median_days": 28.0,
       "p25": 28.0,
       "p75": 28.0,
       "p90": 28.0,
-      "pct_same_day": 1.1
+      "pct_same_day": 1.0
     },
     {
       "library": "sammamish",
-      "n": 5502,
-      "n_direct": 5324,
+      "n": 5516,
+      "n_direct": 5338,
       "n_lb": 178,
       "median_days": 7.0,
       "p25": 7.0,
@@ -567,14 +567,14 @@
     },
     {
       "library": "woodinville",
-      "n": 362,
-      "n_direct": 332,
+      "n": 363,
+      "n_direct": 333,
       "n_lb": 30,
       "median_days": 28.0,
-      "p25": 4.2,
+      "p25": 4.5,
       "p75": 28.0,
       "p90": 28.0,
-      "pct_same_day": 21.0
+      "pct_same_day": 20.9
     }
   ]
 }
