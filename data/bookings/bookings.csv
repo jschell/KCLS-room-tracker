@@ -67684,3 +67684,4 @@ fetch_date,booking_date,day_of_week,library,space_name,space_id,booking_id,title
 2026-10-16,2026-11-13,Friday,bellevue,Meeting Room 5,17227,grid_17227_202611131700,,17:00,17:30,0.5,2026-10-16,28,grid_inferred
 2026-10-16,2026-11-13,Friday,bellevue,Meeting Room 5,17227,grid_17227_202611131700,,17:00,17:30,0.5,2026-10-16,28,grid_inferred
 2026-10-16,2026-11-13,Friday,bellevue,Meeting Room 5,17227,grid_17227_202611131700,,17:00,17:30,0.5,2026-10-16,28,grid_inferred
+2026-10-16,2026-10-23,Friday,sammamish,Meeting Room,17254,grid_17254_202610231300,,13:00,15:30,2.5,2026-10-16,7,grid_inferred
