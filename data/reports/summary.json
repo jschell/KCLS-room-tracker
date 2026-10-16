@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-10-15T18:47:29.241594",
-  "total_records": 67361,
+  "generated_at": "2026-10-16T00:53:40.045132",
+  "total_records": 67380,
   "missing_created": 4823,
   "libraries": [
     "bellevue",
@@ -534,19 +534,19 @@
     },
     {
       "library": "kingsgate",
-      "n": 446,
-      "n_direct": 417,
+      "n": 447,
+      "n_direct": 418,
       "n_lb": 29,
       "median_days": 28.0,
-      "p25": 8.0,
+      "p25": 7.5,
       "p75": 28.0,
       "p90": 28.0,
-      "pct_same_day": 19.1
+      "pct_same_day": 19.0
     },
     {
       "library": "redmond",
-      "n": 10881,
-      "n_direct": 10029,
+      "n": 10899,
+      "n_direct": 10047,
       "n_lb": 852,
       "median_days": 28.0,
       "p25": 28.0,
