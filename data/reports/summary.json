@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-10-16T18:32:34.599422",
-  "total_records": 67686,
+  "generated_at": "2026-10-17T00:54:14.308357",
+  "total_records": 67688,
   "missing_created": 4823,
   "libraries": [
     "bellevue",
@@ -217,24 +217,24 @@
           "n_booked": 8
         },
         "13:00": {
-          "pct_booked": 0.2188,
+          "pct_booked": 0.25,
           "n_saturdays": 32,
-          "n_booked": 7
+          "n_booked": 8
         },
         "14:00": {
-          "pct_booked": 0.2188,
+          "pct_booked": 0.25,
           "n_saturdays": 32,
-          "n_booked": 7
+          "n_booked": 8
         },
         "15:00": {
-          "pct_booked": 0.2812,
+          "pct_booked": 0.3125,
           "n_saturdays": 32,
-          "n_booked": 9
+          "n_booked": 10
         },
         "16:00": {
-          "pct_booked": 0.4062,
+          "pct_booked": 0.4375,
           "n_saturdays": 32,
-          "n_booked": 13
+          "n_booked": 14
         },
         "17:00": {
           "pct_booked": 0.8438,
@@ -567,14 +567,14 @@
     },
     {
       "library": "woodinville",
-      "n": 364,
-      "n_direct": 334,
+      "n": 366,
+      "n_direct": 336,
       "n_lb": 30,
       "median_days": 28.0,
-      "p25": 4.8,
+      "p25": 4.2,
       "p75": 28.0,
       "p90": 28.0,
-      "pct_same_day": 20.9
+      "pct_same_day": 21.0
     }
   ]
 }
