@@ -68483,3 +68483,6 @@ fetch_date,booking_date,day_of_week,library,space_name,space_id,booking_id,title
 2026-10-19,2026-10-21,Wednesday,redmond,East Meeting Room 2,17229,grid_17229_202610211400,,14:00,17:00,3.0,2026-10-19,2,grid_inferred
 2026-10-19,2026-10-20,Tuesday,redmond,Conference Room,17230,grid_17230_202610201700,,17:00,19:30,2.5,2026-10-19,1,grid_inferred
 2026-10-19,2026-10-21,Wednesday,redmond,Conference Room,17230,grid_17230_202610211400,,14:00,17:00,3.0,2026-10-19,2,grid_inferred
+2026-10-20,2026-11-08,Sunday,sammamish,Meeting Room,17254,grid_17254_202611081700,,17:00,17:30,0.5,2026-10-20,19,grid_inferred
+2026-10-20,2026-11-07,Saturday,woodinville,Meeting Room,17258,grid_17258_202611071500,,15:00,17:30,2.5,2026-10-20,18,grid_inferred
+2026-10-20,2026-11-16,Monday,issaquah,Meeting Room,17233,grid_17233_202611161500,,15:00,17:30,2.5,2026-10-20,27,grid_inferred
