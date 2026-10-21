@@ -68986,3 +68986,46 @@ fetch_date,booking_date,day_of_week,library,space_name,space_id,booking_id,title
 2026-10-20,2026-11-17,Tuesday,bellevue,Meeting Room 5,17227,grid_17227_202611171900,,19:00,19:30,0.5,2026-10-20,28,grid_inferred
 2026-10-20,2026-10-27,Tuesday,sammamish,Sunset Room,134490,grid_134490_202610271500,,15:00,17:00,2.0,2026-10-20,7,grid_inferred
 2026-10-20,2026-10-27,Tuesday,sammamish,Sunset Room,134490,grid_134490_202610271900,,19:00,19:30,0.5,2026-10-20,7,grid_inferred
+2026-10-21,2026-11-18,Wednesday,redmond,East Meeting Room 1,17228,grid_17228_202611181000,,10:00,19:30,9.5,2026-10-21,28,grid_inferred
+2026-10-21,2026-11-18,Wednesday,redmond,East Meeting Room 2,17229,grid_17229_202611181000,,10:00,19:30,9.5,2026-10-21,28,grid_inferred
+2026-10-21,2026-11-18,Wednesday,redmond,Conference Room,17230,grid_17230_202611181000,,10:00,19:30,9.5,2026-10-21,28,grid_inferred
+2026-10-21,2026-11-18,Wednesday,sammamish,Meeting Room,17254,grid_17254_202611181000,,10:00,12:30,2.5,2026-10-21,28,grid_inferred
+2026-10-21,2026-11-18,Wednesday,sammamish,Meeting Room,17254,grid_17254_202611181500,,15:00,15:30,0.5,2026-10-21,28,grid_inferred
+2026-10-21,2026-10-28,Wednesday,sammamish,Sunset Room,134490,grid_134490_202610281000,,10:00,10:15,0.25,2026-10-21,7,grid_inferred
+2026-10-21,2026-10-28,Wednesday,sammamish,Sunset Room,134490,grid_134490_202610281000,,10:00,10:30,0.5,2026-10-21,7,grid_inferred
+2026-10-21,2026-10-28,Wednesday,sammamish,Sunset Room,134490,grid_134490_202610281015,,10:15,10:45,0.5,2026-10-21,7,grid_inferred
+2026-10-21,2026-10-28,Wednesday,sammamish,Sunset Room,134490,grid_134490_202610281030,,10:30,11:00,0.5,2026-10-21,7,grid_inferred
+2026-10-21,2026-10-28,Wednesday,sammamish,Sunset Room,134490,grid_134490_202610281045,,10:45,11:15,0.5,2026-10-21,7,grid_inferred
+2026-10-21,2026-10-28,Wednesday,sammamish,Sunset Room,134490,grid_134490_202610281100,,11:00,11:30,0.5,2026-10-21,7,grid_inferred
+2026-10-21,2026-10-28,Wednesday,sammamish,Sunset Room,134490,grid_134490_202610281115,,11:15,11:45,0.5,2026-10-21,7,grid_inferred
+2026-10-21,2026-10-28,Wednesday,sammamish,Sunset Room,134490,grid_134490_202610281130,,11:30,12:00,0.5,2026-10-21,7,grid_inferred
+2026-10-21,2026-10-28,Wednesday,sammamish,Sunset Room,134490,grid_134490_202610281145,,11:45,12:15,0.5,2026-10-21,7,grid_inferred
+2026-10-21,2026-10-28,Wednesday,sammamish,Sunset Room,134490,grid_134490_202610281200,,12:00,12:30,0.5,2026-10-21,7,grid_inferred
+2026-10-21,2026-10-28,Wednesday,sammamish,Sunset Room,134490,grid_134490_202610281215,,12:15,12:45,0.5,2026-10-21,7,grid_inferred
+2026-10-21,2026-10-28,Wednesday,sammamish,Sunset Room,134490,grid_134490_202610281230,,12:30,13:00,0.5,2026-10-21,7,grid_inferred
+2026-10-21,2026-10-28,Wednesday,sammamish,Sunset Room,134490,grid_134490_202610281245,,12:45,13:15,0.5,2026-10-21,7,grid_inferred
+2026-10-21,2026-10-28,Wednesday,sammamish,Sunset Room,134490,grid_134490_202610281300,,13:00,13:30,0.5,2026-10-21,7,grid_inferred
+2026-10-21,2026-10-28,Wednesday,sammamish,Sunset Room,134490,grid_134490_202610281315,,13:15,15:00,1.75,2026-10-21,7,grid_inferred
+2026-10-21,2026-10-28,Wednesday,sammamish,Sunset Room,134490,grid_134490_202610281445,,14:45,15:15,0.5,2026-10-21,7,grid_inferred
+2026-10-21,2026-10-28,Wednesday,sammamish,Sunset Room,134490,grid_134490_202610281500,,15:00,15:30,0.5,2026-10-21,7,grid_inferred
+2026-10-21,2026-10-28,Wednesday,sammamish,Sunset Room,134490,grid_134490_202610281515,,15:15,15:45,0.5,2026-10-21,7,grid_inferred
+2026-10-21,2026-10-28,Wednesday,sammamish,Sunset Room,134490,grid_134490_202610281530,,15:30,16:00,0.5,2026-10-21,7,grid_inferred
+2026-10-21,2026-10-28,Wednesday,sammamish,Sunset Room,134490,grid_134490_202610281545,,15:45,16:15,0.5,2026-10-21,7,grid_inferred
+2026-10-21,2026-10-28,Wednesday,sammamish,Sunset Room,134490,grid_134490_202610281600,,16:00,16:30,0.5,2026-10-21,7,grid_inferred
+2026-10-21,2026-10-28,Wednesday,sammamish,Sunset Room,134490,grid_134490_202610281615,,16:15,16:45,0.5,2026-10-21,7,grid_inferred
+2026-10-21,2026-10-28,Wednesday,sammamish,Sunset Room,134490,grid_134490_202610281630,,16:30,17:00,0.5,2026-10-21,7,grid_inferred
+2026-10-21,2026-10-28,Wednesday,sammamish,Sunset Room,134490,grid_134490_202610281645,,16:45,17:15,0.5,2026-10-21,7,grid_inferred
+2026-10-21,2026-10-28,Wednesday,sammamish,Sunset Room,134490,grid_134490_202610281700,,17:00,17:30,0.5,2026-10-21,7,grid_inferred
+2026-10-21,2026-10-28,Wednesday,sammamish,Sunset Room,134490,grid_134490_202610281715,,17:15,17:45,0.5,2026-10-21,7,grid_inferred
+2026-10-21,2026-10-28,Wednesday,sammamish,Sunset Room,134490,grid_134490_202610281730,,17:30,18:00,0.5,2026-10-21,7,grid_inferred
+2026-10-21,2026-10-28,Wednesday,sammamish,Sunset Room,134490,grid_134490_202610281745,,17:45,18:15,0.5,2026-10-21,7,grid_inferred
+2026-10-21,2026-10-28,Wednesday,sammamish,Sunset Room,134490,grid_134490_202610281800,,18:00,18:30,0.5,2026-10-21,7,grid_inferred
+2026-10-21,2026-10-28,Wednesday,sammamish,Sunset Room,134490,grid_134490_202610281815,,18:15,18:45,0.5,2026-10-21,7,grid_inferred
+2026-10-21,2026-10-28,Wednesday,sammamish,Sunset Room,134490,grid_134490_202610281830,,18:30,19:00,0.5,2026-10-21,7,grid_inferred
+2026-10-21,2026-10-28,Wednesday,sammamish,Sunset Room,134490,grid_134490_202610281845,,18:45,19:15,0.5,2026-10-21,7,grid_inferred
+2026-10-21,2026-10-28,Wednesday,sammamish,Sunset Room,134490,grid_134490_202610281900,,19:00,19:30,0.5,2026-10-21,7,grid_inferred
+2026-10-21,2026-10-28,Wednesday,sammamish,Sunset Room,134490,grid_134490_202610281915,,19:15,19:30,0.25,2026-10-21,7,grid_inferred
+2026-10-21,2026-11-18,Wednesday,woodinville,Meeting Room,17258,grid_17258_202611181000,,10:00,15:30,5.5,2026-10-21,28,grid_inferred
+2026-10-21,2026-11-18,Wednesday,kingsgate,Meeting Room,17268,grid_17268_202611181200,,12:00,14:00,2.0,2026-10-21,28,grid_inferred
+2026-10-21,2026-11-18,Wednesday,kingsgate,Meeting Room,17268,grid_17268_202611181700,,17:00,17:30,0.5,2026-10-21,28,grid_inferred
+2026-10-21,2026-11-18,Wednesday,issaquah,Meeting Room,17233,grid_17233_202611181000,,10:00,11:00,1.0,2026-10-21,28,grid_inferred
