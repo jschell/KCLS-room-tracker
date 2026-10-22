@@ -69029,3 +69029,8 @@ fetch_date,booking_date,day_of_week,library,space_name,space_id,booking_id,title
 2026-10-21,2026-11-18,Wednesday,kingsgate,Meeting Room,17268,grid_17268_202611181200,,12:00,14:00,2.0,2026-10-21,28,grid_inferred
 2026-10-21,2026-11-18,Wednesday,kingsgate,Meeting Room,17268,grid_17268_202611181700,,17:00,17:30,0.5,2026-10-21,28,grid_inferred
 2026-10-21,2026-11-18,Wednesday,issaquah,Meeting Room,17233,grid_17233_202611181000,,10:00,11:00,1.0,2026-10-21,28,grid_inferred
+2026-10-22,2026-10-30,Friday,redmond,East Meeting Room 1,17228,grid_17228_202610301500,,15:00,17:00,2.0,2026-10-22,8,grid_inferred
+2026-10-22,2026-10-30,Friday,redmond,East Meeting Room 2,17229,grid_17229_202610301500,,15:00,17:00,2.0,2026-10-22,8,grid_inferred
+2026-10-22,2026-10-30,Friday,redmond,Conference Room,17230,grid_17230_202610301500,,15:00,17:00,2.0,2026-10-22,8,grid_inferred
+2026-10-22,2026-11-06,Friday,kingsgate,Meeting Room,17268,grid_17268_202611061330,,13:30,17:30,4.0,2026-10-22,15,grid_inferred
+2026-10-22,2026-10-28,Wednesday,issaquah,Meeting Room,17233,grid_17233_202610281130,,11:30,13:00,1.5,2026-10-22,6,grid_inferred
