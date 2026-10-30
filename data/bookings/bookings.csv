@@ -71445,3 +71445,24 @@ fetch_date,booking_date,day_of_week,library,space_name,space_id,booking_id,title
 2026-10-30,2026-11-08,Sunday,redmond,East Meeting Room 1,17228,grid_17228_202611081500,,15:00,17:30,2.5,2026-10-30,9,grid_inferred
 2026-10-30,2026-11-08,Sunday,redmond,East Meeting Room 2,17229,grid_17229_202611081500,,15:00,17:30,2.5,2026-10-30,9,grid_inferred
 2026-10-30,2026-11-08,Sunday,redmond,Conference Room,17230,grid_17230_202611081500,,15:00,17:30,2.5,2026-10-30,9,grid_inferred
+2026-10-30,2026-11-06,Friday,sammamish,Sunset Room,134490,grid_134490_202611061000,,10:00,10:15,0.25,2026-10-30,7,grid_inferred
+2026-10-30,2026-11-06,Friday,sammamish,Sunset Room,134490,grid_134490_202611061000,,10:00,10:30,0.5,2026-10-30,7,grid_inferred
+2026-10-30,2026-11-06,Friday,sammamish,Sunset Room,134490,grid_134490_202611061015,,10:15,10:45,0.5,2026-10-30,7,grid_inferred
+2026-10-30,2026-11-06,Friday,sammamish,Sunset Room,134490,grid_134490_202611061030,,10:30,11:00,0.5,2026-10-30,7,grid_inferred
+2026-10-30,2026-11-06,Friday,sammamish,Sunset Room,134490,grid_134490_202611061045,,10:45,11:15,0.5,2026-10-30,7,grid_inferred
+2026-10-30,2026-11-06,Friday,sammamish,Sunset Room,134490,grid_134490_202611061100,,11:00,11:30,0.5,2026-10-30,7,grid_inferred
+2026-10-30,2026-11-06,Friday,sammamish,Sunset Room,134490,grid_134490_202611061115,,11:15,11:45,0.5,2026-10-30,7,grid_inferred
+2026-10-30,2026-11-06,Friday,sammamish,Sunset Room,134490,grid_134490_202611061130,,11:30,12:00,0.5,2026-10-30,7,grid_inferred
+2026-10-30,2026-11-06,Friday,sammamish,Sunset Room,134490,grid_134490_202611061145,,11:45,12:15,0.5,2026-10-30,7,grid_inferred
+2026-10-30,2026-11-06,Friday,sammamish,Sunset Room,134490,grid_134490_202611061200,,12:00,12:30,0.5,2026-10-30,7,grid_inferred
+2026-10-30,2026-11-06,Friday,sammamish,Sunset Room,134490,grid_134490_202611061215,,12:15,12:45,0.5,2026-10-30,7,grid_inferred
+2026-10-30,2026-11-06,Friday,sammamish,Sunset Room,134490,grid_134490_202611061230,,12:30,13:00,0.5,2026-10-30,7,grid_inferred
+2026-10-30,2026-11-06,Friday,sammamish,Sunset Room,134490,grid_134490_202611061245,,12:45,13:15,0.5,2026-10-30,7,grid_inferred
+2026-10-30,2026-11-06,Friday,sammamish,Sunset Room,134490,grid_134490_202611061300,,13:00,13:30,0.5,2026-10-30,7,grid_inferred
+2026-10-30,2026-11-06,Friday,sammamish,Sunset Room,134490,grid_134490_202611061315,,13:15,13:45,0.5,2026-10-30,7,grid_inferred
+2026-10-30,2026-11-06,Friday,sammamish,Sunset Room,134490,grid_134490_202611061330,,13:30,14:00,0.5,2026-10-30,7,grid_inferred
+2026-10-30,2026-11-06,Friday,sammamish,Sunset Room,134490,grid_134490_202611061345,,13:45,14:15,0.5,2026-10-30,7,grid_inferred
+2026-10-30,2026-11-06,Friday,sammamish,Sunset Room,134490,grid_134490_202611061400,,14:00,14:30,0.5,2026-10-30,7,grid_inferred
+2026-10-30,2026-11-06,Friday,sammamish,Sunset Room,134490,grid_134490_202611061415,,14:15,14:45,0.5,2026-10-30,7,grid_inferred
+2026-10-30,2026-11-06,Friday,sammamish,Sunset Room,134490,grid_134490_202611061430,,14:30,15:00,0.5,2026-10-30,7,grid_inferred
+2026-10-30,2026-11-06,Friday,sammamish,Sunset Room,134490,grid_134490_202611061445,,14:45,15:30,0.75,2026-10-30,7,grid_inferred
