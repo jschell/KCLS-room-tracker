@@ -4,7 +4,7 @@
 ## Dataset Summary
 | Metric | Value |
 |--------|-------|
-| Total records | 72,932 |
+| Total records | 72,933 |
 | Date range | 2026-03-22 to 2026-12-01 |
 | Libraries | bellevue, issaquah, kingsgate, redmond, sammamish, woodinville |
 | Missing `created` (affects lead time) | 4,823 (7%) |
@@ -13,7 +13,7 @@
 | Day | Bookings |
 |-----|---------|
 | Monday | 12,361 |
-| Tuesday | 14,524 |
+| Tuesday | 14,525 |
 | Wednesday | 11,716 |
 | Thursday | 5,152 |
 | Friday | 12,041 |
@@ -31,7 +31,7 @@
 | 3pm | 9,464 |
 | 4pm | 9,744 |
 | 5pm | 6,297 |
-| 6pm | 2,550 |
+| 6pm | 2,551 |
 | 7pm | 1,355 |
 
 ## Booking Lead Times
@@ -46,15 +46,15 @@
 | kingsgate | 28.0 | 8.0 | 28.0 | 28.0 | 18.6% | 473 (444 / 29) |
 | redmond | 28.0 | 28.0 | 28.0 | 28.0 | 1.0% | 11931 (11079 / 852) |
 | sammamish | 7.0 | 7.0 | 7.0 | 7.0 | 1.8% | 6049 (5871 / 178) |
-| woodinville | 28.0 | 4.5 | 28.0 | 28.0 | 20.5% | 391 (361 / 30) |
+| woodinville | 28.0 | 4.8 | 28.0 | 28.0 | 20.4% | 392 (362 / 30) |
 
-*72,932 bookings total — 68,109 fresh-caught (accurate), 4,823 initial batch (lower bounds). Accuracy improves as the dataset matures.*
+*72,933 bookings total — 68,110 fresh-caught (accurate), 4,823 initial batch (lower bounds). Accuracy improves as the dataset matures.*
 
 ## Day × Hour Heatmap (Booking Counts)
 | Day | 10am | 11am | 12pm | 1pm | 2pm | 3pm | 4pm | 5pm | 6pm | 7pm |
 |-----|----|----|----|----|----|----|----|----|----|----|
 | Monday | 1598 | 1153 | 1340 | 1860 | 1818 | 1822 | 1849 | 921 | 0 | 0 |
-| Tuesday | 466 | 1541 | 1969 | 1793 | 1805 | 1779 | 1661 | 1429 | 1360 | 721 |
+| Tuesday | 466 | 1541 | 1969 | 1793 | 1805 | 1779 | 1661 | 1429 | 1361 | 721 |
 | Wednesday | 273 | 1461 | 1610 | 1295 | 1317 | 1320 | 1407 | 1209 | 1190 | 634 |
 | Thursday | 856 | 446 | 616 | 678 | 683 | 714 | 761 | 398 | 0 | 0 |
 | Friday | 1871 | 1471 | 1544 | 1568 | 1566 | 1613 | 1572 | 836 | 0 | 0 |
@@ -247,12 +247,12 @@
 | sammamish | 6,049 |
 | kingsgate | 473 |
 | issaquah | 456 |
-| woodinville | 391 |
+| woodinville | 392 |
 
 ## Data Quality Notes
-- Total records: 72,932
+- Total records: 72,933
 - Records missing `created` timestamp: 4,823
 - Lead time coverage: 100% of records have lead time data (direct or inferred)
-- Fresh-caught bookings (lead time accurate ±12h): 68,109
+- Fresh-caught bookings (lead time accurate ±12h): 68,110
 - Initial-batch bookings (lead time is lower bound — true lead may be longer): 4,823
 - Data maturity: 93% fresh — grows toward 100% as initial batch ages out
