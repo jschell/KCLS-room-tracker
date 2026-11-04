@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-11-04T14:59:38.471566",
-  "total_records": 73213,
+  "generated_at": "2026-11-04T20:59:40.931135",
+  "total_records": 73215,
   "missing_created": 4823,
   "libraries": [
     "bellevue",
@@ -534,8 +534,8 @@
     },
     {
       "library": "kingsgate",
-      "n": 476,
-      "n_direct": 447,
+      "n": 477,
+      "n_direct": 448,
       "n_lb": 29,
       "median_days": 28.0,
       "p25": 8.0,
@@ -567,14 +567,14 @@
     },
     {
       "library": "woodinville",
-      "n": 393,
-      "n_direct": 363,
+      "n": 394,
+      "n_direct": 364,
       "n_lb": 30,
       "median_days": 28.0,
-      "p25": 5.0,
+      "p25": 5.2,
       "p75": 28.0,
       "p90": 28.0,
-      "pct_same_day": 20.4
+      "pct_same_day": 20.3
     }
   ]
 }
