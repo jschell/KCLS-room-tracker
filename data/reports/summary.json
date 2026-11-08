@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-11-07T19:12:47.189482",
-  "total_records": 73990,
+  "generated_at": "2026-11-08T01:56:30.807148",
+  "total_records": 73991,
   "missing_created": 4823,
   "libraries": [
     "bellevue",
@@ -261,24 +261,24 @@
           "n_booked": 7
         },
         "14:00": {
-          "pct_booked": 0.3889,
+          "pct_booked": 0.4167,
           "n_saturdays": 36,
-          "n_booked": 14
+          "n_booked": 15
         },
         "15:00": {
-          "pct_booked": 0.4444,
+          "pct_booked": 0.4722,
           "n_saturdays": 36,
-          "n_booked": 16
+          "n_booked": 17
         },
         "16:00": {
-          "pct_booked": 0.5,
+          "pct_booked": 0.5278,
           "n_saturdays": 36,
-          "n_booked": 18
+          "n_booked": 19
         },
         "17:00": {
-          "pct_booked": 0.7778,
+          "pct_booked": 0.8056,
           "n_saturdays": 36,
-          "n_booked": 28
+          "n_booked": 29
         }
       }
     },
@@ -534,8 +534,8 @@
     },
     {
       "library": "kingsgate",
-      "n": 483,
-      "n_direct": 454,
+      "n": 484,
+      "n_direct": 455,
       "n_lb": 29,
       "median_days": 28.0,
       "p25": 8.0,
