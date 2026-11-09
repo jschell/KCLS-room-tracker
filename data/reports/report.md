@@ -4,7 +4,7 @@
 ## Dataset Summary
 | Metric | Value |
 |--------|-------|
-| Total records | 74,625 |
+| Total records | 74,627 |
 | Date range | 2026-03-22 to 2026-12-07 |
 | Libraries | bellevue, issaquah, kingsgate, redmond, sammamish, woodinville |
 | Missing `created` (affects lead time) | 4,823 (6%) |
@@ -13,12 +13,12 @@
 | Day | Bookings |
 |-----|---------|
 | Monday | 12,731 |
-| Tuesday | 14,526 |
+| Tuesday | 14,527 |
 | Wednesday | 11,995 |
 | Thursday | 5,272 |
 | Friday | 12,425 |
 | Saturday | 8,760 |
-| Sunday | 8,916 |
+| Sunday | 8,917 |
 
 ## Booking Volume by Hour (All Libraries)
 | Hour | Bookings |
@@ -26,7 +26,7 @@
 | 10am | 5,249 |
 | 11am | 9,881 |
 | 12pm | 9,911 |
-| 1pm | 9,917 |
+| 1pm | 9,919 |
 | 2pm | 9,679 |
 | 3pm | 9,646 |
 | 4pm | 9,955 |
@@ -42,24 +42,24 @@
 | Library | Median days | p25 | p75 | p90 | % same-day | N (direct / lower-bound) |
 |---------|------------|-----|-----|-----|------------|--------------------------|
 | bellevue | 28.0 | 28.0 | 28.0 | 28.0 | 0.0% | 54847 (51145 / 3702) |
-| issaquah | 28.0 | 7.0 | 28.0 | 28.0 | 15.7% | 465 (433 / 32) |
+| issaquah | 28.0 | 7.0 | 28.0 | 28.0 | 15.7% | 466 (434 / 32) |
 | kingsgate | 28.0 | 8.0 | 28.0 | 28.0 | 18.4% | 488 (459 / 29) |
 | redmond | 28.0 | 28.0 | 28.0 | 28.0 | 1.0% | 12273 (11421 / 852) |
-| sammamish | 7.0 | 7.0 | 7.0 | 7.0 | 1.7% | 6154 (5976 / 178) |
+| sammamish | 7.0 | 7.0 | 7.0 | 7.0 | 1.7% | 6155 (5977 / 178) |
 | woodinville | 28.0 | 6.0 | 28.0 | 28.0 | 20.1% | 398 (368 / 30) |
 
-*74,625 bookings total — 69,802 fresh-caught (accurate), 4,823 initial batch (lower bounds). Accuracy improves as the dataset matures.*
+*74,627 bookings total — 69,804 fresh-caught (accurate), 4,823 initial batch (lower bounds). Accuracy improves as the dataset matures.*
 
 ## Day × Hour Heatmap (Booking Counts)
 | Day | 10am | 11am | 12pm | 1pm | 2pm | 3pm | 4pm | 5pm | 6pm | 7pm |
 |-----|----|----|----|----|----|----|----|----|----|----|
 | Monday | 1646 | 1189 | 1381 | 1916 | 1873 | 1874 | 1903 | 949 | 0 | 0 |
-| Tuesday | 466 | 1541 | 1969 | 1793 | 1805 | 1780 | 1661 | 1429 | 1361 | 721 |
+| Tuesday | 466 | 1541 | 1969 | 1794 | 1805 | 1780 | 1661 | 1429 | 1361 | 721 |
 | Wednesday | 313 | 1491 | 1641 | 1326 | 1347 | 1340 | 1428 | 1233 | 1224 | 652 |
 | Thursday | 886 | 456 | 628 | 684 | 694 | 725 | 787 | 412 | 0 | 0 |
 | Friday | 1938 | 1527 | 1601 | 1614 | 1612 | 1656 | 1617 | 860 | 0 | 0 |
 | Saturday | 0 | 1767 | 1326 | 1243 | 1178 | 1102 | 1304 | 840 | 0 | 0 |
-| Sunday | 0 | 1910 | 1365 | 1341 | 1170 | 1169 | 1255 | 706 | 0 | 0 |
+| Sunday | 0 | 1910 | 1365 | 1342 | 1170 | 1169 | 1255 | 706 | 0 | 0 |
 
 ## Saturday Availability Windows
 *Based on 36 Saturdays observed (2026-03-28 to 2026-12-05):*
@@ -244,15 +244,15 @@
 |---------|---------|
 | bellevue | 54,847 |
 | redmond | 12,273 |
-| sammamish | 6,154 |
+| sammamish | 6,155 |
 | kingsgate | 488 |
-| issaquah | 465 |
+| issaquah | 466 |
 | woodinville | 398 |
 
 ## Data Quality Notes
-- Total records: 74,625
+- Total records: 74,627
 - Records missing `created` timestamp: 4,823
 - Lead time coverage: 100% of records have lead time data (direct or inferred)
-- Fresh-caught bookings (lead time accurate ±12h): 69,802
+- Fresh-caught bookings (lead time accurate ±12h): 69,804
 - Initial-batch bookings (lead time is lower bound — true lead may be longer): 4,823
 - Data maturity: 94% fresh — grows toward 100% as initial batch ages out
