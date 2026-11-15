@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-11-14T19:37:33.292678",
-  "total_records": 76178,
+  "generated_at": "2026-11-15T02:15:56.641994",
+  "total_records": 76179,
   "missing_created": 4823,
   "libraries": [
     "bellevue",
@@ -523,8 +523,8 @@
     },
     {
       "library": "issaquah",
-      "n": 474,
-      "n_direct": 442,
+      "n": 475,
+      "n_direct": 443,
       "n_lb": 32,
       "median_days": 28.0,
       "p25": 7.0,
