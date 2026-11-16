@@ -76374,3 +76374,16 @@ fetch_date,booking_date,day_of_week,library,space_name,space_id,booking_id,title
 2026-11-15,2026-12-13,Sunday,bellevue,Meeting Room 5,17227,grid_17227_202612131630,,16:30,17:30,1.0,2026-11-15,28,grid_inferred
 2026-11-15,2026-12-13,Sunday,bellevue,Meeting Room 5,17227,grid_17227_202612131700,,17:00,17:30,0.5,2026-11-15,28,grid_inferred
 2026-11-15,2026-12-13,Sunday,bellevue,Meeting Room 5,17227,grid_17227_202612131700,,17:00,17:30,0.5,2026-11-15,28,grid_inferred
+2026-11-16,2026-12-12,Saturday,redmond,East Meeting Room 1,17228,grid_17228_202612121130,,11:30,12:30,1.0,2026-11-16,26,grid_inferred
+2026-11-16,2026-12-12,Saturday,redmond,East Meeting Room 1,17228,grid_17228_202612121200,,12:00,13:00,1.0,2026-11-16,26,grid_inferred
+2026-11-16,2026-12-12,Saturday,redmond,East Meeting Room 1,17228,grid_17228_202612121230,,12:30,13:30,1.0,2026-11-16,26,grid_inferred
+2026-11-16,2026-12-12,Saturday,redmond,East Meeting Room 1,17228,grid_17228_202612121300,,13:00,17:30,4.5,2026-11-16,26,grid_inferred
+2026-11-16,2026-12-12,Saturday,redmond,East Meeting Room 2,17229,grid_17229_202612121130,,11:30,12:30,1.0,2026-11-16,26,grid_inferred
+2026-11-16,2026-12-12,Saturday,redmond,East Meeting Room 2,17229,grid_17229_202612121200,,12:00,13:00,1.0,2026-11-16,26,grid_inferred
+2026-11-16,2026-12-12,Saturday,redmond,East Meeting Room 2,17229,grid_17229_202612121230,,12:30,13:30,1.0,2026-11-16,26,grid_inferred
+2026-11-16,2026-12-12,Saturday,redmond,East Meeting Room 2,17229,grid_17229_202612121300,,13:00,17:30,4.5,2026-11-16,26,grid_inferred
+2026-11-16,2026-12-12,Saturday,redmond,Conference Room,17230,grid_17230_202612121130,,11:30,12:30,1.0,2026-11-16,26,grid_inferred
+2026-11-16,2026-12-12,Saturday,redmond,Conference Room,17230,grid_17230_202612121200,,12:00,13:00,1.0,2026-11-16,26,grid_inferred
+2026-11-16,2026-12-12,Saturday,redmond,Conference Room,17230,grid_17230_202612121230,,12:30,13:30,1.0,2026-11-16,26,grid_inferred
+2026-11-16,2026-12-12,Saturday,redmond,Conference Room,17230,grid_17230_202612121300,,13:00,17:30,4.5,2026-11-16,26,grid_inferred
+2026-11-16,2026-11-16,Monday,issaquah,Meeting Room,17233,grid_17233_202611161630,,16:30,17:30,1.0,2026-11-16,0,grid_inferred
