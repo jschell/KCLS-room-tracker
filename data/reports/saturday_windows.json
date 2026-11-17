@@ -318,19 +318,19 @@
         "n_booked": 37
       },
       "13:00": {
+        "pct_booked": 1.0,
+        "n_saturdays": 37,
+        "n_booked": 37
+      },
+      "14:00": {
         "pct_booked": 0.973,
         "n_saturdays": 37,
         "n_booked": 36
       },
-      "14:00": {
-        "pct_booked": 0.9459,
-        "n_saturdays": 37,
-        "n_booked": 35
-      },
       "15:00": {
-        "pct_booked": 0.9459,
+        "pct_booked": 0.973,
         "n_saturdays": 37,
-        "n_booked": 35
+        "n_booked": 36
       },
       "16:00": {
         "pct_booked": 0.973,
@@ -355,19 +355,19 @@
         "n_booked": 37
       },
       "13:00": {
+        "pct_booked": 1.0,
+        "n_saturdays": 37,
+        "n_booked": 37
+      },
+      "14:00": {
         "pct_booked": 0.973,
         "n_saturdays": 37,
         "n_booked": 36
       },
-      "14:00": {
-        "pct_booked": 0.9459,
-        "n_saturdays": 37,
-        "n_booked": 35
-      },
       "15:00": {
-        "pct_booked": 0.9459,
+        "pct_booked": 0.973,
         "n_saturdays": 37,
-        "n_booked": 35
+        "n_booked": 36
       },
       "16:00": {
         "pct_booked": 0.973,
@@ -392,19 +392,19 @@
         "n_booked": 37
       },
       "13:00": {
+        "pct_booked": 1.0,
+        "n_saturdays": 37,
+        "n_booked": 37
+      },
+      "14:00": {
         "pct_booked": 0.973,
         "n_saturdays": 37,
         "n_booked": 36
       },
-      "14:00": {
-        "pct_booked": 0.9459,
-        "n_saturdays": 37,
-        "n_booked": 35
-      },
       "15:00": {
-        "pct_booked": 0.9459,
+        "pct_booked": 0.973,
         "n_saturdays": 37,
-        "n_booked": 35
+        "n_booked": 36
       },
       "16:00": {
         "pct_booked": 0.973,
@@ -429,19 +429,19 @@
         "n_booked": 37
       },
       "13:00": {
+        "pct_booked": 1.0,
+        "n_saturdays": 37,
+        "n_booked": 37
+      },
+      "14:00": {
         "pct_booked": 0.973,
         "n_saturdays": 37,
         "n_booked": 36
       },
-      "14:00": {
-        "pct_booked": 0.9459,
-        "n_saturdays": 37,
-        "n_booked": 35
-      },
       "15:00": {
-        "pct_booked": 0.9459,
+        "pct_booked": 0.973,
         "n_saturdays": 37,
-        "n_booked": 35
+        "n_booked": 36
       },
       "16:00": {
         "pct_booked": 0.973,
@@ -466,19 +466,19 @@
         "n_booked": 37
       },
       "13:00": {
+        "pct_booked": 1.0,
+        "n_saturdays": 37,
+        "n_booked": 37
+      },
+      "14:00": {
         "pct_booked": 0.973,
         "n_saturdays": 37,
         "n_booked": 36
       },
-      "14:00": {
-        "pct_booked": 0.9459,
-        "n_saturdays": 37,
-        "n_booked": 35
-      },
       "15:00": {
-        "pct_booked": 0.9459,
+        "pct_booked": 0.973,
         "n_saturdays": 37,
-        "n_booked": 35
+        "n_booked": 36
       },
       "16:00": {
         "pct_booked": 0.973,
