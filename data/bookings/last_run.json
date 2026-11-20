@@ -1,10 +1,10 @@
 {
   "run_date": "2026-11-20",
-  "run_time": "15:51:54",
+  "run_time": "22:03:28",
   "range_start": "2026-11-20",
   "range_end": "2026-12-19",
-  "total_fetched": 5141,
-  "new_written": 312,
+  "total_fetched": 5038,
+  "new_written": 2,
   "libraries_scraped": [
     "redmond",
     "sammamish",
