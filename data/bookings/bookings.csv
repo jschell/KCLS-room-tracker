@@ -77708,3 +77708,4 @@ fetch_date,booking_date,day_of_week,library,space_name,space_id,booking_id,title
 2026-11-19,2026-12-17,Thursday,bellevue,Meeting Room 5,17227,grid_17227_202612171600,,16:00,17:00,1.0,2026-11-19,28,grid_inferred
 2026-11-19,2026-12-17,Thursday,bellevue,Meeting Room 5,17227,grid_17227_202612171630,,16:30,17:30,1.0,2026-11-19,28,grid_inferred
 2026-11-19,2026-12-17,Thursday,bellevue,Meeting Room 5,17227,grid_17227_202612171700,,17:00,17:30,0.5,2026-11-19,28,grid_inferred
+2026-11-20,2026-12-10,Thursday,woodinville,Meeting Room,17258,grid_17258_202612101630,,16:30,17:30,1.0,2026-11-20,20,grid_inferred
