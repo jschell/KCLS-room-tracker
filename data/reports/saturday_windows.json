@@ -2,306 +2,306 @@
   "redmond": {
     "East Meeting Room 1": {
       "11:00": {
-        "pct_booked": 0.9189,
-        "n_saturdays": 37,
-        "n_booked": 34
+        "pct_booked": 0.9211,
+        "n_saturdays": 38,
+        "n_booked": 35
       },
       "12:00": {
-        "pct_booked": 0.9189,
-        "n_saturdays": 37,
-        "n_booked": 34
+        "pct_booked": 0.9211,
+        "n_saturdays": 38,
+        "n_booked": 35
       },
       "13:00": {
-        "pct_booked": 0.9189,
-        "n_saturdays": 37,
-        "n_booked": 34
+        "pct_booked": 0.9211,
+        "n_saturdays": 38,
+        "n_booked": 35
       },
       "14:00": {
-        "pct_booked": 0.973,
-        "n_saturdays": 37,
-        "n_booked": 36
+        "pct_booked": 0.9737,
+        "n_saturdays": 38,
+        "n_booked": 37
       },
       "15:00": {
-        "pct_booked": 0.9189,
-        "n_saturdays": 37,
-        "n_booked": 34
+        "pct_booked": 0.9211,
+        "n_saturdays": 38,
+        "n_booked": 35
       },
       "16:00": {
-        "pct_booked": 0.973,
-        "n_saturdays": 37,
-        "n_booked": 36
+        "pct_booked": 0.9737,
+        "n_saturdays": 38,
+        "n_booked": 37
       },
       "17:00": {
-        "pct_booked": 0.973,
-        "n_saturdays": 37,
-        "n_booked": 36
+        "pct_booked": 0.9737,
+        "n_saturdays": 38,
+        "n_booked": 37
       }
     },
     "East Meeting Room 2": {
       "11:00": {
-        "pct_booked": 0.9189,
-        "n_saturdays": 37,
-        "n_booked": 34
+        "pct_booked": 0.9211,
+        "n_saturdays": 38,
+        "n_booked": 35
       },
       "12:00": {
-        "pct_booked": 0.9189,
-        "n_saturdays": 37,
-        "n_booked": 34
+        "pct_booked": 0.9211,
+        "n_saturdays": 38,
+        "n_booked": 35
       },
       "13:00": {
-        "pct_booked": 0.9189,
-        "n_saturdays": 37,
-        "n_booked": 34
+        "pct_booked": 0.9211,
+        "n_saturdays": 38,
+        "n_booked": 35
       },
       "14:00": {
-        "pct_booked": 0.973,
-        "n_saturdays": 37,
-        "n_booked": 36
+        "pct_booked": 0.9737,
+        "n_saturdays": 38,
+        "n_booked": 37
       },
       "15:00": {
-        "pct_booked": 0.9189,
-        "n_saturdays": 37,
-        "n_booked": 34
+        "pct_booked": 0.9211,
+        "n_saturdays": 38,
+        "n_booked": 35
       },
       "16:00": {
-        "pct_booked": 0.973,
-        "n_saturdays": 37,
-        "n_booked": 36
+        "pct_booked": 0.9737,
+        "n_saturdays": 38,
+        "n_booked": 37
       },
       "17:00": {
-        "pct_booked": 0.973,
-        "n_saturdays": 37,
-        "n_booked": 36
+        "pct_booked": 0.9737,
+        "n_saturdays": 38,
+        "n_booked": 37
       }
     },
     "Conference Room": {
       "11:00": {
-        "pct_booked": 0.9189,
-        "n_saturdays": 37,
-        "n_booked": 34
+        "pct_booked": 0.9211,
+        "n_saturdays": 38,
+        "n_booked": 35
       },
       "12:00": {
-        "pct_booked": 0.9189,
-        "n_saturdays": 37,
-        "n_booked": 34
+        "pct_booked": 0.9211,
+        "n_saturdays": 38,
+        "n_booked": 35
       },
       "13:00": {
-        "pct_booked": 0.9189,
-        "n_saturdays": 37,
-        "n_booked": 34
+        "pct_booked": 0.9211,
+        "n_saturdays": 38,
+        "n_booked": 35
       },
       "14:00": {
-        "pct_booked": 0.973,
-        "n_saturdays": 37,
-        "n_booked": 36
+        "pct_booked": 0.9737,
+        "n_saturdays": 38,
+        "n_booked": 37
       },
       "15:00": {
-        "pct_booked": 0.9189,
-        "n_saturdays": 37,
-        "n_booked": 34
+        "pct_booked": 0.9211,
+        "n_saturdays": 38,
+        "n_booked": 35
       },
       "16:00": {
-        "pct_booked": 0.973,
-        "n_saturdays": 37,
-        "n_booked": 36
+        "pct_booked": 0.9737,
+        "n_saturdays": 38,
+        "n_booked": 37
       },
       "17:00": {
-        "pct_booked": 0.973,
-        "n_saturdays": 37,
-        "n_booked": 36
+        "pct_booked": 0.9737,
+        "n_saturdays": 38,
+        "n_booked": 37
       }
     }
   },
   "sammamish": {
     "Meeting Room": {
       "11:00": {
-        "pct_booked": 0.7297,
-        "n_saturdays": 37,
-        "n_booked": 27
+        "pct_booked": 0.7368,
+        "n_saturdays": 38,
+        "n_booked": 28
       },
       "12:00": {
-        "pct_booked": 0.6757,
-        "n_saturdays": 37,
-        "n_booked": 25
+        "pct_booked": 0.6842,
+        "n_saturdays": 38,
+        "n_booked": 26
       },
       "13:00": {
-        "pct_booked": 0.6486,
-        "n_saturdays": 37,
+        "pct_booked": 0.6316,
+        "n_saturdays": 38,
         "n_booked": 24
       },
       "14:00": {
-        "pct_booked": 0.3784,
-        "n_saturdays": 37,
+        "pct_booked": 0.3684,
+        "n_saturdays": 38,
         "n_booked": 14
       },
       "15:00": {
-        "pct_booked": 0.3514,
-        "n_saturdays": 37,
+        "pct_booked": 0.3421,
+        "n_saturdays": 38,
         "n_booked": 13
       },
       "16:00": {
-        "pct_booked": 0.7568,
-        "n_saturdays": 37,
+        "pct_booked": 0.7368,
+        "n_saturdays": 38,
         "n_booked": 28
       },
       "17:00": {
-        "pct_booked": 0.8108,
-        "n_saturdays": 37,
+        "pct_booked": 0.7895,
+        "n_saturdays": 38,
         "n_booked": 30
       }
     },
     "Sunset Room": {
       "11:00": {
-        "pct_booked": 0.9189,
-        "n_saturdays": 37,
-        "n_booked": 34
+        "pct_booked": 0.9211,
+        "n_saturdays": 38,
+        "n_booked": 35
       },
       "12:00": {
-        "pct_booked": 0.9189,
-        "n_saturdays": 37,
-        "n_booked": 34
+        "pct_booked": 0.9211,
+        "n_saturdays": 38,
+        "n_booked": 35
       },
       "13:00": {
-        "pct_booked": 0.9189,
-        "n_saturdays": 37,
-        "n_booked": 34
+        "pct_booked": 0.9211,
+        "n_saturdays": 38,
+        "n_booked": 35
       },
       "14:00": {
-        "pct_booked": 0.9189,
-        "n_saturdays": 37,
-        "n_booked": 34
+        "pct_booked": 0.9211,
+        "n_saturdays": 38,
+        "n_booked": 35
       },
       "15:00": {
-        "pct_booked": 0.9189,
-        "n_saturdays": 37,
-        "n_booked": 34
+        "pct_booked": 0.9211,
+        "n_saturdays": 38,
+        "n_booked": 35
       },
       "16:00": {
-        "pct_booked": 0.9189,
-        "n_saturdays": 37,
-        "n_booked": 34
+        "pct_booked": 0.9211,
+        "n_saturdays": 38,
+        "n_booked": 35
       },
       "17:00": {
-        "pct_booked": 0.9189,
-        "n_saturdays": 37,
-        "n_booked": 34
+        "pct_booked": 0.9211,
+        "n_saturdays": 38,
+        "n_booked": 35
       }
     }
   },
   "woodinville": {
     "Meeting Room": {
       "11:00": {
-        "pct_booked": 0.5946,
-        "n_saturdays": 37,
+        "pct_booked": 0.5789,
+        "n_saturdays": 38,
         "n_booked": 22
       },
       "12:00": {
-        "pct_booked": 0.2703,
-        "n_saturdays": 37,
+        "pct_booked": 0.2632,
+        "n_saturdays": 38,
         "n_booked": 10
       },
       "13:00": {
-        "pct_booked": 0.2432,
-        "n_saturdays": 37,
+        "pct_booked": 0.2368,
+        "n_saturdays": 38,
         "n_booked": 9
       },
       "14:00": {
-        "pct_booked": 0.2432,
-        "n_saturdays": 37,
+        "pct_booked": 0.2368,
+        "n_saturdays": 38,
         "n_booked": 9
       },
       "15:00": {
-        "pct_booked": 0.2973,
-        "n_saturdays": 37,
+        "pct_booked": 0.2895,
+        "n_saturdays": 38,
         "n_booked": 11
       },
       "16:00": {
-        "pct_booked": 0.4054,
-        "n_saturdays": 37,
+        "pct_booked": 0.3947,
+        "n_saturdays": 38,
         "n_booked": 15
       },
       "17:00": {
-        "pct_booked": 0.7838,
-        "n_saturdays": 37,
-        "n_booked": 29
+        "pct_booked": 0.7895,
+        "n_saturdays": 38,
+        "n_booked": 30
       }
     }
   },
   "kingsgate": {
     "Meeting Room": {
       "11:00": {
-        "pct_booked": 0.6757,
-        "n_saturdays": 37,
-        "n_booked": 25
+        "pct_booked": 0.6842,
+        "n_saturdays": 38,
+        "n_booked": 26
       },
       "12:00": {
-        "pct_booked": 0.5676,
-        "n_saturdays": 37,
-        "n_booked": 21
+        "pct_booked": 0.5789,
+        "n_saturdays": 38,
+        "n_booked": 22
       },
       "13:00": {
-        "pct_booked": 0.1892,
-        "n_saturdays": 37,
+        "pct_booked": 0.1842,
+        "n_saturdays": 38,
         "n_booked": 7
       },
       "14:00": {
-        "pct_booked": 0.4054,
-        "n_saturdays": 37,
+        "pct_booked": 0.3947,
+        "n_saturdays": 38,
         "n_booked": 15
       },
       "15:00": {
-        "pct_booked": 0.4595,
-        "n_saturdays": 37,
+        "pct_booked": 0.4474,
+        "n_saturdays": 38,
         "n_booked": 17
       },
       "16:00": {
-        "pct_booked": 0.5405,
-        "n_saturdays": 37,
+        "pct_booked": 0.5263,
+        "n_saturdays": 38,
         "n_booked": 20
       },
       "17:00": {
-        "pct_booked": 0.8108,
-        "n_saturdays": 37,
-        "n_booked": 30
+        "pct_booked": 0.8158,
+        "n_saturdays": 38,
+        "n_booked": 31
       }
     }
   },
   "issaquah": {
     "Meeting Room": {
       "11:00": {
-        "pct_booked": 0.6216,
-        "n_saturdays": 37,
-        "n_booked": 23
+        "pct_booked": 0.6316,
+        "n_saturdays": 38,
+        "n_booked": 24
       },
       "12:00": {
-        "pct_booked": 0.6216,
-        "n_saturdays": 37,
-        "n_booked": 23
+        "pct_booked": 0.6316,
+        "n_saturdays": 38,
+        "n_booked": 24
       },
       "13:00": {
-        "pct_booked": 0.5135,
-        "n_saturdays": 37,
-        "n_booked": 19
-      },
-      "14:00": {
-        "pct_booked": 0.4054,
-        "n_saturdays": 37,
-        "n_booked": 15
-      },
-      "15:00": {
-        "pct_booked": 0.4054,
-        "n_saturdays": 37,
-        "n_booked": 15
-      },
-      "16:00": {
-        "pct_booked": 0.5405,
-        "n_saturdays": 37,
+        "pct_booked": 0.5263,
+        "n_saturdays": 38,
         "n_booked": 20
       },
-      "17:00": {
-        "pct_booked": 0.5676,
-        "n_saturdays": 37,
+      "14:00": {
+        "pct_booked": 0.4211,
+        "n_saturdays": 38,
+        "n_booked": 16
+      },
+      "15:00": {
+        "pct_booked": 0.4211,
+        "n_saturdays": 38,
+        "n_booked": 16
+      },
+      "16:00": {
+        "pct_booked": 0.5526,
+        "n_saturdays": 38,
         "n_booked": 21
+      },
+      "17:00": {
+        "pct_booked": 0.5789,
+        "n_saturdays": 38,
+        "n_booked": 22
       }
     }
   },
@@ -309,186 +309,186 @@
     "Meeting Room 1": {
       "11:00": {
         "pct_booked": 1.0,
-        "n_saturdays": 37,
-        "n_booked": 37
+        "n_saturdays": 38,
+        "n_booked": 38
       },
       "12:00": {
         "pct_booked": 1.0,
-        "n_saturdays": 37,
-        "n_booked": 37
+        "n_saturdays": 38,
+        "n_booked": 38
       },
       "13:00": {
         "pct_booked": 1.0,
-        "n_saturdays": 37,
-        "n_booked": 37
+        "n_saturdays": 38,
+        "n_booked": 38
       },
       "14:00": {
-        "pct_booked": 0.973,
-        "n_saturdays": 37,
-        "n_booked": 36
+        "pct_booked": 0.9737,
+        "n_saturdays": 38,
+        "n_booked": 37
       },
       "15:00": {
-        "pct_booked": 0.973,
-        "n_saturdays": 37,
-        "n_booked": 36
+        "pct_booked": 0.9737,
+        "n_saturdays": 38,
+        "n_booked": 37
       },
       "16:00": {
-        "pct_booked": 0.973,
-        "n_saturdays": 37,
-        "n_booked": 36
+        "pct_booked": 0.9737,
+        "n_saturdays": 38,
+        "n_booked": 37
       },
       "17:00": {
         "pct_booked": 1.0,
-        "n_saturdays": 37,
-        "n_booked": 37
+        "n_saturdays": 38,
+        "n_booked": 38
       }
     },
     "Meeting Room 2": {
       "11:00": {
         "pct_booked": 1.0,
-        "n_saturdays": 37,
-        "n_booked": 37
+        "n_saturdays": 38,
+        "n_booked": 38
       },
       "12:00": {
         "pct_booked": 1.0,
-        "n_saturdays": 37,
-        "n_booked": 37
+        "n_saturdays": 38,
+        "n_booked": 38
       },
       "13:00": {
         "pct_booked": 1.0,
-        "n_saturdays": 37,
-        "n_booked": 37
+        "n_saturdays": 38,
+        "n_booked": 38
       },
       "14:00": {
-        "pct_booked": 0.973,
-        "n_saturdays": 37,
-        "n_booked": 36
+        "pct_booked": 0.9737,
+        "n_saturdays": 38,
+        "n_booked": 37
       },
       "15:00": {
-        "pct_booked": 0.973,
-        "n_saturdays": 37,
-        "n_booked": 36
+        "pct_booked": 0.9737,
+        "n_saturdays": 38,
+        "n_booked": 37
       },
       "16:00": {
-        "pct_booked": 0.973,
-        "n_saturdays": 37,
-        "n_booked": 36
+        "pct_booked": 0.9737,
+        "n_saturdays": 38,
+        "n_booked": 37
       },
       "17:00": {
         "pct_booked": 1.0,
-        "n_saturdays": 37,
-        "n_booked": 37
+        "n_saturdays": 38,
+        "n_booked": 38
       }
     },
     "Meeting Room 3": {
       "11:00": {
         "pct_booked": 1.0,
-        "n_saturdays": 37,
-        "n_booked": 37
+        "n_saturdays": 38,
+        "n_booked": 38
       },
       "12:00": {
         "pct_booked": 1.0,
-        "n_saturdays": 37,
-        "n_booked": 37
+        "n_saturdays": 38,
+        "n_booked": 38
       },
       "13:00": {
         "pct_booked": 1.0,
-        "n_saturdays": 37,
-        "n_booked": 37
+        "n_saturdays": 38,
+        "n_booked": 38
       },
       "14:00": {
-        "pct_booked": 0.973,
-        "n_saturdays": 37,
-        "n_booked": 36
+        "pct_booked": 0.9737,
+        "n_saturdays": 38,
+        "n_booked": 37
       },
       "15:00": {
-        "pct_booked": 0.973,
-        "n_saturdays": 37,
-        "n_booked": 36
+        "pct_booked": 0.9737,
+        "n_saturdays": 38,
+        "n_booked": 37
       },
       "16:00": {
-        "pct_booked": 0.973,
-        "n_saturdays": 37,
-        "n_booked": 36
+        "pct_booked": 0.9737,
+        "n_saturdays": 38,
+        "n_booked": 37
       },
       "17:00": {
         "pct_booked": 1.0,
-        "n_saturdays": 37,
-        "n_booked": 37
+        "n_saturdays": 38,
+        "n_booked": 38
       }
     },
     "Meeting Room 4": {
       "11:00": {
         "pct_booked": 1.0,
-        "n_saturdays": 37,
-        "n_booked": 37
+        "n_saturdays": 38,
+        "n_booked": 38
       },
       "12:00": {
         "pct_booked": 1.0,
-        "n_saturdays": 37,
-        "n_booked": 37
+        "n_saturdays": 38,
+        "n_booked": 38
       },
       "13:00": {
         "pct_booked": 1.0,
-        "n_saturdays": 37,
-        "n_booked": 37
+        "n_saturdays": 38,
+        "n_booked": 38
       },
       "14:00": {
-        "pct_booked": 0.973,
-        "n_saturdays": 37,
-        "n_booked": 36
+        "pct_booked": 0.9737,
+        "n_saturdays": 38,
+        "n_booked": 37
       },
       "15:00": {
-        "pct_booked": 0.973,
-        "n_saturdays": 37,
-        "n_booked": 36
+        "pct_booked": 0.9737,
+        "n_saturdays": 38,
+        "n_booked": 37
       },
       "16:00": {
-        "pct_booked": 0.973,
-        "n_saturdays": 37,
-        "n_booked": 36
+        "pct_booked": 0.9737,
+        "n_saturdays": 38,
+        "n_booked": 37
       },
       "17:00": {
         "pct_booked": 1.0,
-        "n_saturdays": 37,
-        "n_booked": 37
+        "n_saturdays": 38,
+        "n_booked": 38
       }
     },
     "Meeting Room 5": {
       "11:00": {
         "pct_booked": 1.0,
-        "n_saturdays": 37,
-        "n_booked": 37
+        "n_saturdays": 38,
+        "n_booked": 38
       },
       "12:00": {
         "pct_booked": 1.0,
-        "n_saturdays": 37,
-        "n_booked": 37
+        "n_saturdays": 38,
+        "n_booked": 38
       },
       "13:00": {
         "pct_booked": 1.0,
-        "n_saturdays": 37,
-        "n_booked": 37
+        "n_saturdays": 38,
+        "n_booked": 38
       },
       "14:00": {
-        "pct_booked": 0.973,
-        "n_saturdays": 37,
-        "n_booked": 36
+        "pct_booked": 0.9737,
+        "n_saturdays": 38,
+        "n_booked": 37
       },
       "15:00": {
-        "pct_booked": 0.973,
-        "n_saturdays": 37,
-        "n_booked": 36
+        "pct_booked": 0.9737,
+        "n_saturdays": 38,
+        "n_booked": 37
       },
       "16:00": {
-        "pct_booked": 0.973,
-        "n_saturdays": 37,
-        "n_booked": 36
+        "pct_booked": 0.9737,
+        "n_saturdays": 38,
+        "n_booked": 37
       },
       "17:00": {
         "pct_booked": 1.0,
-        "n_saturdays": 37,
-        "n_booked": 37
+        "n_saturdays": 38,
+        "n_booked": 38
       }
     }
   }

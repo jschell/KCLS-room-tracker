@@ -4,8 +4,8 @@
 ## Dataset Summary
 | Metric | Value |
 |--------|-------|
-| Total records | 78,027 |
-| Date range | 2026-03-22 to 2026-12-18 |
+| Total records | 78,280 |
+| Date range | 2026-03-22 to 2026-12-19 |
 | Libraries | bellevue, issaquah, kingsgate, redmond, sammamish, woodinville |
 | Missing `created` (affects lead time) | 4,823 (6%) |
 
@@ -17,20 +17,20 @@
 | Wednesday | 12,772 |
 | Thursday | 5,556 |
 | Friday | 13,165 |
-| Saturday | 8,931 |
+| Saturday | 9,184 |
 | Sunday | 9,119 |
 
 ## Booking Volume by Hour (All Libraries)
 | Hour | Bookings |
 |------|---------|
 | 10am | 5,701 |
-| 11am | 10,289 |
-| 12pm | 10,303 |
-| 1pm | 10,331 |
-| 2pm | 10,091 |
-| 3pm | 10,019 |
-| 4pm | 10,367 |
-| 5pm | 6,717 |
+| 11am | 10,335 |
+| 12pm | 10,337 |
+| 1pm | 10,365 |
+| 2pm | 10,125 |
+| 3pm | 10,059 |
+| 4pm | 10,407 |
+| 5pm | 6,742 |
 | 6pm | 2,754 |
 | 7pm | 1,455 |
 
@@ -41,14 +41,14 @@
 
 | Library | Median days | p25 | p75 | p90 | % same-day | N (direct / lower-bound) |
 |---------|------------|-----|-----|-----|------------|--------------------------|
-| bellevue | 28.0 | 28.0 | 28.0 | 28.0 | 0.0% | 57387 (53685 / 3702) |
-| issaquah | 28.0 | 7.5 | 28.0 | 28.0 | 15.2% | 487 (455 / 32) |
-| kingsgate | 28.0 | 9.0 | 28.0 | 28.0 | 17.9% | 504 (475 / 29) |
-| redmond | 28.0 | 28.0 | 28.0 | 28.0 | 0.9% | 12846 (11994 / 852) |
-| sammamish | 7.0 | 7.0 | 7.0 | 7.0 | 1.7% | 6390 (6212 / 178) |
-| woodinville | 28.0 | 6.0 | 28.0 | 28.0 | 19.4% | 413 (383 / 30) |
+| bellevue | 28.0 | 28.0 | 28.0 | 28.0 | 0.0% | 57602 (53900 / 3702) |
+| issaquah | 28.0 | 7.8 | 28.0 | 28.0 | 15.2% | 488 (456 / 32) |
+| kingsgate | 28.0 | 9.2 | 28.0 | 28.0 | 17.8% | 506 (477 / 29) |
+| redmond | 28.0 | 28.0 | 28.0 | 28.0 | 0.9% | 12858 (12006 / 852) |
+| sammamish | 7.0 | 7.0 | 7.0 | 7.0 | 1.7% | 6412 (6234 / 178) |
+| woodinville | 28.0 | 6.0 | 28.0 | 28.0 | 19.3% | 414 (384 / 30) |
 
-*78,027 bookings total — 73,204 fresh-caught (accurate), 4,823 initial batch (lower bounds). Accuracy improves as the dataset matures.*
+*78,280 bookings total — 73,457 fresh-caught (accurate), 4,823 initial batch (lower bounds). Accuracy improves as the dataset matures.*
 
 ## Day × Hour Heatmap (Booking Counts)
 | Day | 10am | 11am | 12pm | 1pm | 2pm | 3pm | 4pm | 5pm | 6pm | 7pm |
@@ -58,11 +58,11 @@
 | Wednesday | 423 | 1566 | 1724 | 1413 | 1436 | 1412 | 1496 | 1305 | 1305 | 692 |
 | Thursday | 937 | 483 | 661 | 723 | 732 | 762 | 827 | 431 | 0 | 0 |
 | Friday | 2051 | 1617 | 1690 | 1706 | 1711 | 1750 | 1724 | 916 | 0 | 0 |
-| Saturday | 0 | 1811 | 1354 | 1267 | 1196 | 1113 | 1333 | 857 | 0 | 0 |
+| Saturday | 0 | 1857 | 1388 | 1301 | 1230 | 1153 | 1373 | 882 | 0 | 0 |
 | Sunday | 0 | 1955 | 1399 | 1371 | 1200 | 1197 | 1279 | 718 | 0 | 0 |
 
 ## Saturday Availability Windows
-*Based on 37 Saturdays observed (2026-03-28 to 2026-12-12):*
+*Based on 38 Saturdays observed (2026-03-28 to 2026-12-19):*
 
 ### Redmond
 **East Meeting Room 1**
@@ -108,13 +108,13 @@
 
 | Hour | Booking rate | Status |
 |------|-------------|--------|
-| 11am | 73% | ⚠️ Usually taken |
+| 11am | 74% | ⚠️ Usually taken |
 | 12pm | 68% | 🟡 Moderate demand |
-| 1pm | 65% | 🟡 Moderate demand |
-| 2pm | 38% | 🟡 Moderate demand |
-| 3pm | 35% | 🟡 Moderate demand |
-| 4pm | 76% | ⚠️ Usually taken |
-| 5pm | 81% | ⚠️ Usually taken |
+| 1pm | 63% | 🟡 Moderate demand |
+| 2pm | 37% | 🟡 Moderate demand |
+| 3pm | 34% | 🟡 Moderate demand |
+| 4pm | 74% | ⚠️ Usually taken |
+| 5pm | 79% | ⚠️ Usually taken |
 
 **Sunset Room**
 
@@ -135,13 +135,13 @@
 
 | Hour | Booking rate | Status |
 |------|-------------|--------|
-| 11am | 59% | 🟡 Moderate demand |
-| 12pm | 27% | ✅ Often available |
+| 11am | 58% | 🟡 Moderate demand |
+| 12pm | 26% | ✅ Often available |
 | 1pm | 24% | ✅ Often available |
 | 2pm | 24% | ✅ Often available |
-| 3pm | 30% | ✅ Often available |
-| 4pm | 41% | 🟡 Moderate demand |
-| 5pm | 78% | ⚠️ Usually taken |
+| 3pm | 29% | ✅ Often available |
+| 4pm | 39% | 🟡 Moderate demand |
+| 5pm | 79% | ⚠️ Usually taken |
 
 **Typical lead time at Woodinville:** median 28.0 days, p90 28.0 days
 
@@ -151,12 +151,12 @@
 | Hour | Booking rate | Status |
 |------|-------------|--------|
 | 11am | 68% | 🟡 Moderate demand |
-| 12pm | 57% | 🟡 Moderate demand |
-| 1pm | 19% | ✅ Often available |
-| 2pm | 41% | 🟡 Moderate demand |
-| 3pm | 46% | 🟡 Moderate demand |
-| 4pm | 54% | 🟡 Moderate demand |
-| 5pm | 81% | ⚠️ Usually taken |
+| 12pm | 58% | 🟡 Moderate demand |
+| 1pm | 18% | ✅ Often available |
+| 2pm | 39% | 🟡 Moderate demand |
+| 3pm | 45% | 🟡 Moderate demand |
+| 4pm | 53% | 🟡 Moderate demand |
+| 5pm | 82% | ⚠️ Usually taken |
 
 **Typical lead time at Kingsgate:** median 28.0 days, p90 28.0 days
 
@@ -165,13 +165,13 @@
 
 | Hour | Booking rate | Status |
 |------|-------------|--------|
-| 11am | 62% | 🟡 Moderate demand |
-| 12pm | 62% | 🟡 Moderate demand |
-| 1pm | 51% | 🟡 Moderate demand |
-| 2pm | 41% | 🟡 Moderate demand |
-| 3pm | 41% | 🟡 Moderate demand |
-| 4pm | 54% | 🟡 Moderate demand |
-| 5pm | 57% | 🟡 Moderate demand |
+| 11am | 63% | 🟡 Moderate demand |
+| 12pm | 63% | 🟡 Moderate demand |
+| 1pm | 53% | 🟡 Moderate demand |
+| 2pm | 42% | 🟡 Moderate demand |
+| 3pm | 42% | 🟡 Moderate demand |
+| 4pm | 55% | 🟡 Moderate demand |
+| 5pm | 58% | 🟡 Moderate demand |
 
 **Typical lead time at Issaquah:** median 28.0 days, p90 28.0 days
 
@@ -242,17 +242,17 @@
 ## Booking Frequency by Library
 | Library | Bookings |
 |---------|---------|
-| bellevue | 57,387 |
-| redmond | 12,846 |
-| sammamish | 6,390 |
-| kingsgate | 504 |
-| issaquah | 487 |
-| woodinville | 413 |
+| bellevue | 57,602 |
+| redmond | 12,858 |
+| sammamish | 6,412 |
+| kingsgate | 506 |
+| issaquah | 488 |
+| woodinville | 414 |
 
 ## Data Quality Notes
-- Total records: 78,027
+- Total records: 78,280
 - Records missing `created` timestamp: 4,823
 - Lead time coverage: 100% of records have lead time data (direct or inferred)
-- Fresh-caught bookings (lead time accurate ±12h): 73,204
+- Fresh-caught bookings (lead time accurate ±12h): 73,457
 - Initial-batch bookings (lead time is lower bound — true lead may be longer): 4,823
 - Data maturity: 94% fresh — grows toward 100% as initial batch ages out
